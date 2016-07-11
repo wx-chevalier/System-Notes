@@ -1,5 +1,5 @@
 > [原文地址](https://medium.freecodecamp.com/git-rebase-and-the-golden-rule-explained-70715eccc372#.h4rzk9cui)
-> []()
+> [Git系列文章地址](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/VersionControl/Git/Branch/Rebase/git-rebase-and-the-gloden-rule-explained.md)
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/1/1-e-tlWqLwbUd1UmZyC_KbGg.png)
 

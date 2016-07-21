@@ -67,7 +67,7 @@ Just Coder Massive Knowledge
 ### RESTful
 
 - [来自Paypal的API接口风格最佳实践](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/SoftwareEngineering/SoftwareArchitecture/NetworkBasedArchitecture/RESTful/paypal-api-standards.md)
-
+- [来自微软的API接口指南](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/SoftwareEngineering/SoftwareArchitecture/NetworkBasedArchitecture/RESTful/microsoft-api-guidelines.md)
 
 ## SoftwareTest:软件测试
 

@@ -41,13 +41,6 @@ Just Coder Massive Knowledge
 
 ## Java:Java版本的数据结构基础实现
 
-# Network
-## Protocol
-### HTTP
-- [HTTP 基础](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Network/Protocol/HTTP/http.md)
-- [HTTP Request](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Network/Protocol/HTTP/http-request.md)
-- [HTTP Response](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Network/Protocol/HTTP/http-response.md)
-- [HTTP 缓存](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Network/Protocol/HTTP/http-cache.md)
 
 # ProgrammingParadigm:编程范式
 

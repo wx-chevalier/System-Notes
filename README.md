@@ -36,7 +36,7 @@ Just Coder Massive Knowledge
 
 # DataStructure&Algorithm:数据结构与算法
 
-- [数据结构与算法系列文章目录]()
+- [数据结构与算法系列文章目录](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/README.md)
 
 
 # ProgrammingParadigm:编程范式

@@ -16,4 +16,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'Sorting'
+rootProject.name = 'DataStructure&Algorithm'

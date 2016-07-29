@@ -33,13 +33,10 @@
 # just-coder-handbook
 Just Coder Massive Knowledge 
 
-# Algorithm:算法
 
-## Java:Java版本的算法实现
+# DataStructure&Algorithm:数据结构与算法
 
-# DataStructure:数据结构
-
-## Java:Java版本的数据结构基础实现
+- [数据结构与算法系列文章目录]()
 
 
 # ProgrammingParadigm:编程范式

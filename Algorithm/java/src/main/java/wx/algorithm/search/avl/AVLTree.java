@@ -63,6 +63,10 @@ public class AVLTree {
         return true;
     }
 
+    /**
+     * @param delKey
+     * @function 根据关键值删除某个元素, 需要对树进行再平衡
+     */
     public void delete(int delKey) {
         if (root == null)
             return;

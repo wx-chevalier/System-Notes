@@ -100,7 +100,11 @@
 
 - [常见搜索算法与比较](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Search/search.md)
 
-- [二叉搜索树,AVL与红黑树详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Search/binarysearchtree.md)
+- [二叉搜索树详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Search/binarysearchtree.md)
+
+- [AVL平衡二叉树详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Search/avl.md)
+
+- [红黑树详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Search/redblacktree.md)
 
 - [B-Tree及其变种B+树,B*树详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Search/b-tree.md)
 

@@ -1,5 +1,8 @@
 package wx.algorithm.search.avl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by apple on 16/7/30.
  */
@@ -16,9 +19,9 @@ public class AVLTree {
     public boolean insert(int key) {
 
         //如果当前根节点为空,则直接创建新节点
-        if (root == null)
+        if (root == null) {
             root = new AVLNode(key, null);
-        else {
+        } else {
 
             //设置新的临时节点
             AVLNode n = root;

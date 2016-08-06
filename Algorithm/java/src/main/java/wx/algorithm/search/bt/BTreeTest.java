@@ -80,7 +80,7 @@ public class BTreeTest {
 
                         System.out.println("What is the key you wish to search for:");
                         int key2 = input.nextInt();
-                        tree.SearchPrintNode(tree, key2);
+//                        tree.SearchPrintNode(tree, key2);
 
                         break;
                     case 4: //If User Enters 4, this case is executed

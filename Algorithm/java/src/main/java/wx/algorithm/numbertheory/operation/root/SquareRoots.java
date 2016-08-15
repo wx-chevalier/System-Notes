@@ -1,4 +1,4 @@
-package wx.algorithm.numbertheory;
+package wx.algorithm.numbertheory.operation.root;
 
 /**
  * Created by apple on 16/7/29.

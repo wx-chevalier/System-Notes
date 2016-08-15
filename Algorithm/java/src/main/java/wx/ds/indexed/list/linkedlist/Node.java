@@ -1,4 +1,4 @@
-package wx.ds.list.linkedlist;
+package wx.ds.indexed.list.linkedlist;
 
 /**
  * Created by apple on 16/5/11.

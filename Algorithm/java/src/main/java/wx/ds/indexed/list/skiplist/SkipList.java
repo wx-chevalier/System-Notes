@@ -1,4 +1,4 @@
-package wx.ds.list.skiplist;
+package wx.ds.indexed.list.skiplist;
 
 import java.util.NoSuchElementException;
 import java.util.Random;

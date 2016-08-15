@@ -4,6 +4,10 @@ package wx.algorithm.op.dp;
  * Created by apple on 16/8/1.
  */
 
+import org.junit.Test;
+
+import java.util.Scanner;
+
 /**
  * This is an implementation, in Java, of the Longest Common Subsequence algorithm.
  * That is, given two strings A and B, this program will find the longest sequence
@@ -95,10 +99,81 @@ public class LCS {
         return new String(lcs);
     }
 
+    /**
+     * @function 计算两个字符串的最大公共字串的长度，字符不区分大小写
+     * @OJ http://www.nowcoder.com/practice/98dc82c094e043ccb7e0570e5342dd1b?tpId=37&tqId=21298&rp=&ru=/ta/huawei&qru=/ta/huawei/question-ranking
+     */
+    @Test
+    public void LCS_OJ() {
+
+        System.out.println(this.LCS("bacefaebcdfabfaadebdaacabbdabcfffbdcebaabecefddfaceeebaeabebbad", "dedcecfbbbecaffedcedbadadbbfaafcafdd"));
+
+        //测试输入内容
+        Scanner scanner = new Scanner(System.in);
+
+        while (scanner.hasNext()) {
+
+            String str = scanner.nextLine();
+
+            System.out.println(this.LCS(str.split(" ")[0], str.split(" ")[1]));
+
+        }
+
+
+    }
+
+    /**
+     * @param firstStr
+     * @param secondStr
+     * @return
+     * @function 计算最长公共子序列
+     */
+    public int LCS(String firstStr, String secondStr) {
+
+        //采用自底向上的计算方法
+        //当前公共字串长度 =
+        //若当前比较字符串相同 = LCS(firstStr - 1, secondStr - 1) + 1
+        //若当前比较字符串不同 = Max(LCS(firstStr , secondStr - 1),LCS(firstStr - 1, secondStr));
+
+        int firstStrLength = firstStr.length();
+
+        int secondStrLength = secondStr.length();
+
+        if (firstStrLength == 0 || secondStrLength == 0) {
+            //如果两个字符串中某个长度为0,则返回0
+            return 0;
+        }
+
+        char firstStrLastChar = firstStr.charAt(firstStrLength - 1);
+
+        char secondStrLastChar = secondStr.charAt(secondStrLength - 1);
+
+        if (firstStrLastChar == secondStrLastChar) {
+
+            return 1 + LCS(firstStr.substring(0, firstStrLength - 1), secondStr.substring(0, secondStrLength - 1));
+
+        } else {
+
+            int LCS_1 = LCS(firstStr.substring(0, firstStrLength - 1), secondStr.substring(0, secondStrLength));
+
+            int LCS_2 = LCS(firstStr.substring(0, firstStrLength), secondStr.substring(0, secondStrLength - 1));
+
+            if (LCS_1 > LCS_2) {
+                return LCS_1;
+            } else {
+                return LCS_2;
+            }
+
+        }
+
+    }
+
     public static void main(String args[]) {
         try {
-            String s = LCSAlgorithm("adacsfsar3d", "ffadcdacewqe");
+            String s = LCSAlgorithm("bacefaebcdfabfaadebdaacabbdabcfffbdcebaabecefddfaceeebaeabebbad", "dedcecfbbbecaffedcedbadadbbfaafcafdd");
+
             System.out.println(s);
+
         } catch (Exception e) {
             e.printStackTrace();
         }

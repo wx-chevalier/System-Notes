@@ -1,4 +1,4 @@
-package wx.ds.list.skiplist;
+package wx.ds.indexed.list.skiplist;
 
 import org.junit.Assert;
 import org.junit.Before;

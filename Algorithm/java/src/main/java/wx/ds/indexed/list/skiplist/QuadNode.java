@@ -2,7 +2,7 @@
  * Created by apple on 16/7/30.
  */
 
-package wx.ds.list.skiplist;
+package wx.ds.indexed.list.skiplist;
 
 import java.util.NoSuchElementException;
 

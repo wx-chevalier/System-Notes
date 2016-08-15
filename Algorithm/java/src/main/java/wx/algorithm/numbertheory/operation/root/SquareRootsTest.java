@@ -1,4 +1,4 @@
-package wx.algorithm.numbertheory;
+package wx.algorithm.numbertheory.operation.root;
 
 import org.junit.Assert;
 import org.junit.Before;

@@ -41,7 +41,21 @@ Just Coder Massive Knowledge
 
 # ProgrammingParadigm:编程范式
 
-## ConcurrentProgramming:并发编程
+## ConcurrentProgramming:现代并发编程理解与实践
+
+- [现代并发编程导论](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/concurrentprogramming.md)
+
+### ConcurrentModel:现代并发模型
+
+- [现代并发模型](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/ConcurrentModel/concurrentmodel.md)
+- [基于线程、锁与共享状态的并发](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/ConcurrentModel/concurrency-based-on-threads-locks-and-shared-state.md)
+- [基于软件事务内存的并发](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/ConcurrentModel/concurrency-via-software-transactional-memory.md)
+- [基于Actor模型的并发](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/ConcurrentModel/actor-based-concurrency.md)
+- [事件流驱动的并发](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/ConcurrentModel/event-driven-concurrency.md)
+
+### AsynchronousPattern
+
+- [现代异步编程模式](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/AsynchronousPattern/asynchronouspattern.md)
 
 ### IO:IO并发
 

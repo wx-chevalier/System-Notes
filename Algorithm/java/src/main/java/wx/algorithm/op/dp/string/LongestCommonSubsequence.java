@@ -1,4 +1,4 @@
-package wx.algorithm.op.dp;
+package wx.algorithm.op.dp.string;
 
 /**
  * Created by apple on 16/8/1.
@@ -28,7 +28,7 @@ import java.util.Scanner;
  * <p>
  * Copyright (C) 2005 Neil Jones.
  */
-public class LCS {
+public class LongestCommonSubsequence {
     // These are "constants" which indicate a direction in the backtracking array.
     private static final int NEITHER = 0;
     private static final int UP = 1;

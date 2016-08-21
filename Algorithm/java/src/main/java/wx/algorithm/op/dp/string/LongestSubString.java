@@ -1,10 +1,8 @@
-package wx.algorithm.op.dp;
+package wx.algorithm.op.dp.string;
 
 /**
  * Created by apple on 16/8/12.
  */
-
-import org.junit.Test;
 
 /**
  * @function 最长公共子串问题

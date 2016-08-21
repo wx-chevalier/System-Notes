@@ -1,4 +1,4 @@
-package wx.algorithm.op.dp;
+package wx.algorithm.op.dp.string;
 
 
 import java.util.Scanner;

@@ -1,33 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [DataStructure&Algorithm:数据结构与算法](#datastructure&algorithm%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95)
-- [DataStructure:数据结构](#datastructure%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
-  - [IndexCollection:序列结构](#indexcollection%E5%BA%8F%E5%88%97%E7%BB%93%E6%9E%84)
-    - [List:列表](#list%E5%88%97%E8%A1%A8)
-    - [StackQueue:栈与队列](#stackqueue%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97)
-  - [KeyedCollection:键值数据结构](#keyedcollection%E9%94%AE%E5%80%BC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
-    - [HashTable:哈希表](#hashtable%E5%93%88%E5%B8%8C%E8%A1%A8)
-  - [Tree:树](#tree%E6%A0%91)
-    - [Heap:堆](#heap%E5%A0%86)
-  - [Graph:图](#graph%E5%9B%BE)
-  - [Serialization:序列化](#serialization%E5%BA%8F%E5%88%97%E5%8C%96)
-    - [JSON](#json)
-    - [XML](#xml)
-    - [ProtoBuf](#protobuf)
-    - [MsgBack](#msgback)
-    - [Thrift](#thrift)
-- [Algorithm](#algorithm)
-  - [NumberTheory](#numbertheory)
-  - [Search:搜索](#search%E6%90%9C%E7%B4%A2)
-  - [Sorting:排序](#sorting%E6%8E%92%E5%BA%8F)
-  - [Optimization:优化算法](#optimization%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95)
-    - [DynamicProgramming:动态规划](#dynamicprogramming%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
-    - [Greedy:贪心算法](#greedy%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # DataStructure&Algorithm:数据结构与算法
 
 - [数据结构与算法概论](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/datastructure-algorithm.md)
@@ -67,6 +37,8 @@
 ## Graph:图
 
 - [图介绍与表示](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/Graph/graph.md)
+
+- [最小生成树](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/Graph/graph.md)
 
 ## Serialization:序列化
 

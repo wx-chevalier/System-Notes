@@ -19,6 +19,11 @@ public class LongestSubString {
     //构建一个备忘录,记录两个(i,j)下的最长公共子串长度
     private int[][] dp;
 
+    /**
+     * @function
+     * @param firstStr
+     * @param secondStr
+     */
     public LongestSubString(String firstStr, String secondStr) {
 
         this.firstStr = firstStr;
@@ -97,5 +102,7 @@ public class LongestSubString {
 
 
     }
+
+
 
 }

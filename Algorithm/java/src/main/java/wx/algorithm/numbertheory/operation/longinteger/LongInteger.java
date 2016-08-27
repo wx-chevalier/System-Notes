@@ -27,6 +27,8 @@ public class LongInteger {
 
         }
 
+        return "";
+
     }
 
 }

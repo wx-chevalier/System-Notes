@@ -24,6 +24,10 @@ public class LowestCommonAncestor {
 
     //二叉树节点的定义
     public class TreeNode {
+
+
+
+
         int val;
         TreeNode left;
         TreeNode right;
@@ -49,7 +53,9 @@ public class LowestCommonAncestor {
             return root;
         }
 
-
+        int b = 2;
+        int c = 3;
+        int a =b=c;
         //否则在左子树搜索,返回搜索到的节点或者包含该两节点的最近父节点
         TreeNode left = lowestCommonAncestor_Recursion(root.left, p, q);
 

@@ -1,4 +1,4 @@
-package wx.ds.string.longestpalindrome;
+package wx.ds.string.palindrome;
 
 /**
  * Created by apple on 16/8/13.
@@ -7,9 +7,9 @@ package wx.ds.string.longestpalindrome;
 import java.util.Scanner;
 
 /**
- * @function 利用Manacher法求取最长回文字串
+ * @function 处理最长回文子串问题
  */
-public class Manacher {
+public class LongestPalindrome {
 
     /**
      * @param str 原字符串
@@ -27,14 +27,17 @@ public class Manacher {
         //第一个字符串使用特殊字符
         stringBuilder.append("$");
 
+
         stringBuilder.append("#");
 
         for (int i = 0; i < strLength; i = i + 1) {
 
+            //中间开始填充#
             stringBuilder.append(str.charAt(i));
             stringBuilder.append("#");
         }
 
+        //最后一个字符串使用特殊字符
         stringBuilder.append("%");
 
         //填充之后的字符串

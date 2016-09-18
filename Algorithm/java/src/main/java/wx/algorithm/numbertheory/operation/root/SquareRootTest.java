@@ -9,15 +9,15 @@ import java.util.Random;
 /**
  * Created by apple on 16/7/29.
  */
-public class SquareRootsTest {
+public class SquareRootTest {
 
     //用于测试类
-    SquareRoots squareRoots;
+    SquareRoot squareRoots;
 
     @Before
     public void setUp() {
 
-        squareRoots = new SquareRoots(4.695);
+        squareRoots = new SquareRoot(4.695);
 
     }
 
@@ -70,7 +70,7 @@ public class SquareRootsTest {
 
             double value = r.nextDouble() * 1000;
 
-            SquareRoots squareRoots = new SquareRoots(value);
+            SquareRoot squareRoots = new SquareRoot(value);
 
             long start, stop;
 

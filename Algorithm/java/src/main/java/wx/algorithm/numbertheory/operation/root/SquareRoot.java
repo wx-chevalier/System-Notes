@@ -7,14 +7,14 @@ package wx.algorithm.numbertheory.operation.root;
 /**
  * @function 平方根计算
  */
-public class SquareRoots {
+public class SquareRoot {
 
 
     /**
      * @param value 待求取平方根的值
      * @function 带参数的构造函数
      */
-    SquareRoots(double value) {
+    SquareRoot(double value) {
 
         this.value = value;
 

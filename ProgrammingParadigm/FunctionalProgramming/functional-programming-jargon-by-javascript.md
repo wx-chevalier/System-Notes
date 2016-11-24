@@ -171,7 +171,9 @@ Object.freeze({name: 'John', age: 30}) // The `freeze` function enforces immutab
 ---
 
 ## Constant:常量
+
 > 对于一个值的不可变引用，不能跟变量相混淆。Variable即指那些可能在任意点呗更改的引用。
+
 ```js
 const five = 5
 const john = {name: 'John', age: 30}
@@ -179,9 +181,8 @@ const john = {name: 'John', age: 30}
 常量一般认为是透明的，也就是说，它们可以被值本身代替而不影响最终的计算结果，上面的两个常量也可以用下述方式表述：
 ```js
 john.age + five === ({name: 'John', age: 30}).age + (5)
-
 ```
-上述表达式会一直返回真。
+上述表达式会一直返回 `true`。
 
 ---
 

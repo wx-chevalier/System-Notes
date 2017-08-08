@@ -1,4 +1,4 @@
-# DataStructure&Algorithm:数据结构与算法
+# DataStructure&Algorithm: 数据结构与算法
 
 - [数据结构与算法概论](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/datastructure-algorithm.md)
 

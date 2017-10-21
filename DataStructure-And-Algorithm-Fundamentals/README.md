@@ -1,141 +1,175 @@
+
+![](https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*0FlvitTZnPKh8qkJ7UPLeQ/RS/w1408.png?&ssl=1)
+ 
+
 # 数据结构与算法基础
+
+
+
+`Copyright © 2017 王下邀月熊`
+
+
+
+
 
 
 # 前言
 
+
 # 目录
 
-- 数据结构与算法概论
-    - 数据的逻辑结构与物理结构
-    - 算法复杂度分析
 
-- 简单数论
 
-    - [科学计算]()：平方根、位操作
+- [数据结构与算法导论]()
+    
+- [数据的逻辑结构与物理结构]()
+
+    
+- [算法复杂度分析]()
+
+
+
+- [简单数论]()
+    
+- [科学计算]()：平方根、随机数、进制转换
+
+    
+- [数组序列]()
+
+    
+- [矩阵乘法]()
+
+    
+- [大数运算]()
+
+    
+- [位运算]()
+
+
+
 
 - 排序
+    
+- [基础排序算法]()    
+
+    
+- [优化排序算法]()
+
+    
+- [其他排序算法]()
+
+    
+- [大数据外部排序]()
+
+
 
 - 搜索
 
+
 - 字符串
+    - 回文子串
+
+
+
+- 模式匹配
+    - 正则表达式
+
+    
 
 - 树
 
-- 图
+
+- 图论
+    
+- [图基础]()
+
+    
+- [最短路径]()
+
+    
+- [最小生成树]()
+
+
 
 - 序列
 
-- 集合
 
-- 优化算法
+- 映射
 
-- 序列化与反序列化
+
+
+- [优化算法]()
+    
+- [贪婪算法]()
+
+    
+- [动态规划]()    
+
+
+
+
+- [序列化与反序列化]()
+
+
+
+- [动态规划进阶]()
+
+
+# 题库
+
+
+
+## Java 
+
+
+### 通用数据结构
+
+
+## Python
+
+
+### 通用数据结构
+
+
+
+## JavaScript
+
+
+### 通用数据结构
+
+
+
+## Go
+
+
+### 通用数据结构
+
+
 
 # 参考
 
+
+
 # 狗粮
 
+
+
 如果觉得本系列对你有所帮助，欢迎给我家布丁买点狗粮（支付宝扫码）~
+
+
 
 ![](https://github.com/wxyyxc1992/OSS/blob/master/2017/8/1/Buding.jpg?raw=true)
 
 
 
-# 原目录
+# 版权
 
 
-- [数据结构与算法概论](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/datastructure-algorithm.md)
 
-- [数据结构与算法Java版本实现](https://github.com/wxyyxc1992/just-coder-handbook/tree/master/Algorithm/java)
+![](https://parg.co/bDY)
 
-- [数据结构与算法Python版本实现](https://github.com/wxyyxc1992/just-coder-handbook/tree/master/Algorithm/python)
 
-# DataStructure:数据结构
+![](https://parg.co/bDm)
 
-## IndexCollection:序列结构
+笔者所有文章遵循 [知识共享 署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。
 
-### List:列表
-
-- [列表详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/IndexCollection/List/list.md)
-- [链表详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/IndexCollection/List/linkedlist.md)
-- [跳跃表详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/IndexCollection/List/skiplist.md)
-
-### StackQueue:栈与队列
-- [栈详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/IndexCollection/StackQueue/stack.md)
-- [队列详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/IndexCollection/StackQueue/queue.md)
-
-## KeyedCollection:键值数据结构
-
-### HashTable:哈希表
-
-- [哈希表详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/KeyedCollection/HashTable/hashtable.md)
-
-## Tree:树
-
-- [树介绍与表示](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/Tree/tree.md)
-
-### Heap:堆
-
-- [堆详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/Tree/Heap/heap.md)
-
-## Graph:图
-
-- [图介绍与表示](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/Graph/graph.md)
-
-- [最小生成树](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/Graph/graph.md)
-
-## Serialization:序列化
-
-### JSON
-
-- [JSON](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/Serialization/JSON/json.md)
-
-- [JSON扩展](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/Serialization/JSON/json-extension.md)
-
-- [BSON:二进制格式的JSON](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/Serialization/JSON/bson.md)
-
-### XML
-
-- [XML](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/Serialization/XML/xml.md)
-
-### ProtoBuf
-
-### MsgBack
-
-### Thrift
-
-# Algorithm
-
-## NumberTheory
-
-- [科学计算详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/NumberTheory/scientificcalculation.md)
-
-- [常用的平方根算法详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/NumberTheory/squareroot.md)
-
-## Search:搜索
-
-- [常见搜索算法与比较](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Search/search.md)
-
-- [二叉搜索树详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Search/binarysearchtree.md)
-
-- [AVL平衡二叉树详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Search/avl.md)
-
-- [红黑树详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Search/redblacktree.md)
-
-- [B-Tree及其变种B+树,B*树详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Search/b-tree.md)
-
-## Sorting:排序
-
-- [基本排序算法详解与实现:插入排序、冒泡排序与选择排序](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Sorting/sorting.md)
-
-- [经典优化排序算法详解与实现:快速排序、合并排序、堆排序与桶排序](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Sorting/optimized-sorting.md)
-
-- [其他排序算法详解与实现:希尔排序、基数排序、二叉树排序与计数排序](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Sorting/other-sorting.md)
-
-## Optimization:优化算法
-### DynamicProgramming:动态规划
-- [动态规划详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Optimization/DynamicProgramming/dynamicprogramming.md)
-
-### Greedy:贪心算法
-
-- [贪心算法详解与实现](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/doc/Optimization/Greedy/greedy.md)

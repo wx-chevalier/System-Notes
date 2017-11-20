@@ -1,98 +1,31 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+# 软件工程基础
 
-- [just-coder-handbook](#just-coder-handbook)
-- [DataStructure&Algorithm:数据结构与算法](#datastructurealgorithm%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95)
-- [ProgrammingParadigm:编程范式](#programmingparadigm%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F)
-    - [ConcurrentProgramming:现代并发编程理解与实践](#concurrentprogramming%E7%8E%B0%E4%BB%A3%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%90%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E8%B7%B5)
-        - [ConcurrentModel:现代并发模型](#concurrentmodel%E7%8E%B0%E4%BB%A3%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B)
-        - [AsynchronousPattern](#asynchronouspattern)
-        - [IO:IO并发](#ioio%E5%B9%B6%E5%8F%91)
-    - [FunctionalProgramming:函数式编程](#functionalprogramming%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B)
-- [SoftwareEngineering:软件工程](#softwareengineering%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B)
-    - [SoftwareArchitecture:软件架构](#softwarearchitecture%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84)
-    - [GUIArchitecture](#guiarchitecture)
-    - [NetworkBasedArchitecture](#networkbasedarchitecture)
-        - [QueryLanguage:查询语言](#querylanguage%E6%9F%A5%E8%AF%A2%E8%AF%AD%E8%A8%80)
-            - [GraphQL](#graphql)
-        - [RESTful](#restful)
-    - [SoftwareTest:软件测试](#softwaretest%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95)
-- [VersionControl:版本控制](#versioncontrol%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6)
-    - [Git](#git)
-        - [Branch](#branch)
-            - [Rebase](#rebase)
-        - [Practice](#practice)
+软件开发就是把一个复杂的问题分解为一系列简单的问题，再把一系列简单的解决方案组合成一个复杂的解决方案。
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+- [数据结构与算法基础]()
 
-# just-coder-handbook
-Just Coder Massive Knowledge 
+- [团队协同开发与软件质量保障必知必会]()
 
-> There are only two hard things in Computer Science: cache invalidation and naming things. — Phil Karlton
+- [设计模式与软件架构之禅]()
 
-# DataStructure&Algorithm:数据结构与算法
+***
 
-- [数据结构与算法系列文章目录](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/DataStructure/README.md)
+# 关于
+
+## 规划
+
+## 致谢
+
+由于笔者平日忙于工作，几乎所有线上的文档都是我夫人帮忙整理，在此特别致谢；同时也感谢我家的布丁安静的趴在脚边，不再那么粪发涂墙。
 
 
-# ProgrammingParadigm:编程范式
+## 版权
 
-## ConcurrentProgramming:现代并发编程理解与实践
-
-- [现代并发编程导论](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/concurrentprogramming.md)
-
-### ConcurrentModel:现代并发模型
-
-- [现代并发模型](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/ConcurrentModel/concurrentmodel.md)
-- [基于线程、锁与共享状态的并发](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/ConcurrentModel/concurrency-based-on-threads-locks-and-shared-state.md)
-- [基于软件事务内存的并发](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/ConcurrentModel/concurrency-via-software-transactional-memory.md)
-- [基于Actor模型的并发](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/ConcurrentModel/actor-based-concurrency.md)
-- [事件流驱动的并发](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/ConcurrentModel/event-driven-concurrency.md)
-
-### AsynchronousPattern
-
-- [现代异步编程模式](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/AsynchronousPattern/asynchronouspattern.md)
-
-### IO:IO并发
-
-- [并发IO详解](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/ConcurrentProgramming/IO/Concurrent-IO.md)
-
-## FunctionalProgramming:函数式编程
-
-- [以JavaScript讲解函数式编程中的常见概念](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/ProgrammingParadigm/FunctionalProgramming/functional-programming-jargon-by-javascript.md)
-
-# SoftwareEngineering:软件工程
-
-## SoftwareArchitecture:软件架构
-
-## GUIArchitecture
-
-- [GUI应用程序架构的十年变迁:MVC,MVP,MVVM,Unidirectional,Clean](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/SoftwareEngineering/SoftwareArchitecture/GUIArchitecture/evolution-of-gui-architectural-patterns.md)
-
-## NetworkBasedArchitecture
-
-### QueryLanguage:查询语言
-#### GraphQL
-- [GraphQL入门指南](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/SoftwareEngineering/SoftwareArchitecture/NetworkBasedArchitecture/QueryLanguage/GraphQL/graphql.md)
-
-### RESTful
-
-- [来自Paypal的API接口风格最佳实践](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/SoftwareEngineering/SoftwareArchitecture/NetworkBasedArchitecture/RESTful/paypal-api-standards.md)
-- [来自微软的API接口指南](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/SoftwareEngineering/SoftwareArchitecture/NetworkBasedArchitecture/RESTful/microsoft-api-guidelines.md)
-
-## SoftwareTest:软件测试
-
-- [单元测试中Mock与Stub概念浅述](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/SoftwareEngineering/SoftwareTest/UnitTest.md)
+![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
+![](https://parg.co/bDm)
 
 
+笔者所有文章遵循 [知识共享 署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。如果觉得本系列对你有所帮助，欢迎给我家布丁买点狗粮（支付宝扫码）~
 
-# VersionControl:版本控制
-## Git
-### Branch
-#### Rebase
-- [Git Rebase与所谓的黄金准则浅析](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/VersionControl/Git/Branch/Rebase/git-rebase-and-the-gloden-rule-explained.md)
-
-### Practice
-- [常用的数十个Git Tips](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/VersionControl/Git/Practice/git-tips.md)
+![](https://github.com/wxyyxc1992/OSS/blob/master/2017/8/1/Buding.jpg?raw=true)
 

@@ -1,0 +1,8 @@
+[package]
+name = "quick-sort"
+version = "0.1.0"
+authors = ["wxyyxc1992 <384924552@qq.com>"]
+
+[dependencies]
+time = "0.1.12"
+regex = "0.1.41"

@@ -582,7 +582,7 @@ events可以是以下几个宏的集合：
 
 ## Demo
 
-> 本部分代码实现参考[可能是最接地气的 I/O 多路复用小结](https://mengkang.net/726.html?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
+> 本部分代码实现参考[可能是最接地气的 I/O 多路复用小结](https://mengkang.net/726.html)
 
 
 

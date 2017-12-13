@@ -1,4 +1,4 @@
-[toc]
+
 
 > [关于初创公司的研发体系构建，这可能是最成功的案例了](http://mp.weixin.qq.com/s?__biz=MzA5Nzc4OTA1Mw==&mid=410367860&idx=1&sn=d9f4fdc1c4ace8ce46a277930f141288&scene=0#wechat_redirect) > [创业做一个 App 究竟要花多少钱？ ](http://mp.weixin.qq.com/s?__biz=MjM5OTM5OTAyMQ==&mid=405273138&idx=1&sn=0d36a4c45a90b8170df5b9b9ed8a28ca&scene=23&srcid=#rd)
 

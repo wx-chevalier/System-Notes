@@ -5,7 +5,7 @@
 
 
 
-- [Html to pdf converter in nodejs](https://github.com/marcbachmann/node-html-pdf?utm_source=mybridge&utm_medium=web&utm_campaign=read_more)
+- [Html to pdf converter in nodejs](https://github.com/marcbachmann/node-html-pdf)
 
 # DOCX2PDF
 

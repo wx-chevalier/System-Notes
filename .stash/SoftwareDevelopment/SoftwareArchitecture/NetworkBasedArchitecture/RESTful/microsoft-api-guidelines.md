@@ -1,6 +1,6 @@
-> - [原文地址:Microsoft API Guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#63-silent-fail-rule)
+- [原文地址:Microsoft API Guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#63-silent-fail-rule)
 
-> - [笔者有关于REST系列文章](https://github.com/wxyyxc1992/just-coder-handbook/#restful)
+- [笔者有关于REST系列文章](https://github.com/wxyyxc1992/just-coder-handbook/#restful)
 
 > 笔者之前翻译过一篇[来自于PayPal的RESTful API标准](https://segmentfault.com/a/1190000005924733)，其是PayPal内部遵循的RESTful的接口规范，本文则是微软提出的API 风格指南，笔者认为二者各有优劣。微软的准则相对更加详细严谨，但是对于复杂资源请求，却没有PayPal提及的多。本文目前仅包含第一部分的翻译，笔者日后为添加上第二部分。
 

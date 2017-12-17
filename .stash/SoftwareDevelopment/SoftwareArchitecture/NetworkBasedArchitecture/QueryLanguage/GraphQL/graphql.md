@@ -744,4 +744,4 @@ $ curl -XPOST -H 'Content-Type:application/graphql' -d 'mutation RootMutationTyp
 
 # GraphiQL
 
-> - [graphiql-graphql-s-killer-app](https://medium.com/the-graphqlhub/graphiql-graphql-s-killer-app-9896242b2125#.gork8qie3)
+- [graphiql-graphql-s-killer-app](https://medium.com/the-graphqlhub/graphiql-graphql-s-killer-app-9896242b2125#.gork8qie3)

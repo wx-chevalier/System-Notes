@@ -282,7 +282,7 @@ var hello = Header({ text: 'Hello' }); var bye   = Header({ text: 'Good Bye' });
 
 > 可变的与不可预测的状态是软件开发中的万恶之源
 
-> - [Web开发中所谓状态浅析:Domain State&UI State](https://github.com/wxyyxc1992/web-frontend-practice-handbook/blob/master/advanced/engineering/state/domain-state-vs-ui-state.md)
+- [Web开发中所谓状态浅析:Domain State&UI State](https://github.com/wxyyxc1992/web-frontend-practice-handbook/blob/master/advanced/engineering/state/domain-state-vs-ui-state.md)
 
 
 
@@ -1445,7 +1445,7 @@ This means that one change (a user input or API response) can affect the state o
 
 
 
-> - [easier-reasoning-with-unidirectional-dataflow-and-immutable-data](https://open.bekk.no/easier-reasoning-with-unidirectional-dataflow-and-immutable-data)
+- [easier-reasoning-with-unidirectional-dataflow-and-immutable-data](https://open.bekk.no/easier-reasoning-with-unidirectional-dataflow-and-immutable-data)
 
 
 

@@ -154,4 +154,4 @@
 
 # Cuckoo Filter
 
-> [Cuckoo Filter：设计与实现](http://coolshell.cn/articles/17225.html?utm_source=tuicool&utm_medium=referral) > [CFilter](https://github.com/irfansharif/cfilter)
+> [Cuckoo Filter：设计与实现](http://coolshell.cn/articles/17225.html) > [CFilter](https://github.com/irfansharif/cfilter)

@@ -363,7 +363,7 @@ var hello = Header({ text: 'Hello' }); var bye   = Header({ text: 'Good Bye' });
 
 - [Model-View-Controller (MVC) in iOS: A Modern Approach](https://www.raywenderlich.com/132662/mvc-in-ios-a-modern-approach)
 
-- [为什么我不再使用MVC框架](http://www.infoq.com/cn/articles/no-more-mvc-frameworks?utm_source=infoq_en&utm_medium=link_on_en_item&utm_campaign=item_in_other_langs)
+- [为什么我不再使用MVC框架](http://www.infoq.com/cn/articles/no-more-mvc-frameworks)
 
 - [difference-between-mvc-mvp-mvvm-swapneel-salunkhe](https://www.linkedin.com/pulse/difference-between-mvc-mvp-mvvm-swapneel-salunkhe)
 

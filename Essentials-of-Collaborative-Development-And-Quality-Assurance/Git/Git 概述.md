@@ -1,4 +1,4 @@
-[TOC]
+
 
 # Git
 
@@ -42,7 +42,7 @@ works for you. Angels sing, and a light suddenly fills the room.
 ### Practices & Resources
 
 - [探索 .git 目录，让你真正了理解git](http://blog.jobbole.com/98634/?f=tt&hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
-- [dropbox-as-a-true-git-server](http://www.anishathalye.com/2016/04/25/dropbox-as-a-true-git-server/?utm_source=tuicool&utm_medium=referral)
+- [dropbox-as-a-true-git-server](http://www.anishathalye.com/2016/04/25/dropbox-as-a-true-git-server/)
 - [Git tips](https://github.com/git-tips/tips):常用的Git小技巧
 ### Books & Tools
 

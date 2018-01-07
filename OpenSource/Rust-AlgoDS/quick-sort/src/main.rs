@@ -1,6 +1,6 @@
 fn main() {
 
-    let mut x = "1";
+    let x = "1";
 
     print_number(x);
 }

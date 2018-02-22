@@ -1,169 +1,24 @@
-
 ![](https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*0FlvitTZnPKh8qkJ7UPLeQ/RS/w1408.png?&ssl=1)
- 
 
 # 数据结构与算法基础
 
 `Copyright © 王下邀月熊`
 
+> “Bad programmers worry about the code. Good programmers worry about data structures and their relationships.”
+> — Linus Torvalds, creator of Linux
 
 # 前言
 
+## 参考
 
-# 目录
-
-
-
-- [数据结构与算法导论]()
-    
-- [数据的逻辑结构与物理结构]()
-
-    
-- [算法复杂度分析]()
-
-
-
-- [简单数论]()
-    
-- [科学计算]()：平方根、随机数、进制转换
-
-    
-- [数组序列]()
-
-    
-- [矩阵乘法]()
-
-    
-- [大数运算]()
-
-    
-- [位运算]()
-
-
-
-
-- 排序
-    
-- [基础排序算法]()    
-
-    
-- [优化排序算法]()
-
-    
-- [其他排序算法]()
-
-    
-- [大数据外部排序]()
-
-
-
-- 搜索
-
-
-- 字符串
-    - 回文子串
-
-
-
-- 模式匹配
-    - 正则表达式
-
-    
-
-- 树
-
-
-- 图论
-    
-- [图基础]()
-
-    
-- [最短路径]()
-
-    
-- [最小生成树]()
-
-
-
-- 序列
-
-
-- 映射
-
-
-
-- [优化算法]()
-    
-- [贪婪算法]()
-
-    
-- [动态规划]()    
-
-
-
-
-- [序列化与反序列化]()
-
-
-
-- [动态规划进阶]()
-
-
-# 题库
-
-
-
-## Java 
-
-
-### 通用数据结构
-
-
-## Python
-
-
-### 通用数据结构
-
-
-
-## JavaScript
-
-
-### 通用数据结构
-
-
-
-## Go
-
-
-### 通用数据结构
-
-
-
-# 参考
-
-
-
-# 狗粮
-
-
-
-如果觉得本系列对你有所帮助，欢迎给我家布丁买点狗粮（支付宝扫码）~
-
-
-
-![](https://github.com/wxyyxc1992/OSS/blob/master/2017/8/1/Buding.jpg?raw=true)
-
-
-
-# 版权
-
-
+## 版权
 
 ![](https://parg.co/bDY)
 
-
 ![](https://parg.co/bDm)
 
-笔者所有文章遵循 [知识共享 署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。
+笔者所有文章遵循 [知识共享 署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。如果觉得本系列对你有所帮助，欢迎给我家布丁买点狗粮（支付宝扫码）~
 
+![](https://github.com/wxyyxc1992/OSS/blob/master/2017/8/1/Buding.jpg?raw=true)
+
+# 目录

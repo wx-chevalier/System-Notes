@@ -2,11 +2,11 @@
 
 软件开发就是把一个复杂的问题分解为一系列简单的问题，再把一系列简单的解决方案组合成一个复杂的解决方案。
 
-* [数据结构与算法基础](./DataStructure-And-Algorithm-Fundamentals)
+* [数据结构与算法篇](./AlgoDS)
 
-* [团队协同开发与软件质量保障必知必会](./Essentials-of-Collaborative-Development-And-Quality-Assurance)
+* [协同开发篇](./CollaborativeDevelopment)
 
-* [设计模式与软件架构之禅](./Zen-of-DesignPattern-And-SoftwareArchitecture)
+* [设计模式与软件架构篇](./DesignPattern)
 
 ---
 

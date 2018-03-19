@@ -6,7 +6,9 @@
 
 * [协同开发篇](./CollaborativeDevelopment)
 
-* [设计模式与软件架构篇](./DesignPattern)
+* [设计模式篇](./DesignPattern)
+
+* [软件架构篇](./SoftwareArchitecture)
 
 ---
 

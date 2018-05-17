@@ -10,7 +10,7 @@
 # DOCX2PDF
 
 
-将DOCX文档转化为PDF是项目中常见的需求之一，目前主流的方法可以分为两大类，一类是利用各种Office应用进行转换，譬如Microsoft Office、WPS以及LiberOffice，另一种是利用各种语言提供的对于Office文档读取的接口（譬如Apache POI）然后使用专门的PDFGenerator库，譬如IText进行PDF构建。总的来说，从样式上利用Office应用可以保证较好的样式，不过相对而言效率会比较低。其中Microsoft Office涉及版权，不可轻易使用（笔者所在公司就被抓包了），WPS目前使用比较广泛，不过存在超链接截断问题，即超过256个字符的超链接会被截断，LiberOffice的样式排版相对比较随意。而利用POI接口进行读取与生成的方式性能较好，适用于对于格式要求不是很高的情况。另外还有一些封装好的在线工具或者命令行工具，譬如[docx2pdf](https://github.com/casatir/docx2pdf)与[OfficeToPDF](http://officetopdf.codeplex.com/releases/view/620406)。
+将DOCX文档转化为PDF是项目中常见的需求之一，目前主流的方法可以分为两大类，一类是利用各种Office应用进行转换，譬如Microsoft Office、WPS以及LiberOffice，另一种是利用各种语言提供的对于Office文档读取的接口(譬如Apache POI)然后使用专门的PDFGenerator库，譬如IText进行PDF构建。总的来说，从样式上利用Office应用可以保证较好的样式，不过相对而言效率会比较低。其中Microsoft Office涉及版权，不可轻易使用(笔者所在公司就被抓包了)，WPS目前使用比较广泛，不过存在超链接截断问题，即超过256个字符的超链接会被截断，LiberOffice的样式排版相对比较随意。而利用POI接口进行读取与生成的方式性能较好，适用于对于格式要求不是很高的情况。另外还有一些封装好的在线工具或者命令行工具，譬如[docx2pdf](https://github.com/casatir/docx2pdf)与[OfficeToPDF](http://officetopdf.codeplex.com/releases/view/620406)。
 
 
 ## MicroSoft Office

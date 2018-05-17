@@ -8,23 +8,23 @@
 
 为了 add 一个元素，用 k 个 hash function 将它 hash 得到 bloom filter 中 k 个 bit 位，将这 k 个 bit 位置 1。
 
-为了 query 一个元素，即判断它是否在集合中，用 k 个 hash function 将它 hash 得到 k 个 bit 位。若这 k bits 全为 1，则此元素在集合中；若其中任一位不为 1，则此元素比不在集合中（因为如果在，则在 add 时已经把对应的 k 个 bits 位置为 1）。
+为了 query 一个元素，即判断它是否在集合中，用 k 个 hash function 将它 hash 得到 k 个 bit 位。若这 k bits 全为 1，则此元素在集合中；若其中任一位不为 1，则此元素比不在集合中(因为如果在，则在 add 时已经把对应的 k 个 bits 位置为 1)。
 
 不允许 remove 元素，因为那样的话会把相应的 k 个 bits 位置为 0，而其中很有可能有其他元素对应的位。因此 remove 会引入 false negative，这是绝对不被允许的。
 
-当 k 很大时，设计 k 个独立的 hash function 是不现实并且困难的。对于一个输出范围很大的 hash function（例如 MD5 产生的 128 bits 数），如果不同 bit 位的相关性很小，则可把此输出分割为 k 份。或者可将 k 个不同的初始值（例如 0,1,2, … ,k-1）结合元素，feed 给一个 hash function 从而产生 k 个不同的数。
+当 k 很大时，设计 k 个独立的 hash function 是不现实并且困难的。对于一个输出范围很大的 hash function(例如 MD5 产生的 128 bits 数)，如果不同 bit 位的相关性很小，则可把此输出分割为 k 份。或者可将 k 个不同的初始值(例如 0,1,2, … ,k-1)结合元素，feed 给一个 hash function 从而产生 k 个不同的数。
 
-当 add 的元素过多时，即 n/m 过大时（n 是元素数，m 是 bloom filter 的 bits 数），会导致 false positive 过高，此时就需要重新组建 filter，但这种情况相对少见。
+当 add 的元素过多时，即 n/m 过大时(n 是元素数，m 是 bloom filter 的 bits 数)，会导致 false positive 过高，此时就需要重新组建 filter，但这种情况相对少见。
 
 ### 时间与空间优势
 
-当可以承受一些误报时，布隆过滤器比其它表示集合的数据结构有着很大的空间优势。例如 self-balance BST, tries, hash table 或者 array, chain，它们中大多数至少都要存储元素本身，对于小整数需要少量的 bits，对于字符串则需要任意多的 bits（tries 是个例外，因为对于有相同 prefixes 的元素可以共享存储空间）；而 chain 结构还需要为存储指针付出额外的代价。对于一个有 1%误报率和一个最优 k 值的布隆过滤器来说，无论元素的类型及大小，每个元素只需要 9.6 bits 来存储。这个优点一部分继承自 array 的紧凑性，一部分来源于它的概率性。如果你认为 1%的误报率太高，那么对每个元素每增加 4.8 bits，我们就可将误报率降低为原来的 1/10。add 和 query 的时间复杂度都为 O(k)，与集合中元素的多少无关，这是其他数据结构都不能完成的。
+当可以承受一些误报时，布隆过滤器比其它表示集合的数据结构有着很大的空间优势。例如 self-balance BST, tries, hash table 或者 array, chain，它们中大多数至少都要存储元素本身，对于小整数需要少量的 bits，对于字符串则需要任意多的 bits(tries 是个例外，因为对于有相同 prefixes 的元素可以共享存储空间)；而 chain 结构还需要为存储指针付出额外的代价。对于一个有 1%误报率和一个最优 k 值的布隆过滤器来说，无论元素的类型及大小，每个元素只需要 9.6 bits 来存储。这个优点一部分继承自 array 的紧凑性，一部分来源于它的概率性。如果你认为 1%的误报率太高，那么对每个元素每增加 4.8 bits，我们就可将误报率降低为原来的 1/10。add 和 query 的时间复杂度都为 O(k)，与集合中元素的多少无关，这是其他数据结构都不能完成的。
 
-如果可能元素范围不是很大，并且大多数都在集合中，则使用确定性的 bit array 远远胜过使用布隆过滤器。因为 bit array 对于每个可能的元素空间上只需要 1 bit，add 和 query 的时间复杂度只有 O(1)。注意到这样一个哈希表（bit array）只有在忽略 collision 并且只存储元素是否在其中的二进制信息时，才会获得空间和时间上的优势，而在此情况下，它就有效地称为了 k=1 的布隆过滤器。
+如果可能元素范围不是很大，并且大多数都在集合中，则使用确定性的 bit array 远远胜过使用布隆过滤器。因为 bit array 对于每个可能的元素空间上只需要 1 bit，add 和 query 的时间复杂度只有 O(1)。注意到这样一个哈希表(bit array)只有在忽略 collision 并且只存储元素是否在其中的二进制信息时，才会获得空间和时间上的优势，而在此情况下，它就有效地称为了 k=1 的布隆过滤器。
 
-而当考虑到 collision 时，对于有 m 个 slot 的 bit array 或者其他哈希表（即 k=1 的布隆过滤器），如果想要保证 1%的误判率，则这个 bit array 只能存储 m/100 个元素，因而有大量的空间被浪费，同时也会使得空间复杂度急剧上升，这显然不是 space efficient 的。解决的方法很简单，使用 k>1 的布隆过滤器，即 k 个 hash function 将每个元素改为对应于 k 个 bits，因为误判度会降低很多，并且如果参数 k 和 m 选取得好，一半的 m 可被置为为 1，这充分说明了布隆过滤器的 space efficient 性。
+而当考虑到 collision 时，对于有 m 个 slot 的 bit array 或者其他哈希表(即 k=1 的布隆过滤器)，如果想要保证 1%的误判率，则这个 bit array 只能存储 m/100 个元素，因而有大量的空间被浪费，同时也会使得空间复杂度急剧上升，这显然不是 space efficient 的。解决的方法很简单，使用 k>1 的布隆过滤器，即 k 个 hash function 将每个元素改为对应于 k 个 bits，因为误判度会降低很多，并且如果参数 k 和 m 选取得好，一半的 m 可被置为为 1，这充分说明了布隆过滤器的 space efficient 性。
 
-以垃圾邮件过滤中黑白名单为例：现有 1 亿个 email 的黑名单，每个都拥有 8 bytes 的指纹信息，则可能的元素范围为 [![clip_image00](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318584027.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318572980.png) ，对于 bit array 来说是根本不可能的范围，而且元素的数量（即 email 列表）为 [![clip_image002[]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318585390.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318586502.png) ，相比于元素范围过于稀疏，而且还没有考虑到哈希表中的 collision 问题。
+以垃圾邮件过滤中黑白名单为例：现有 1 亿个 email 的黑名单，每个都拥有 8 bytes 的指纹信息，则可能的元素范围为 [![clip_image00](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318584027.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318572980.png) ，对于 bit array 来说是根本不可能的范围，而且元素的数量(即 email 列表)为 [![clip_image002[]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318585390.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318586502.png) ，相比于元素范围过于稀疏，而且还没有考虑到哈希表中的 collision 问题。
 
 若采用哈希表，由于大多数采用 open addressing 来解决 collision，而此时的 search 时间复杂度为 ：
 
@@ -34,9 +34,9 @@
 
 [![clip_image002[1]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318599402.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318595847.png)
 
-若采用 Perfect hashing（这里可以采用 Perfect hashing 是因为主要操作是 search/query，而并不是 add 和 remove），虽然保证 worst-case 也只有一次 probe，但是空间利用率更低，一般情况下为 50%，worst-case 时有不到一半的概率为 25%。
+若采用 Perfect hashing(这里可以采用 Perfect hashing 是因为主要操作是 search/query，而并不是 add 和 remove)，虽然保证 worst-case 也只有一次 probe，但是空间利用率更低，一般情况下为 50%，worst-case 时有不到一半的概率为 25%。
 
-若采用布隆过滤器，取 k=8。因为 n 为 1 亿，所以总共需要 [![clip_image002[1]](http://images.cnblogs.com/cnblogs_com/allensun/201102/20110216231900208.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318598289.png) 被置位为 1，又因为在保证误判率低且 k 和 m 选取合适时，空间利用率为 50%（后面会解释），所以总空间为：
+若采用布隆过滤器，取 k=8。因为 n 为 1 亿，所以总共需要 [![clip_image002[1]](http://images.cnblogs.com/cnblogs_com/allensun/201102/20110216231900208.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318598289.png) 被置位为 1，又因为在保证误判率低且 k 和 m 选取合适时，空间利用率为 50%(后面会解释)，所以总空间为：
 
 [![clip_image002[1]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319003174.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319009303.png)
 

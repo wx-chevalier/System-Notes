@@ -1,4 +1,4 @@
-> [测试中 Fakes、Mocks 以及 Stubs 概念明晰](https://zhuanlan.zhihu.com/p/26942686)翻译自[Test Doubles - Fakes, Mocks and Stubs.](https://dev.to/milipski/test-doubles---fakes-mocks-and-stubs)，从属于笔者的[软件测试](https://parg.co/b8b)系列总结，也是笔者在[前端每周清单](https://zhuanlan.zhihu.com/p/26920959)中推荐的文章。在自动化测试中，我们经常会使用一些简化但是类似于生产环境下的对象复制品来进行测试，从而简化测试的复杂度、允许仅对测试目标而独立于其实际耦合模块进行测试。本文则是形象生动地介绍了常见的测试复制品（Test Doubles）中 Mocks、Fakes 以及 Stubs 的区别。
+> [测试中 Fakes、Mocks 以及 Stubs 概念明晰](https://zhuanlan.zhihu.com/p/26942686)翻译自[Test Doubles - Fakes, Mocks and Stubs.](https://dev.to/milipski/test-doubles---fakes-mocks-and-stubs)，从属于笔者的[软件测试](https://parg.co/b8b)系列总结，也是笔者在[前端每周清单](https://zhuanlan.zhihu.com/p/26920959)中推荐的文章。在自动化测试中，我们经常会使用一些简化但是类似于生产环境下的对象复制品来进行测试，从而简化测试的复杂度、允许仅对测试目标而独立于其实际耦合模块进行测试。本文则是形象生动地介绍了常见的测试复制品(Test Doubles)中 Mocks、Fakes 以及 Stubs 的区别。
 
 # 测试中 Fakes、Mocks 以及 Stubs 概念明晰
 自动化测试中，我们常会使用一些经过简化的，行为与表现类似于生产环境下的对象的复制品。引入这样的复制品能够降低构建测试用例的复杂度，允许我们独立而解耦地测试某个模块，不再担心受到系统中其他部分的影响；这类型对象也就是所谓的 Test Double。实际上对于 Test Double 的定义与阐述也是见仁见智，Gerard Meszaros 在[这篇文章](http://xunitpatterns.com/Test%20Double.html)中就介绍了五个不同的 Double 类型；而人们更倾向于使用 Mock 来统一描述不同的 Test Doubles。不过对于 Test Doubles 实现的误解还是可能会影响到测试的设计，使测试用例变得混乱和脆弱，最终带来不必要的重构。本文则是从作者个人的角度描述了常见的 Test Doubles 类型及其具体的实现：Fake、Stub 与 Mock，并且给出了不同的 Double 的使用场景。
@@ -77,7 +77,7 @@ public class GradesServiceTest {
 
 # Command Query Separation
 
-仅返回部分结果而并没有真实改变系统状态的的方法被称作查询（Query）。譬如 `avarangeGrades`，用于返回学生成绩平均值的函数就是非常典型的例子：`Double getAverageGrades(Student student);`。该函数仅返回了某个值，而没有其他的任何副作用。正如我们上文中介绍的，我们可以使用 Stubs 来替换提供实际成绩值的函数，从而简化了整个测试用例的编写。不过除了 Query 之外还有另一个类别的方法，被称作 Command。即当某个函数在执行某些操作的时候还改变了系统状态，不过该类型函数往往没有什么返回值：void sendReminderEmail(Student student);。这种对于方法的划分方式也就是 Bertrand Meyer 在 [Object Oriented Software Construction](https://www.amazon.com/Object-Oriented-Software-Construction-Book-CD-ROM/dp/0136291554) 一书中介绍的 Command Query 分割法。
+仅返回部分结果而并没有真实改变系统状态的的方法被称作查询(Query)。譬如 `avarangeGrades`，用于返回学生成绩平均值的函数就是非常典型的例子：`Double getAverageGrades(Student student);`。该函数仅返回了某个值，而没有其他的任何副作用。正如我们上文中介绍的，我们可以使用 Stubs 来替换提供实际成绩值的函数，从而简化了整个测试用例的编写。不过除了 Query 之外还有另一个类别的方法，被称作 Command。即当某个函数在执行某些操作的时候还改变了系统状态，不过该类型函数往往没有什么返回值：void sendReminderEmail(Student student);。这种对于方法的划分方式也就是 Bertrand Meyer 在 [Object Oriented Software Construction](https://www.amazon.com/Object-Oriented-Software-Construction-Book-CD-ROM/dp/0136291554) 一书中介绍的 Command Query 分割法。
 对于 Query 类型的方法我们会优先考虑使用 Stub 来代替方法的返回值，而对于 Command 类型的方法的测试则需要依赖于 Mock。
 
 # Mock

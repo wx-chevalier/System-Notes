@@ -16,7 +16,7 @@
 * 是否支持第三方支付，譬如支付宝、微信支付等
 * 是否支持即时聊天，譬如在线网页聊天等
 * 是否需要支持文件上传，是否需要支持流媒体播放
-* 是否需要支持 LBS 地理位置信息展示功能模块 LBS：百度 Pay：BeeCloud Media ： TuSDK、Vitamio CloudStorage ： Qiniu
+* 是否需要支持 LBS 地理位置信息展示功能模块 LBS：百度 Pay：BeeCloud Media : TuSDK、Vitamio CloudStorage : Qiniu
 
 ### 可用性需求
 
@@ -63,7 +63,7 @@
 笔者在最早接触 iOS 开发的时候，觉得这最麻烦的一点就是申请开发者账户巴拉巴拉拉的。苹果的开发者账户分为三种：个人、公司团队与企业。一般来说，要想发布到 AppStore 的话个人与团队二选一即可，而一般为了方便内测，申请个企业账户也是不错的，方便分发调试。 ![](http://images.cnitblog.com/blog/41574/201303/16162735-cacf140e38be4952892fe9d37093c392.x-png)
 
 * 个人账号(Individual )费用 99 美金一年 , 该账号在 App Store 销售者只能显示个人的 ID，比如 zhitian zhang，单人使用。个人账号只能有一个开发者。100 个苹果的 iOS 设备 UDID 测试。
-* 公司团队账号 (Company/Organization )费用 99 美金一年 , 该账号在 App Store 销售者可以显示类似 Studios，或者自定义的团队名称 ，比如 Mamshare INC，公司账号可以允许多个开发者协作开发，比个人多一些帐号管理的设置，可以设置多个 AppleID，分 4 种管理级别权限，详细见备注。100 个苹果的 iOS 设备 UDID 测试。但是申请时需要填写公司的邓白氏编码(D-U-N-S )。备注： Admin Legal 权限：超级管理员。可以管理开发者和管理 app store 中的应用。 Admin 权限：管理员，可以管理开发者。添加测试机子和管理团队证书。 Member 权限：是普通开发者。只能下载证书和使用证书 No Access 权限：没有相应的权限。申请公司团队账号地址：http://developer.apple.com/programs/ios/ [详细流程](http://www.cnblogs.com/taintain1984) 邓白氏编码(D-U-N-S )申请地址：https://developer.apple.com/ios/enroll/dunsLookupForm.action
+* 公司团队账号 (Company/Organization )费用 99 美金一年 , 该账号在 App Store 销售者可以显示类似 Studios，或者自定义的团队名称 ，比如 Mamshare INC，公司账号可以允许多个开发者协作开发，比个人多一些帐号管理的设置，可以设置多个 AppleID，分 4 种管理级别权限，详细见备注。100 个苹果的 iOS 设备 UDID 测试。但是申请时需要填写公司的邓白氏编码(D-U-N-S )。备注: Admin Legal 权限：超级管理员。可以管理开发者和管理 app store 中的应用。 Admin 权限：管理员，可以管理开发者。添加测试机子和管理团队证书。 Member 权限：是普通开发者。只能下载证书和使用证书 No Access 权限：没有相应的权限。申请公司团队账号地址：http://developer.apple.com/programs/ios/ [详细流程](http://www.cnblogs.com/taintain1984) 邓白氏编码(D-U-N-S )申请地址：https://developer.apple.com/ios/enroll/dunsLookupForm.action
 * 企业账号 (Enterprise )费用 299 美金一年 , 该账号开发应用不能发布到 App Store，只能企业内部应用，苹果的 iOS 设备 UDID 数量不限制。企业账号适合不希望上线 App Store，但是需要企业内部比如 1000 人的 iOS 设备都部署。公司测试部门需要全公司测试设备，突破 100 个 UDID 的限制。
 * 教育账号 (University) 费用 0 美元 ，只能教育机构或学院内部使用。必须是苹果 iOS 开发者计划授权机构。不能对外正式发布 iOS 应用程序。
 

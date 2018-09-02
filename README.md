@@ -1,14 +1,18 @@
+![default](https://user-images.githubusercontent.com/5803001/44412872-85055300-a59c-11e8-9025-b74c9a47b42b.png)
+
+![javascript](https://user-images.githubusercontent.com/5803001/44412874-859de980-a59c-11e8-8845-eebe9d13d832.jpg)
+
 # 软件工程基础
 
 软件开发就是把一个复杂的问题分解为一系列简单的问题，再把一系列简单的解决方案组合成一个复杂的解决方案。
 
-* [数据结构与算法篇](./AlgoDS)
+- [数据结构与算法篇](./AlgoDS)
 
-* [协同开发篇](./CollaborativeDevelopment)
+- [协同开发篇](./CollaborativeDevelopment)
 
-* [设计模式篇](./DesignPattern)
+- [设计模式篇](./DesignPattern)
 
-* [软件架构篇](./SoftwareArchitecture)
+- [软件架构篇](./SoftwareArchitecture)
 
 ---
 

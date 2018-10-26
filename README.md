@@ -1,10 +1,16 @@
 ![default](https://user-images.githubusercontent.com/5803001/44412872-85055300-a59c-11e8-9025-b74c9a47b42b.png)
 
-![javascript](https://user-images.githubusercontent.com/5803001/44412874-859de980-a59c-11e8-8845-eebe9d13d832.jpg)
-
 # 软件工程基础
 
 软件开发就是把一个复杂的问题分解为一系列简单的问题，再把一系列简单的解决方案组合成一个复杂的解决方案。
+
+![default](https://user-images.githubusercontent.com/5803001/47262684-025c2e00-d522-11e8-8c82-4a5afcf428d1.png)
+
+**建议前往 [xCompass](https://wxyyxc1992.github.io/home/#/search) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。**
+
+# 前言
+
+## 索引
 
 - [数据结构与算法篇](./AlgoDS)
 
@@ -14,11 +20,9 @@
 
 - [软件架构篇](./SoftwareArchitecture)
 
----
-
-**建议前往 [xCompass](https://wxyyxc1992.github.io/home/#/search) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。**
-
 # 关于
+
+![javascript](https://user-images.githubusercontent.com/5803001/44412874-859de980-a59c-11e8-8845-eebe9d13d832.jpg)
 
 ## 规划
 

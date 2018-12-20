@@ -1,6 +1,8 @@
+![javascript](https://user-images.githubusercontent.com/5803001/44412874-859de980-a59c-11e8-8845-eebe9d13d832.jpg)
+
 # Git Rebase 详解
 
-> 本文主要讲解下 Git Rebase 的基本概念用法、其内部原理以及我们在真实项目中使用 Git Rebase 应该遵循的原则以及为啥需要遵循这些原则。
+本文主要讲解下 Git Rebase 的基本概念用法、其内部原理以及我们在真实项目中使用 Git Rebase 应该遵循的原则以及为啥需要遵循这些原则。
 
 # Base of Rebase
 

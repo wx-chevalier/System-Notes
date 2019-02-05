@@ -1,5 +1,4 @@
-﻿
-```.
+﻿```.
 ├── book.json
 ├── README.md
 ├── SUMMARY.md
@@ -10,19 +9,20 @@
     ├── README.md
     └── something.md
 ```
+
 ### Project integration with subdirectory {#subdirectory}
+
 ```.
 ├── book.json
 └── docs/
     ├── README.md
     └── SUMMARY.md
 ```
-With `book.json` containing:
 
+With `book.json` containing:
 
 ```
 {
     "root": "./docs"
 }
 ```
-

@@ -13,11 +13,18 @@
 
 本系列文章对应的算法实现参考 [coding-snippets: Code Snippets, DataStructure, Algorithm and DesignPattern Implementations for Several Programming Language, Web, etc.](https://github.com/wxyyxc1992/coding-snippets)。
 
-# 前言
+# Nav | 导航
 
-## 参考
+- Array | 数组：数组，矩阵
 
-## 版权
+- Linear List | 线性表：链表
+
+- String | 字符串：KMP
+
+- Tree | 树：二叉树，哈夫曼树，
+
+
+# 版权
 
 ![](https://parg.co/bDY)
 
@@ -26,5 +33,3 @@
 笔者所有文章遵循 [知识共享 署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。如果觉得本系列对你有所帮助，欢迎给我家布丁买点狗粮(支付宝扫码)~
 
 ![](https://github.com/wxyyxc1992/OSS/blob/master/2017/8/1/Buding.jpg?raw=true)
-
-# 目录

@@ -31,6 +31,7 @@ const actions = {
   '5': ['cancel', 'CancelPage'],
   default: ['other', 'Index']
 };
+
 /**
  * 按钮点击事件
  * @param {number} status 活动状态：1开团进行中 2开团失败 3 商品售罄 4 开团成功 5 系统取消

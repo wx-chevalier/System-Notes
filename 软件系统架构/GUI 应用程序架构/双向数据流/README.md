@@ -1,0 +1,10 @@
+
+
+
+# MV*: 碎片化的状态与双向数据流
+
+MVC模式将有关于渲染、控制与数据存储的概念有机分割，是GUI应用架构模式的一个巨大成就。但是，MVC模式在构建能够长期运行、维护、有效扩展的应用程序时遇到了极大的问题。MVC模式在一些小型项目或者简单的界面上仍旧有极大的可用性，但是在现代富客户端开发中导致职责分割不明确、功能模块重用性、View的组合性较差。作为继任者MVP模式分割了View与Model之间的直接关联，MVP模式中也将更多的ViewLogic转移到Presenter中进行实现，从而保证了View的可测试性。而最年轻的MVVM将ViewLogic与View剥离开来，保证了View的无状态性、可重用性、可组合性以及可测试性。总结而言，MV*模型都包含了以下几个方面:
+- Models:负责存储领域/业务逻辑相关的数据与构建数据访问层，典型的就是譬如Person、PersonDataProvider。
+- Views:负责将数据渲染展示给用户，并且响应用户输入
+- Controller/Presenter/ViewModel:往往作为Model与View之间的中间人出现，接收View传来的用户事件并且传递给Model，同时利用从Model传来的最新模型控制更新View
+

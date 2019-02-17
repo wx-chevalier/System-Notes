@@ -1,0 +1,9 @@
+
+
+
+
+
+# Unidirectional User Interface Architecture: 单向数据流
+Unidirectional User Interface Architecture架构的概念源于后端常见的CROS/Event Sourcing模式，其核心思想即是将应用状态被统一存放在一个或多个的Store中，并且所有的数据更新都是通过可观测的Actions触发，而所有的View都是基于Store中的状态渲染而来。该架构的最大优势在于整个应用中的数据流以单向流动的方式从而使得有用更好地可预测性与可控性，这样可以保证你的应用各个模块之间的松耦合性。与MVVM模式相比，其解决了以下两个问题：
+- 避免了数据在多个ViewModel中的冗余与不一致问题
+- 分割了ViewModel的职责，使得ViewModel变得更加Clean

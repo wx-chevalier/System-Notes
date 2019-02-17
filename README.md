@@ -4,7 +4,7 @@
 
 软件开发就是把一个复杂的问题分解为一系列简单的问题，再把一系列简单的解决方案组合成一个复杂的解决方案。
 
-![default](https://user-images.githubusercontent.com/5803001/47262684-025c2e00-d522-11e8-8c82-4a5afcf428d1.png)
+![default](https://i.postimg.cc/7Lq1rwBT/image.png)
 
 **建议前往 [xCompass](https://wxyyxc1992.github.io/home/#/search)/[alfred-sg](https://github.com/wxyyxc1992/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。**
 

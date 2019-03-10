@@ -6,19 +6,19 @@
 
 我们以 `文字链接` 为例，它对应的 JSON Schema 大概如此：
 
-```
+```json
 {
-"type": "object",
-"properties": {
-"text": {
-"type": "string",
-"title": "文字"
-},
-"href": {
-"type": "string",
-"title": "链接地址(URL)"
-}
-}
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string",
+      "title": "文字"
+    },
+    "href": {
+      "type": "string",
+      "title": "链接地址(URL)"
+    }
+  }
 }
 ```
 

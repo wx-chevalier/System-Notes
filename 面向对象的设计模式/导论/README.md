@@ -41,10 +41,10 @@ Visitor Adds a new operation to a class without changing the class.
 
 High cohesion is preferable because it suggests to design the elements of the module to focus solely on a single task. It makes the module:
 
-* _Focused_ and _understandable_: easier to understand what the module does
-* _Maintainable_ and _easier to refactor_: the change in the module affects fewer modules
-* _Reusable_: being focusing on a single task, it makes the module easier to reuse
-* _Testable_: you would easier test a module that's focused on a single task
+- _Focused_ and _understandable_: easier to understand what the module does
+- _Maintainable_ and _easier to refactor_: the change in the module affects fewer modules
+- _Reusable_: being focusing on a single task, it makes the module easier to reuse
+- _Testable_: you would easier test a module that's focused on a single task
 
 ![Components coupling and cohesion](https://rainsoft.io/content/images/2017/03/CouplingVsCohesion.svg)
 
@@ -57,7 +57,7 @@ For instance, if a variable solely exists to form the logic of a block scope, th
 One classic example of unnecessary extended life of variables is the usage of `for` cycle inside a function:
 
 ```
-function someFunc(array) {  
+function someFunc(array) {
   var index, item, length = array.length;
   // some code...
   // some code...
@@ -76,7 +76,7 @@ All the way between the declaration at the top and the usage in `for` statement 
 A better approach is to move these variables as close as possible to their usage place:
 
 ```
-function someFunc(array) {  
+function someFunc(array) {
   // some code...
   // some code...
   const length = array.length;
@@ -93,9 +93,9 @@ function someFunc(array) {
 
 Why is the modified version better than the initial one? Let's see:
 
-* The variables are not exposed to uninitialized state, thus you have no risk of accessing `undefined`
-* Moving the variables as close as possible to their usage place increases the code readability
-* High cohesive chunks of code are easier to refactor and extract into separated functions when necessary
+- The variables are not exposed to uninitialized state, thus you have no risk of accessing `undefined`
+- Moving the variables as close as possible to their usage place increases the code readability
+- High cohesive chunks of code are easier to refactor and extract into separated functions when necessary
 
 设计模式(Design pattern)是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。 毫无疑问，设计模式于己于他人于系统都是多赢的，设计模式使代码编制真正工程化，设计模式是软件工程的基石，如同大厦的一块块砖石一样。项目中合理的运用设计模式可以完美的解决很多问题，每种模式在现在中都有相应的原理来与之对应，每一个模式描述了一个在我们周围不断重复发生的问题，以及该问题的核心解决方案，这也是它能被广泛应用的原因。设计模式的解释如下：
 
@@ -124,58 +124,33 @@ Why is the modified version better than the initial one? Let's see:
 
 ### Blogs
 
-* [架构设计基础知识整理](https://blog.dreamtobe.cn/2016/10/25/oo_architecture/)
+- [架构设计基础知识整理](https://blog.dreamtobe.cn/2016/10/25/oo_architecture/)
 
 [23 种设计模式](http://www.cnblogs.com/beijiguangyong/archive/2010/11/15/2302807.html#_Toc281750469)
 
 ### Practices & Resources
 
-* [java-design-patterns](https://github.com/iluwatar/java-design-patterns)
+- [java-design-patterns](https://github.com/iluwatar/java-design-patterns)
 
 ### Books
 
-* [Graphic Design Patterns](http://design-patterns.readthedocs.org/zh_CN/latest/read_uml.html):图解设计模式
+- [Graphic Design Patterns](http://design-patterns.readthedocs.org/zh_CN/latest/read_uml.html):图解设计模式
 
 # 设计原则
-
-![](http://mmbiz.qpic.cn/mmbiz/Pn4Sm0RsAugOiaROTDEk941vGPNd3Aq9v4XxqRZfFAkj2fChuptuGSevGjpOtyzBgyiboOBXLDtRgrciaGXKnEulw/640?wx_fmt=png&wxfrom=5&wx_lazy=1)
-
-
-
-只有满足了这六大原则，才能设计出稳定的软件架构！但它们毕竟只是原则，只是四人帮给我们的建议，有些时候我们还是要学会灵活应变，千万不要生搬硬套，否则只会把简单问题复杂化，切记！
-
-* 组合/聚合复用原则(Composition/Aggregation Reuse Principle - CARP)
-
-当要扩展类的功能时，优先考虑使用组合，而不是继承。这条原则在 23 种经典设计模式中频繁使用，如：代理模式、装饰模式、适配器模式等。可见江湖地位非常之高！
-
-* 无环依赖原则(Acyclic Dependencies Principle - ADP)
-
-当 A 模块依赖于 B 模块，B 模块依赖于 C 模块，C 依赖于 A 模块，此时将出现循环依赖。在设计中应该避免这个问题，可通过引入“中介者模式”解决该问题。
-
-* 共同封装原则(Common Closure Principle - CCP)
-
-应该将易变的类放在同一个包里，将变化隔离出来。该原则是“开放-封闭原则”的延生。
-
-* 共同重用原则(Common Reuse Principle - CRP)
-
-如果重用了包中的一个类，那么也就相当于重用了包中的所有类，我们要尽可能减小包的大小。
-
-* 好莱坞原则(Hollywood Principle - HP)
-
-好莱坞明星的经纪人一般都很忙，他们不想被打扰，往往会说：Don't call me, I'll call you. 翻译为：不要联系我，我会联系你。对应于软件设计而言，最著名的就是“控制反转”(或称为“依赖注入”)，我们不需要在代码中主动的创建对象，而是由容器帮我们来创建并管理这些对象。
 
 # 类关系
 
 请看以下这个类图，类之间的关系是我们需要关注的：
+
 ![](http://design-patterns.readthedocs.org/zh_CN/latest/_images/uml_class_struct.jpg)
 
-* 车的类图结构为`<<abstract>>`，表示车是一个抽象类；
-* 它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示；
-* 小汽车为与 SUV 之间也是继承关系，它们之间的关系为泛化关系，使用带空心箭头的实线表示；
-* 小汽车与发动机之间是组合关系，使用带实心箭头的实线表示；
-* 学生与班级之间是聚合关系，使用带空心箭头的实线表示；
-* 学生与身份证之间为关联关系，使用一根实线表示；
-* 学生上学需要用到自行车，与自行车是一种依赖关系，使用带箭头的虚线表示；
+- 车的类图结构为`<<abstract>>`，表示车是一个抽象类；
+- 它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示；
+- 小汽车为与 SUV 之间也是继承关系，它们之间的关系为泛化关系，使用带空心箭头的实线表示；
+- 小汽车与发动机之间是组合关系，使用带实心箭头的实线表示；
+- 学生与班级之间是聚合关系，使用带空心箭头的实线表示；
+- 学生与身份证之间为关联关系，使用一根实线表示；
+- 学生上学需要用到自行车，与自行车是一种依赖关系，使用带箭头的虚线表示；
 
 ## 泛化关系(generalization)
 

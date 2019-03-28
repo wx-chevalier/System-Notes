@@ -18,11 +18,11 @@ MVC 架构的 Layer System 是在 Controller、Model、Service 这样进行分�
 
 为了方便理解，我们也可以借用函数柯里化与反柯里化的概念。我们提供一系列适用范围广，但是适用性较低的接口来代替原先适用性较高，但是适用范围极低的接口。而柯里化的这一步即交由前端来完成，也就是下文中会提及的 URFP 的概念。
 
-AARF 中文文档地址：[AARF-CH](https://wxyyxc1992.gitbooks.io/aarf-ch/content/)
+AARF 中文文档地址：[AARF-CH](https://wx-chevalier.gitbooks.io/aarf-ch/content/)
 
-AARF 英文文档地址：[AARF-EN](https://wxyyxc1992.gitbooks.io/aarf-en/content/)
+AARF 英文文档地址：[AARF-EN](https://wx-chevalier.gitbooks.io/aarf-en/content/)
 
-AARF 的 Java 实例地址：[AARF-Java](https://github.com/wxyyxc1992/AARF-Java)
+AARF 的 Java 实例地址：[AARF-Java](https://github.com/wx-chevalier/AARF-Java)
 
 笔者的联系方式：QQ(384924552)，Mail(384924552@qq.com)
 

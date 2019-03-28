@@ -145,7 +145,7 @@ private AVLNode rotateRightThenLeft(AVLNode n) {
 
 # Java Implementation
 
-Java 实现的核心代码地址为 :[AVLTree](https://github.com/wxyyxc1992/just-coder-handbook/blob/master/Algorithm/java/src/main/java/wx/algorithm/search/avl/AVLTree.java)
+Java 实现的核心代码地址为 :[AVLTree](https://github.com/wx-chevalier/just-coder-handbook/blob/master/Algorithm/java/src/main/java/wx/algorithm/search/avl/AVLTree.java)
 
 ```
 package wx.algorithm.search.avl;

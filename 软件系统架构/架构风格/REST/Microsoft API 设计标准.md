@@ -1,5 +1,5 @@
 >[原文地址 :Microsoft API Guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#63-silent-fail-rule)
->[笔者有关于 REST 系列文章](https://github.com/wxyyxc1992/just-coder-handbook/#restful) 笔者之前翻译过一篇[来自于 PayPal 的 RESTful API 标准](https://segmentfault.com/a/1190000005924733)，其是 PayPal 内部遵循的 RESTful 的接口规范，本文则是微软提出的 API 风格指南，笔者认为二者各有优劣。微软的准则相对更加详细严谨，但是对于复杂资源请求，却没有 PayPal 提及的多。本文目前仅包含第一部分的翻译，笔者日后为添加上第二部分。
+>[笔者有关于 REST 系列文章](https://github.com/wx-chevalier/just-coder-handbook/#restful) 笔者之前翻译过一篇[来自于 PayPal 的 RESTful API 标准](https://segmentfault.com/a/1190000005924733)，其是 PayPal 内部遵循的 RESTful 的接口规范，本文则是微软提出的 API 风格指南，笔者认为二者各有优劣。微软的准则相对更加详细严谨，但是对于复杂资源请求，却没有 PayPal 提及的多。本文目前仅包含第一部分的翻译，笔者日后为添加上第二部分。
 
 微软云平台为开发者提供了基于 HTTP 的 REST 风格的 API 接口，虽然不同的服务都是基于特定语言的一些请求框架的实现，但是基于 HTTP 的 REST 的操作却是遵循一致的规则。本指南的目的即是提供可以使得任何的 HTTP 客户端能够以相同的行为模式与规范来使用的接口。而保障开发者的一致性体验的关键，即是保证 REST API 遵循统一的设计指南，从而简单易用，符合人们的直觉反应。本指南的目标在于 :
 

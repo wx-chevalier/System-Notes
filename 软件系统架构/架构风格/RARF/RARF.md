@@ -207,7 +207,7 @@ POST:/goods/{goods_id}/goods_order?requestData={requestData}
 
 实际上 URFP 并不能完美显示所有的业务逻辑，譬如在购买商品时候，我们是把它看做了对于 goods_order 资源的一个 POST 操作，但是实际业务中，购买了商品之后还要对 goods 进行操作，即把商品数目减一，还要对 credit 进行操作，即把用户积分加减，或者创建支付订单等等等等。以上这些隐性业务逻辑是与返回结果强相关的，直接写在 ResourceHandler 当中即可，那还有一种是非强相关的，最典型的例子就是日志功能。在正常的业务逻辑处理时，不可能因为你日志记错了就不让用户去购买东西的吧？关于这部分隐性业务逻辑的处理，笔者其实不太喜欢 AOP 这种方式，感觉不太可控，所以还是想借鉴 Middleware( 二者区别在哪呢？) 或者 Reducer 这种方式。
 
-看到这里，如果还有兴趣的话可以看看笔者[Java 版本的实现，正在剧烈变动中，不过代码也不多就是了](https://github.com/wxyyxc1992/RARF-Java)，如果笔者的思想真的可能有些意义的话笔者打算在 NodeJs、PHP 以及 Swift 这几个语言中都实现一下，也欢迎大神的加入。
+看到这里，如果还有兴趣的话可以看看笔者[Java 版本的实现，正在剧烈变动中，不过代码也不多就是了](https://github.com/wx-chevalier/RARF-Java)，如果笔者的思想真的可能有些意义的话笔者打算在 NodeJs、PHP 以及 Swift 这几个语言中都实现一下，也欢迎大神的加入。
 
 ### 关于数据库设计
 
@@ -259,11 +259,11 @@ MVC 架构的 Layer System 是在 Controller、Model 、 Service 这样进行分
 
 为了方便理解，我们也可以借用函数柯里化与反柯里化的概念。我们提供一系列适用范围广，但是适用性较低的接口来代替原先适用性较高，但是适用范围极低的接口。而柯里化的这一步即交由前端来完成，也就是下文中会提及的 URFP 的概念。
 
-AARF 中文文档地址：[AARF-CH](https://wxyyxc1992.gitbooks.io/aarf-ch/content/)
+AARF 中文文档地址：[AARF-CH](https://wx-chevalier.gitbooks.io/aarf-ch/content/)
 
-AARF 英文文档地址：[AARF-EN](https://wxyyxc1992.gitbooks.io/aarf-en/content/)
+AARF 英文文档地址：[AARF-EN](https://wx-chevalier.gitbooks.io/aarf-en/content/)
 
-AARF 的 Java 实例地址：[AARF-Java](https://github.com/wxyyxc1992/AARF-Java)
+AARF 的 Java 实例地址：[AARF-Java](https://github.com/wx-chevalier/AARF-Java)
 
 笔者的联系方式：QQ(384924552) ， Mail(384924552@qq.com)
 

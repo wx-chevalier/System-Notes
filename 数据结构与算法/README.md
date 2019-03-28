@@ -9,7 +9,7 @@
 
 本系列文章包含了 Java, JavaScript, Go, Rust, Python 等不同的语言实现，分别对应着 \*.md, \*.js.md, \*.go.md, \*.rs.md, \*.py.md 等不同的后缀文件名。
 
-本系列文章对应的算法实现参考 [coding-snippets: Code Snippets, DataStructure, Algorithm and DesignPattern Implementations for Several Programming Language, Web, etc.](https://github.com/wxyyxc1992/coding-snippets)。
+本系列文章对应的算法实现参考 [coding-snippets: Code Snippets, DataStructure, Algorithm and DesignPattern Implementations for Several Programming Language, Web, etc.](https://github.com/wx-chevalier/coding-snippets)。
 
 # Nav | 导航
 

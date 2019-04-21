@@ -1,0 +1,467 @@
+{
+    "root": {
+        "data": {
+            "id": "5pa2ei74l6a6",
+            "text": "ALGO & DS\n数据结构与算法",
+            "created": 1555843136755
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "23496i1o1na8",
+                    "text": "算法基础",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "58csvjfd1uhm",
+                            "text": "算法复杂度",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "4qfbgjs2aet7",
+                    "text": "数论",
+                    "created": 1555843136755
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "78dvpupgknfa",
+                    "text": "数组",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "4njc66qh2ik6",
+                            "text": "树状数组",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "3ko954l1g09s",
+                    "text": "线性表",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "2gp1sr518gji",
+                            "text": "List\n列表",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "0s19be5pcg45",
+                            "text": "LinkList\n链表",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "2bub9elb47pg",
+                            "text": "SkipList\n跳表",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "5omda466nlig",
+                            "text": "并查集",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "4rum9lfga5pf",
+                    "text": "栈与队列",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "1mql448q0qea",
+                            "text": "优先队列",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "5g82bicj5n17",
+                    "text": "散列表",
+                    "created": 1555843136755
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "02f65j5cft82",
+                    "text": "树",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "2aa3efb1u331",
+                            "text": "二叉树",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "66lop68bhr01",
+                            "text": "哈夫曼树与编码",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "5mm4vaioot07",
+                            "text": "线段树",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "20foootjv1g1",
+                            "text": "倍增、ST 表、RMQ",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "6dnvmg9ngqmn",
+                    "text": "字符串",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "7slbpmobcb4e",
+                            "text": "KMP",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "2u9t21gp4ecg",
+                            "text": "AC 自动机",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "3t508keruf2v",
+                    "text": "序列化",
+                    "created": 1555843136755
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "2osjopubpotp",
+                    "text": "流",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "42lpsuasuvgo",
+                            "text": "最大流：最短增广路、Dinic 算法",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "2teu1kue8u1d",
+                            "text": "最大流最小割：最大收益、方格取数",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "5nr1il26ugbi",
+                            "text": "最小费用最大流：最小费用路、消圈",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "0is3te4ischc",
+                    "text": "动态规划",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "6vb2vit34rrb",
+                            "text": "线性 DP：最长公共/上升子序列",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "7slk5p7lg3qj",
+                            "text": "树形 DP：背包问题，01 背包",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "5ha7kgns7l52",
+                            "text": "区间 DP：矩阵连乘、石子合并",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "71qtmd7jpapq",
+                            "text": "数位 DP：数字游戏",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "7mkhkq2j57tn",
+                            "text": "状态压缩 DP：旅行商",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "531v8o1rqo5t",
+                    "text": "图论",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "30c5al8f0lf8",
+                            "text": "表示：邻接矩阵与邻接表",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "3k88p3g5brs5",
+                            "text": "遍历：深度/广度优先搜索",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "76t42jfgda8m",
+                            "text": "连通性：连通分量与 Tarjan",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "19fsjt3p3q7i",
+                            "text": "路径：Floyd, Dijkstra",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "13mbu3t6f9si",
+                            "text": "生成树：Prim, Kruskal",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "741g01ck23fj",
+                            "text": "应用：拓扑排序，关键路径",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "1k43aoqcu7dn",
+                            "text": "二分图匹配：配对、匈牙利算法",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "1pve8756jokl",
+                    "text": "查找",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "2t4ftlodkku2",
+                            "text": "二叉搜索树",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "25tdcqqg1h1v",
+                            "text": "二分查找",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "2uu0c8iuq4pf",
+                            "text": "平衡二叉树",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "69mbdr6up27g",
+                            "text": "红黑树",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "3l1o6k1t1ejp",
+                            "text": "B-Tree/B+Tree",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "0tmau128j9q9",
+                    "text": "搜索与回溯",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "146fofqbbbi4",
+                            "text": "启发式搜索：A*搜索",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "7rvl78q3bda5",
+                            "text": "01 背包、地图着色、N 皇后、最优加工顺序",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "494fr32uri1m",
+                            "text": "旅行商",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "7p66vevrb9ga",
+                    "text": "排序",
+                    "created": 1555843136755
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "00fjsnhviebi",
+                            "text": "简单排序：插入，冒泡",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "1gr5eqtul4e9",
+                            "text": "分治排序：快速，归并",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "7jkfuolcfes5",
+                            "text": "树形排序：选择，堆",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "5m8218re3b5q",
+                            "text": "分配排序：桶，基数",
+                            "created": 1555843136755
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue-compat",
+    "version": "1.4.43",
+    "id": "5pa2ei74l6a6"
+}

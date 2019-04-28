@@ -1,7 +1,5 @@
 # JSON Schema
 
-> [JSON Schema 那些事儿：基本概念 ](http://taobaofed.org/blog/2016/01/25/jsonschema/)
-
 当我们在描述 `文字链接` 的时候，需要约定数据的组织方式，比如，需要知道有哪些字段，这些字段的取值如何表示等，这就是 JSON Schema 的来源。
 
 我们以 `文字链接` 为例，它对应的 JSON Schema 大概如此：
@@ -45,3 +43,7 @@ JSON Schema 定义了如何基于 JSON 格式描述 JSON 数据结构的规范�
 1. 用于校验数据，实现自动化测试
 
 接口数据的校验工作，往往依赖于测试代码逻辑和用例。如果用 JSON Schema 描述一个数据接口，就不需要再编写测试代码了，所有的逻辑都可以移植到 JSON Schema 中维护。配合 `jsv`、`tv4` 等二方校验工具，接口测试可以真正自动化。
+
+# 链接
+
+- [JSON Schema 那些事儿：基本概念 ](http://taobaofed.org/blog/2016/01/25/jsonschema/)

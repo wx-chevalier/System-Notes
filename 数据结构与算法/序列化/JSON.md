@@ -1,3 +1,35 @@
+# JSON
+
+```json
+{
+  "numbers": 0,
+  "strings": "Hellø, wørld. All unicode is allowed, along with \"escaping\".",
+  "has bools?": true,
+  "nothingness": null,
+
+  "big number": 1.2e100,
+
+  "objects": {
+    "comment": "Most of your structure will come from objects.",
+
+    "array": [0, 1, 2, 3, "Arrays can have anything in them.", 5],
+
+    "another object": {
+      "comment": "These things can be nested, very useful."
+    }
+  },
+
+  "silliness": [
+    {
+      "sources of potassium": ["bananas"]
+    },
+    [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, "neo"], [0, 0, 0, 1]]
+  ],
+
+  "that was short": "And, you're done. You now know everything JSON has to offer."
+}
+```
+
 # JSON Schema
 
 当我们在描述 `文字链接` 的时候，需要约定数据的组织方式，比如，需要知道有哪些字段，这些字段的取值如何表示等，这就是 JSON Schema 的来源。

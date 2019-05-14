@@ -2,7 +2,7 @@
 
 布隆过滤器 (Bloom Filter)是由 Burton Howard Bloom 于 1970 年提出，它是一种 space efficient 的概率型数据结构，用于判断一个元素是否在集合中。在垃圾邮件过滤的黑白名单方法、爬虫(Crawler)的网址判重模块中等等经常被用到。哈希表也能用于判断元素是否在集合中，但是布隆过滤器只需要哈希表的 1/8 或 1/4 的空间复杂度就能完成同样的问题。布隆过滤器可以插入元素，但不可以删除已有元素。其中的元素越多，false positive rate(误报率)越大，但是 false negative (漏报)是不可能的。
 
-### 算法描述
+# 算法描述
 
 一个 empty bloom filter 是一个有 m bits 的 bit array，每一个 bit 位都初始化为 0。并且定义有 k 个不同的 hash function，每个都以 uniform random distribution 将元素 hash 到 m 个不同位置中的一个。在下面的介绍中 n 为元素数，m 为布隆过滤器或哈希表的 slot 数，k 为布隆过滤器重 hash function 数。
 

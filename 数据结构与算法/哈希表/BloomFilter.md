@@ -151,7 +151,3 @@
 [![clip_image002[8]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319272003.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319275940.png)
 
 此概率为某 bit 位在插入 n 个元素后未被置位的概率。因此，想保持错误率低，布隆过滤器的空间使用率需为 50%。
-
-# Cuckoo Filter
-
-> [Cuckoo Filter：设计与实现](http://coolshell.cn/articles/17225.html) > [CFilter](https://github.com/irfansharif/cfilter)

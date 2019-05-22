@@ -6,21 +6,27 @@
 
 ![default](https://i.postimg.cc/y1QXgJ6f/image.png)
 
-**建议前往 [xCompass](https://wx-chevalier.github.io/home/#/search)/[alfred-sg](https://github.com/wx-chevalier/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。**
+# Nav | 导航
 
-# 前言
+建议前往 [xCompass](https://wx-chevalier.github.io/home/#/search)/[alfred-sg](https://github.com/wx-chevalier/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。
 
-## 索引
+- [开发工具漫谈](./开发工具漫谈)：工欲善其事，必先利其器。
 
-- [数据结构与算法篇](./AlgoDS)
+- [数据结构与算法](./数据结构与算法)
 
-- [协同开发篇](./CollaborativeDevelopment)
+- [整洁与重构](./整洁与重构)
 
-- [设计模式篇](./DesignPattern)
+- [质量保障](./质量保障)
 
-- [软件架构篇](./SoftwareArchitecture)
+- [软件架构设计](./软件架构设计)
 
-# 版权
+- [面向对象的设计模式](./面向对象的设计模式)
+
+# Preface | 前言
+
+# About
+
+## 版权
 
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg) ![](https://parg.co/bDm)
 

@@ -2,6 +2,18 @@
 
 DDD 领域驱动设计，起源于 2004 年著名建模专家 Eric Evans 发表的他最具影响力的著名书籍：Domain-Driven Design – Tackling Complexity in the Heart of Software，Eric Evans 在该书中只是提供了一套原始理论，并没有提供一套方法论，因此多年来对于 DDD 也是见仁见智。
 
+Domain-Driven Design will teach you how to model the real world in your application and use OOP to encapsulate the business logic of the organization.
+
+The process of software development is complicated. When we face problems, we usually try to tackle the complexity by turning it into more understandable and manageable pieces.
+
+Domain-Driven Design is a software development methodology for tackling complex software projects to deliver an end-product that meets the goals of the organization. In fact, Domain-Driven Design promotes focusing the project on an evolving core model.
+
+It will teach you how to effectively model the real world in your application and use OOP to encapsulate the business logic of the organization.
+
+在域驱动设计中，语言是最重要的因素。您希望拥有的是在代码中明确表达的问题域。从本质上讲，作为开发人员，您希望使用与您的业务相同的语言。
+
+# 设计理念
+
 DDD 如同微服务一样，理论与价值观的引导优于具体的落地框架，所谓领域建模的设计核心包含了两个：
 
 - 统一语言，软件的开发人员/使用人员都使用同一套语言，即对某个概念，名词的认知是统一的。

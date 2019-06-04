@@ -1,30 +1,28 @@
-
-
-
 ## MVVM: 数据绑定与无状态的视图
-Model View View-Model模型是MV*家族中最年轻的一位，也是由Microsoft提出，并经由Martin Fowler布道传播。MVVM源于Martin Fowler的Presentation Model，Presentation Model的核心在于接管了View所有的行为响应，View的所有响应与状态都定义在了Presentation Model中。也就是说，View不会包含任意的状态。举个典型的使用场景，当用户点击某个按钮之后，状态信息是从Presentation Model传递给Model，而不是从View传递给Presentation Model。任何控制组件间的逻辑操作，即上文所述的ViewLogic，都应该放置在Presentation Model中进行处理，而不是在View层，这一点也是MVP模式与Presentation Model最大的区别。
-MVVM模式进一步深化了Presentation Model的思想，利用Data Binding等技术保证了View中不会存储任何的状态或者逻辑操作。在WPF中，UI主要是利用XAML或者XML创建，而这些标记类型的语言是无法存储任何状态的，就像HTML一样(因此JSX语法其实是将View又有状态化了)，只是允许UI与某个ViewModel中的类建立映射关系。渲染引擎根据XAML中的声明以及来自于ViewModel的数据最终生成呈现的页面。因为数据绑定的特性，有时候MVVM也会被称作MVB:Model View Binder。总结一下，MVVM利用数据绑定彻底完成了从命令式编程到声明式编程的转化，使得View逐步无状态化。一个典型的MVVM的使用场景为：
-- 用户交互输入
-- View将数据直接传送给ViewModel，ViewModel保存这些状态数据
-- 在有需要的情况下，ViewModel会将数据传送给Model
-- Model在更新完成之后通知ViewModel
-- ViewModel从Model中获取最新的模型，并且更新自己的数据状态
-- View根据最新的ViewModel的数据进行重新渲染
 
+Model View View-Model 模型是 MV\*家族中最年轻的一位，也是由 Microsoft 提出，并经由 Martin Fowler 布道传播。MVVM 源于 Martin Fowler 的 Presentation Model，Presentation Model 的核心在于接管了 View 所有的行为响应，View 的所有响应与状态都定义在了 Presentation Model 中。也就是说，View 不会包含任意的状态。举个典型的使用场景，当用户点击某个按钮之后，状态信息是从 Presentation Model 传递给 Model，而不是从 View 传递给 Presentation Model。任何控制组件间的逻辑操作，即上文所述的 ViewLogic，都应该放置在 Presentation Model 中进行处理，而不是在 View 层，这一点也是 MVP 模式与 Presentation Model 最大的区别。
+MVVM 模式进一步深化了 Presentation Model 的思想，利用 Data Binding 等技术保证了 View 中不会存储任何的状态或者逻辑操作。在 WPF 中，UI 主要是利用 XAML 或者 XML 创建，而这些标记类型的语言是无法存储任何状态的，就像 HTML 一样(因此 JSX 语法其实是将 View 又有状态化了)，只是允许 UI 与某个 ViewModel 中的类建立映射关系。渲染引擎根据 XAML 中的声明以及来自于 ViewModel 的数据最终生成呈现的页面。因为数据绑定的特性，有时候 MVVM 也会被称作 MVB:Model View Binder。总结一下，MVVM 利用数据绑定彻底完成了从命令式编程到声明式编程的转化，使得 View 逐步无状态化。一个典型的 MVVM 的使用场景为：
+
+- 用户交互输入
+- View 将数据直接传送给 ViewModel，ViewModel 保存这些状态数据
+- 在有需要的情况下，ViewModel 会将数据传送给 Model
+- Model 在更新完成之后通知 ViewModel
+- ViewModel 从 Model 中获取最新的模型，并且更新自己的数据状态
+- View 根据最新的 ViewModel 的数据进行重新渲染
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/BB708F10-1F39-4FFE-A66C-319293AAC71F.png)
 
-根据上述流程，我们可知MVVM模式的特性为：
-- ViewModel、Model中存在ViewLogic实现，View则不保存任何状态信息
-- View不需要了解ViewModel的实现细节，但是会声明自己所需要的数据类型，并且能够知道如何重新渲染
-- ViewModel不需要了解View的实现细节(非命令式编程)，但是需要根据View声明的数据类型传入对应的数据。ViewModel需要了解Model的实现细节。
--  Model不需要了解View的实现细节，需要了解ViewModel的实现细节
+根据上述流程，我们可知 MVVM 模式的特性为：
 
-
-
+- ViewModel、Model 中存在 ViewLogic 实现，View 则不保存任何状态信息
+- View 不需要了解 ViewModel 的实现细节，但是会声明自己所需要的数据类型，并且能够知道如何重新渲染
+- ViewModel 不需要了解 View 的实现细节(非命令式编程)，但是需要根据 View 声明的数据类型传入对应的数据。ViewModel 需要了解 Model 的实现细节。
+- Model 不需要了解 View 的实现细节，需要了解 ViewModel 的实现细节
 
 # iOS
+
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/1-uhPpTHYzTmHGrAZy8hiM7w.png)
+
 ```
 import UIKit
 
@@ -83,14 +81,15 @@ let viewModel = GreetingViewModel(person: model)
 let view = GreetingViewController()
 view.viewModel = viewModel
 ```
-- Distribution:在Cocoa MVVM中，View相对于MVP中的View担负了更多的功能，譬如需要构建数据绑定等等
-- Testability:ViewModel拥有View中的所有数据结构，因此很容易就可以进行测试
-- 易用性:相对而言有很多的冗余代码
 
+- Distribution:在 Cocoa MVVM 中，View 相对于 MVP 中的 View 担负了更多的功能，譬如需要构建数据绑定等等
+- Testability:ViewModel 拥有 View 中的所有数据结构，因此很容易就可以进行测试
+- 易用性:相对而言有很多的冗余代码
 
 # Android
 
-- XML中声明数据绑定
+- XML 中声明数据绑定
+
 ```
 <data>
         <variable
@@ -115,7 +114,9 @@ view.viewModel = viewModel
 
 
 ```
-- View中绑定ViewModel
+
+- View 中绑定 ViewModel
+
 ```
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.main_activity);
@@ -124,7 +125,9 @@ view.viewModel = viewModel
         setSupportActionBar(binding.toolbar);
         setupRecyclerView(binding.reposRecyclerView);
 ```
-- ViewModel中进行数据操作
+
+- ViewModel 中进行数据操作
+
 ```
 public boolean onSearchAction(TextView view, int actionId, KeyEvent event) {
         if (actionId == EditorInfo.IME_ACTION_SEARCH) {
@@ -165,6 +168,3 @@ public boolean onSearchAction(TextView view, int actionId, KeyEvent event) {
         };
 }
 ```
-
-
-

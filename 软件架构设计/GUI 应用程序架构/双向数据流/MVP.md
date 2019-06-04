@@ -1,36 +1,31 @@
-
-
-
 # MVP: 将视图与模型解耦
-维基百科将[MVP](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)称为MVC的一个推导扩展，观其渊源而知其所以然。对于MVP概念的定义，Microsoft较为明晰，而Martin Fowler的定义最为广泛接受。MVP模式在WinForm系列以Visual-XXX命名的编程语言与Java Swing等系列应用中最早流传开来，不过后来ASP.NET以及JFaces也广泛地使用了该模式。在MVP中用户不再与Presenter进行直接交互，而是由View完全接管了用户交互，譬如窗口上的每个控件都知道如何响应用户输入并且合适地渲染来自于Model的数据。而所有的事件会被传输给Presenter，Presenter在这里就是View与Model之间的中间人，负责控制Model进行修改以及将最新的Model状态传递给View。这里描述的就是典型的所谓Passive View版本的MVP，其典型的用户场景为：
-- 用户交互输入了某些内容
-- View将用户输入转化为发送给Presenter
-- Presenter控制Model接收需要改变的点
-- Model将更新之后的值返回给Presenter
-- Presenter将更新之后的模型返回给View
 
+维基百科将[MVP](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)称为 MVC 的一个推导扩展，观其渊源而知其所以然。对于 MVP 概念的定义，Microsoft 较为明晰，而 Martin Fowler 的定义最为广泛接受。MVP 模式在 WinForm 系列以 Visual-XXX 命名的编程语言与 Java Swing 等系列应用中最早流传开来，不过后来 ASP.NET 以及 JFaces 也广泛地使用了该模式。在 MVP 中用户不再与 Presenter 进行直接交互，而是由 View 完全接管了用户交互，譬如窗口上的每个控件都知道如何响应用户输入并且合适地渲染来自于 Model 的数据。而所有的事件会被传输给 Presenter，Presenter 在这里就是 View 与 Model 之间的中间人，负责控制 Model 进行修改以及将最新的 Model 状态传递给 View。这里描述的就是典型的所谓 Passive View 版本的 MVP，其典型的用户场景为：
+-  用户交互输入了某些内容
+
+- View 将用户输入转化为发送给 Presenter
+- Presenter 控制 Model 接收需要改变的点
+- Model 将更新之后的值返回给 Presenter
+- Presenter 将更新之后的模型返回给 View
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/28983226-1BC6-4AD2-900B-E7D254266D4F.png)
-根据上述流程，我们可知Passive View版本的MVP模式的特性为：
-- View、Presenter、Model中皆有ViewLogic的部分实现
-- Presenter负责连接View与Model，需要了解View与Model的细节。
-- View需要了解Presenter的细节，将用户输入转化为事件传递给Presenter
-- Model需要了解Presenter的细节，在完成更新之后将最新的模型传递给Presenter
-- View与Model之间相互解耦合
+根据上述流程，我们可知 Passive View 版本的 MVP 模式的特性为：
 
+- View、Presenter、Model 中皆有 ViewLogic 的部分实现
+- Presenter 负责连接 View 与 Model，需要了解 View 与 Model 的细节。
+- View 需要了解 Presenter 的细节，将用户输入转化为事件传递给 Presenter
+- Model 需要了解 Presenter 的细节，在完成更新之后将最新的模型传递给 Presenter
+- View 与 Model 之间相互解耦合
 
 ### Supervising Controller MVP
-简化Presenter的部分功能，使得Presenter只起到需要复杂控制或者调解的操作，而简单的Model展示转化直接由View与Model进行交互：
+
+简化 Presenter 的部分功能，使得 Presenter 只起到需要复杂控制或者调解的操作，而简单的 Model 展示转化直接由 View 与 Model 进行交互：
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/EB81D8B6-227A-4E94-8107-C6DCC7920574.png)
 
-
-
-
-
-
 # iOS MVP
+
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/1-hKUCPEHg6TDz6gtOlnFYwQ.png)
-Cocoa中MVP模式是将ViewController当做纯粹的View进行处理，而将很多的ViewLogic与模型操作移动到Presenter中进行，代码如下:
+Cocoa 中 MVP 模式是将 ViewController 当做纯粹的 View 进行处理，而将很多的 ViewLogic 与模型操作移动到 Presenter 中进行，代码如下:
 
 ```
 import UIKit
@@ -93,15 +88,14 @@ let view = GreetingViewController()
 let presenter = GreetingPresenter(view: view, person: model)
 view.presenter = presenter
 ```
-- Distribution:主要的业务逻辑分割在了Presenter与Model中，View相对呆板一点
+
+- Distribution:主要的业务逻辑分割在了 Presenter 与 Model 中，View 相对呆板一点
 - Testability:较为方便地测试
-- 易用性:代码职责分割的更为明显，不过不像MVC那样直观易懂了
+- 易用性:代码职责分割的更为明显，不过不像 MVC 那样直观易懂了
 
 # Android
 
-
-
-- 将Presenter与View绑定，并且将用户响应事件绑定到Presenter中
+- 将 Presenter 与 View 绑定，并且将用户响应事件绑定到 Presenter 中
 
 ```
         //Set up presenter
@@ -119,7 +113,9 @@ view.presenter = presenter
             }
         });
 ```
-- Presenter中调用Model更新数据，并且调用View中进行重新渲染
+
+- Presenter 中调用 Model 更新数据，并且调用 View 中进行重新渲染
+
 ```
     public void loadRepositories(String usernameEntered) {
         String username = usernameEntered.trim();
@@ -165,8 +161,3 @@ view.presenter = presenter
 
 
 ```
-
-
-
-
-

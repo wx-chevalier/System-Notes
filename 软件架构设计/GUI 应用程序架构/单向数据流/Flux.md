@@ -16,17 +16,17 @@ Instead of a Virtual DOM, Vue.js uses the actual DOM as the template and keeps r
 
 Flux 不能算是绝对的先行者，但是在 Unidirectional Architecture 中却是最富盛名的一个，也是很多人接触到的第一个 Unidirectional Architecture。Flux 主要由以下几个部分构成：
 
-* Stores:存放业务数据和应用状态，一个 Flux 中可能存在多个 Stores
-* View:层次化组合的 React 组件
-* Actions:用户输入之后触发 View 发出的事件
-* Dispatcher:负责分发 Actions
+- Stores:存放业务数据和应用状态，一个 Flux 中可能存在多个 Stores
+- View:层次化组合的 React 组件
+- Actions:用户输入之后触发 View 发出的事件
+- Dispatcher:负责分发 Actions
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/923C026D-DCF6-49F1-932E-88A632578068.png)
 根据上述流程，我们可知 Flux 模式的特性为：
 
-* Dispatcher:Event Bus 中设置有一个单例的 Dispatcher，很多 Flux 的变种都移除了 Dispatcher 依赖。
-* 只有 View 使用可组合的组件:在 Flux 中只有 React 的组件可以进行层次化组合，而 Stores 与 Actions 都不可以进行层次化组合。React 组件与 Flux 一般是松耦合的，因此 Flux 并不是 Fractal，Dispatcher 与 Stores 可以被看做 Orchestrator。
-* 用户事件响应在渲染时声明:在 React 的 `render()`  函数中，即负责响应用户交互，也负责注册用户事件的处理器
+- Dispatcher:Event Bus 中设置有一个单例的 Dispatcher，很多 Flux 的变种都移除了 Dispatcher 依赖。
+- 只有 View 使用可组合的组件:在 Flux 中只有 React 的组件可以进行层次化组合，而 Stores 与 Actions 都不可以进行层次化组合。React 组件与 Flux 一般是松耦合的，因此 Flux 并不是 Fractal，Dispatcher 与 Stores 可以被看做 Orchestrator。
+- 用户事件响应在渲染时声明:在 React 的 `render()`  函数中，即负责响应用户交互，也负责注册用户事件的处理器
 
 下面我们来看一个具体的代码对比，首先是以经典的 Cocoa 风格编写一个简单的计数器按钮:
 
@@ -163,47 +163,47 @@ CounterButton = React.createClass(
 
 Redux 是 Flux 的所有变种中最为出色的一个，并且也是当前 Web 领域主流的状态管理工具，其独创的理念与功能深刻影响了 GUI 应用程序架构中的状态管理的思想。Redux 将 Flux 中单例的 Dispatcher 替换为了单例的 Store，即也是其最大的特性，集中式的状态管理。并且 Store 的定义也不是从零开始单独定义，而是基于多个 Reducer 的组合，可以把 Reducer 看做 Store Factory。Redux 的重要组成部分包括:
 
-* Singleton Store:管理应用中的状态，并且提供了一个`dispatch(action)`函数。
-* Provider:用于监听 Store 的变化并且连接像 React、Angular 这样的 UI 框架
-* Actions:基于用户输入创建的分发给 Reducer 的事件
-* Reducers:用于响应 Actions 并且更新全局状态树的纯函数
+- Singleton Store:管理应用中的状态，并且提供了一个`dispatch(action)`函数。
+- Provider:用于监听 Store 的变化并且连接像 React、Angular 这样的 UI 框架
+- Actions:基于用户输入创建的分发给 Reducer 的事件
+- Reducers:用于响应 Actions 并且更新全局状态树的纯函数
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/EE52C4A6-0755-47D9-9A4B-70080E177869.png)
 根据上述流程，我们可知 Redux 模式的特性为：
 
-* 以工厂模式组装 Stores:Redux 允许我以`createStore()`函数加上一系列组合好的 Reducer 函数来创建 Store 实例，还有另一个`applyMiddleware()`函数可以允许在`dispatch()`函数执行前后链式调用一系列中间件。
-* Providers:Redux 并不特定地需要何种 UI 框架，可以与 Angular、React 等等很多 UI 框架协同工作。Redux 并不是 Fractal，一般来说 Store 被视作 Orchestrator。
-* User Event 处理器即可以选择在渲染函数中声明，也可以在其他地方进行声明。
+- 以工厂模式组装 Stores:Redux 允许我以`createStore()`函数加上一系列组合好的 Reducer 函数来创建 Store 实例，还有另一个`applyMiddleware()`函数可以允许在`dispatch()`函数执行前后链式调用一系列中间件。
+- Providers:Redux 并不特定地需要何种 UI 框架，可以与 Angular、React 等等很多 UI 框架协同工作。Redux 并不是 Fractal，一般来说 Store 被视作 Orchestrator。
+- User Event 处理器即可以选择在渲染函数中声明，也可以在其他地方进行声明。
 
 ## Model-View-Update
 
 又被称作[Elm Architecture](https://github.com/evancz/elm-architecture-tutorial/)，上面所讲的 Redux 就是受到 Elm 的启发演化而来，因此 MVU 与 Redux 之间有很多的相通之处。MVU 使用函数式编程语言 Elm 作为其底层开发语言，因此该架构可以被看做更纯粹的函数式架构。MVU 中的基本组成部分有:
 
-* Model:定义状态数据结构的类型
-* View:纯函数，将状态渲染为界面
-* Actions:以 Mailbox 的方式传递用户事件的载体
-* Update:用于更新状态的纯函数
+- Model:定义状态数据结构的类型
+- View:纯函数，将状态渲染为界面
+- Actions:以 Mailbox 的方式传递用户事件的载体
+- Update:用于更新状态的纯函数
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/mvu-unidir-ui-arch.jpg)
 根据上述流程，我们可知 Elm 模式的特性为：
 
-* 到处可见的层次化组合:Redux 只是在 View 层允许将组件进行层次化组合，而 MVU 中在 Model 与 Update 函数中也允许进行层次化组合，甚至 Actions 都可以包含内嵌的子 Action
-* Elm 属于 Fractal 架构:因为 Elm 中所有的模块组件都支持层次化组合，即都可以被单独地导出使用
+- 到处可见的层次化组合:Redux 只是在 View 层允许将组件进行层次化组合，而 MVU 中在 Model 与 Update 函数中也允许进行层次化组合，甚至 Actions 都可以包含内嵌的子 Action
+- Elm 属于 Fractal 架构:因为 Elm 中所有的模块组件都支持层次化组合，即都可以被单独地导出使用
 
 ## Model-View-Intent
 MVI 是一个基于[RxJS](https://github.com/Reactive-Extensions/RxJS)的响应式单向数据流架构。MVI 也是[Cycle.js](http://cycle.js.org/)的首选架构，主要由 Observable 事件流对象与处理函数组成。其主要的组成部分包括:
 
-* Intent:Observable 提供的将用户事件转化为 Action 的函数
-* Model:Observable 提供的将 Action 转化为可观测的 State 的函数
-* View:将状态渲染为用户界面的函数
-* Custom Element:类似于 React Component 那样的界面组件
+- Intent:Observable 提供的将用户事件转化为 Action 的函数
+- Model:Observable 提供的将 Action 转化为可观测的 State 的函数
+- View:将状态渲染为用户界面的函数
+- Custom Element:类似于 React Component 那样的界面组件
 
 ![](http://staltz.com/img/mvi-unidir-ui-arch.jpg)
 根据上述流程，我们可知 MVI 模式的特性为：
 
-* 重度依赖于 Observables:架构中的每个部分都会被转化为 Observable 事件流
-* Intent:不同于 Flux 或者 Redux，MVI 中的 Actions 并没有直接传送给 Dispatcher 或者 Store，而是交于正在监听的 Model
-* 彻底的响应式，并且只要所有的组件都遵循 MVI 模式就能保证整体架构的 fractal 特性
+- 重度依赖于 Observables:架构中的每个部分都会被转化为 Observable 事件流
+- Intent:不同于 Flux 或者 Redux，MVI 中的 Actions 并没有直接传送给 Dispatcher 或者 Store，而是交于正在监听的 Model
+- 彻底的响应式，并且只要所有的组件都遵循 MVI 模式就能保证整体架构的 fractal 特性
 
 # Clean Architecture
 
@@ -215,10 +215,10 @@ Uncle Bob 提出 Clean Architecture 最早并不是专门面向于 GUI 应用程
 Viper 架构中职责分割地更为细致，大概分为了五层:
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/1-0pN3BNTXfwKbf08lhwutag.png)
 
-* Interactor:包含了与数据以及网络相关的业务逻辑，譬如从服务端获取数据并构造出实体对象。很多时候我们会使用所谓的 Services 或者 Managers 来负责此方面的工作
-* 包含 UI 相关的一些业务逻辑，调用 Interactor 中的方法
-* Entities:单纯的数据对象而不是数据访问层
-* Router:在 VIPER 模块间完成路由
+- Interactor:包含了与数据以及网络相关的业务逻辑，譬如从服务端获取数据并构造出实体对象。很多时候我们会使用所谓的 Services 或者 Managers 来负责此方面的工作
+- 包含 UI 相关的一些业务逻辑，调用 Interactor 中的方法
+- Entities:单纯的数据对象而不是数据访问层
+- Router:在 VIPER 模块间完成路由
 
 一般来说，一个 VIPER 模块可以是单独的某个页面或者整个应用程序，经常会按照权限来划分。
 
@@ -316,6 +316,6 @@ presenter.greetingProvider = interactor
 interactor.output = presenter
 ```
 
-* Distribution:毫无疑问，VIPER 中职责分割的最为细致
-* Testability:测试性肯定也是最好的
-* 易用性:代码最多
+- Distribution:毫无疑问，VIPER 中职责分割的最为细致
+- Testability:测试性肯定也是最好的
+- 易用性:代码最多

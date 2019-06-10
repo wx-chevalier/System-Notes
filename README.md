@@ -1,6 +1,6 @@
 ![default](https://user-images.githubusercontent.com/5803001/44412872-85055300-a59c-11e8-9025-b74c9a47b42b.png)
 
-# 软件工程基础
+# Software Engineering Series | 软件工程基础
 
 软件开发就是把一个复杂的问题分解为一系列简单的问题，再把一系列简单的解决方案组合成一个复杂的解决方案。在笔者的系列文章中，分门别类地讨论了 Web、服务端、基础架构等某些具体的领域，而本系列关注形而上的软件工程相关的思考方式、通用能力与设计原则。
 
@@ -8,7 +8,7 @@
 
 建议前往 [xCompass](https://wx-chevalier.github.io/home/#/search) 或 [alfred-sg](https://github.com/wx-chevalier/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。
 
-- [开发工具漫谈](./开发工具漫谈)：工欲善其事，必先利其器。
+- [研发方式与工具](./研发方式与工具)：工欲善其事，必先利其器。
 
 - [数据结构与算法](./数据结构与算法)
 

@@ -2,7 +2,9 @@
 
 > **Make everything as simple as possible, but not simpler — Albert Einstein**
 
-十年前，Martin Fowler 撰写了 [GUI Architectures](http://martinfowler.com/eaaDev/uiArchs.html)一文，至今被奉为经典。本文所谈的所谓架构二字，核心即是对于对于富客户端的**代码组织 / 职责划分**。纵览这十年内的架构模式变迁，大概可以分为 `MV*` 与 Unidirectional 两大类，而 Clean Architecture 则是以严格的层次划分独辟蹊径。从笔者的认知来看，从 MVC 到 MVP 的变迁完成了对于 View 与 Model 的解耦合，改进了职责分配与可测试性。而从 MVP 到 MVVM，添加了 View 与 ViewModel 之间的数据绑定，使得 View 完全的无状态化。最后，整个从 MV\* 到 Unidirectional 的变迁即是采用了消息队列式的数据流驱动的架构，并且以 Redux 为代表的方案将原本 MV\* 中碎片化的状态管理变为了统一的状态管理，保证了状态的有序性与可回溯性。
+十年前，Martin Fowler 撰写了 [GUI Architectures](http://martinfowler.com/eaaDev/uiArchs.html)一文，至今被奉为经典。本文所谈的所谓架构二字，核心即是对于对于富客户端的**代码组织 / 职责划分**。纵览这十年内的架构模式变迁，大概可以分为 `MV*` 与 Unidirectional 两大类，而 Clean Architecture 则是以严格的层次划分独辟蹊径。从笔者的认知来看，从 MVC 到 MVP 的变迁完成了对于 View 与 Model 的解耦合，改进了职责分配与可测试性。而从 MVP 到 MVVM，添加了 View 与 ViewModel 之间的数据绑定，使得 View 完全的无状态化。最后，整个从 `MV*` 到 Unidirectional 的变迁即是采用了消息队列式的数据流驱动的架构，并且以 Redux 为代表的方案将原本 `MV*` 中碎片化的状态管理变为了统一的状态管理，保证了状态的有序性与可回溯性。
+
+![](https://i.postimg.cc/tTs5SKXy/image.png)
 
 笔者在撰写本文的时候也不可避免的带了很多自己的观点，在漫长的 GUI 架构模式变迁过程中，很多概念其实是交错复杂，典型的譬如 MVP 与 MVVM 的区别，笔者按照自己的理解强行定义了二者的区分边界，不可避免的带着自己的主观想法。另外，鉴于笔者目前主要进行的是 Web 方面的开发，因此在整体倾向上是支持 Unidirectional Architecture 并且认为集中式的状态管理是正确的方向(注：MobX 也是极好的)。但是必须要强调，GUI 架构本身是无法脱离其所依托的平台，下文笔者也会浅述由于 Android 与 iOS 本身 SDK API 的特殊性，生搬硬套其他平台的架构模式也是邯郸学步，沐猴而冠。不过总结而言，它山之石，可以攻玉，本身我们所处的开发环境一直在不断变化，对于过去的精华自当应该保留，并且与新的环境相互印证，触类旁通。
 

@@ -1,6 +1,6 @@
 ## MVVM: 数据绑定与无状态的视图
 
-Model View View-Model 模型是 MV\*家族中最年轻的一位，也是由 Microsoft 提出，并经由 Martin Fowler 布道传播。MVVM 源于 Martin Fowler 的 Presentation Model，Presentation Model 的核心在于接管了 View 所有的行为响应，View 的所有响应与状态都定义在了 Presentation Model 中。也就是说，View 不会包含任意的状态。举个典型的使用场景，当用户点击某个按钮之后，状态信息是从 Presentation Model 传递给 Model，而不是从 View 传递给 Presentation Model。任何控制组件间的逻辑操作，即上文所述的 ViewLogic，都应该放置在 Presentation Model 中进行处理，而不是在 View 层，这一点也是 MVP 模式与 Presentation Model 最大的区别。
+Model View View-Model 模型是 `MV*`家族中最年轻的一位，也是由 Microsoft 提出，并经由 Martin Fowler 布道传播。MVVM 源于 Martin Fowler 的 Presentation Model，Presentation Model 的核心在于接管了 View 所有的行为响应，View 的所有响应与状态都定义在了 Presentation Model 中。也就是说，View 不会包含任意的状态。举个典型的使用场景，当用户点击某个按钮之后，状态信息是从 Presentation Model 传递给 Model，而不是从 View 传递给 Presentation Model。任何控制组件间的逻辑操作，即上文所述的 ViewLogic，都应该放置在 Presentation Model 中进行处理，而不是在 View 层，这一点也是 MVP 模式与 Presentation Model 最大的区别。
 MVVM 模式进一步深化了 Presentation Model 的思想，利用 Data Binding 等技术保证了 View 中不会存储任何的状态或者逻辑操作。在 WPF 中，UI 主要是利用 XAML 或者 XML 创建，而这些标记类型的语言是无法存储任何状态的，就像 HTML 一样(因此 JSX 语法其实是将 View 又有状态化了)，只是允许 UI 与某个 ViewModel 中的类建立映射关系。渲染引擎根据 XAML 中的声明以及来自于 ViewModel 的数据最终生成呈现的页面。因为数据绑定的特性，有时候 MVVM 也会被称作 MVB:Model View Binder。总结一下，MVVM 利用数据绑定彻底完成了从命令式编程到声明式编程的转化，使得 View 逐步无状态化。一个典型的 MVVM 的使用场景为：
 
 - 用户交互输入

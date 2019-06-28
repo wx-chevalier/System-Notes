@@ -111,7 +111,7 @@
 
 ## 整洁与重构 
 
-- [Code Review](../整洁与重构/Code%20Review/README.md) 
+- [Code Review](../整洁与重构/Code Review/README.md) 
 - [复杂性](../整洁与重构/复杂性/README.md) 
   - [复杂性来源](../整洁与重构/复杂性/复杂性来源.md) 
 - [技术负债](../整洁与重构/技术负债/README.md) 
@@ -140,14 +140,14 @@
 
 ## 软件架构设计 
 
-- [GUI 应用程序架构](../软件架构设计/GUI%20应用程序架构/README.md) 
-  - [单向数据流](../软件架构设计/GUI%20应用程序架构/单向数据流/README.md) 
-    - [Flux](../软件架构设计/GUI%20应用程序架构/单向数据流/Flux.md) 
-  - [双向数据流](../软件架构设计/GUI%20应用程序架构/双向数据流/README.md) 
-    - [MVC](../软件架构设计/GUI%20应用程序架构/双向数据流/MVC.md) 
-    - [MVP](../软件架构设计/GUI%20应用程序架构/双向数据流/MVP.md) 
-    - [MVVM](../软件架构设计/GUI%20应用程序架构/双向数据流/MVVM.md) 
-  - [组件化](../软件架构设计/GUI%20应用程序架构/组件化/README.md) 
+- [GUI 应用程序架构](../软件架构设计/GUI 应用程序架构/README.md) 
+  - [单向数据流](../软件架构设计/GUI 应用程序架构/单向数据流/README.md) 
+    - [Flux](../软件架构设计/GUI 应用程序架构/单向数据流/Flux.md) 
+  - [双向数据流](../软件架构设计/GUI 应用程序架构/双向数据流/README.md) 
+    - [MVC](../软件架构设计/GUI 应用程序架构/双向数据流/MVC.md) 
+    - [MVP](../软件架构设计/GUI 应用程序架构/双向数据流/MVP.md) 
+    - [MVVM](../软件架构设计/GUI 应用程序架构/双向数据流/MVVM.md) 
+  - [组件化](../软件架构设计/GUI 应用程序架构/组件化/README.md) 
 - [TOGAF](../软件架构设计/TOGAF/README.md) 
 - [业务中台](../软件架构设计/业务中台/README.md) 
   - [业务定义](../软件架构设计/业务中台/业务定义.md) 
@@ -164,11 +164,11 @@
     - [AARF-en](../软件架构设计/架构风格/RARF/AARF-en.md) 
     - [RARF.en](../软件架构设计/架构风格/RARF/RARF.en.md) 
     - [RARF](../软件架构设计/架构风格/RARF/RARF.md) 
-    - [类 Redux 的代码组织](../软件架构设计/架构风格/RARF/类%20Redux%20的代码组织.md) 
+    - [类 Redux 的代码组织](../软件架构设计/架构风格/RARF/类 Redux 的代码组织.md) 
   - [REST](../软件架构设计/架构风格/REST/README.md) 
-    - [Microsoft API 设计标准](../软件架构设计/架构风格/REST/Microsoft%20API%20设计标准.md) 
-    - [Paypal API 设计标准](../软件架构设计/架构风格/REST/Paypal%20API%20设计标准.md) 
-    - [RESTful 接口](../软件架构设计/架构风格/REST/RESTful%20接口.md) 
+    - [Microsoft API 设计标准](../软件架构设计/架构风格/REST/Microsoft API 设计标准.md) 
+    - [Paypal API 设计标准](../软件架构设计/架构风格/REST/Paypal API 设计标准.md) 
+    - [RESTful 接口](../软件架构设计/架构风格/REST/RESTful 接口.md) 
 - [设计原则](../软件架构设计/设计原则/README.md) 
   - [抽象与隔离](../软件架构设计/设计原则/抽象与隔离.md) 
   - [耦合与内聚](../软件架构设计/设计原则/耦合与内聚.md) 

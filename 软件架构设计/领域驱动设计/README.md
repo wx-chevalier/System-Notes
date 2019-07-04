@@ -10,11 +10,11 @@ Domain-Driven Design is a software development methodology for tackling complex 
 
 It will teach you how to effectively model the real world in your application and use OOP to encapsulate the business logic of the organization.
 
-在域驱动设计中，语言是最重要的因素。您希望拥有的是在代码中明确表达的问题域。从本质上讲，作为开发人员，您希望使用与您的业务相同的语言。
+通过领域模型和 DDD 的分层思想，屏蔽外部变化对领域逻辑的影响，确保交付的软件产品是边界清晰的微服务，而不是内部边界依然混乱的小单体。在需求和设计变化时，可以轻松的完成微服务的开发、拆分和组合，确保微服务不易受外部变化的影响，并稳定运行。
 
 # 设计理念
 
-DDD 如同微服务一样，理论与价值观的引导优于具体的落地框架，所谓领域建模的设计核心包含了两个：
+在域驱动设计中，语言是最重要的因素。您希望拥有的是在代码中明确表达的问题域。从本质上讲，作为开发人员，您希望使用与您的业务相同的语言。DDD 如同微服务一样，理论与价值观的引导优于具体的落地框架，所谓领域建模的设计核心包含了两个：
 
 - 统一语言，软件的开发人员/使用人员都使用同一套语言，即对某个概念，名词的认知是统一的。
 - 面向领域，以领域去思考问题，而不是模块。

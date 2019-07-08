@@ -1,6 +1,6 @@
 ![default](https://user-images.githubusercontent.com/5803001/44412872-85055300-a59c-11e8-9025-b74c9a47b42b.png)
 
-# Software Engineering Series | 软件工程基础
+# Software Engineering Series | 软件工程、算法与架构
 
 软件开发就是把一个复杂的问题分解为一系列简单的问题，再把一系列简单的解决方案组合成一个复杂的解决方案。在笔者的系列文章中，分门别类地讨论了 Web、服务端、基础架构等某些具体的领域，而本系列关注形而上的软件工程相关的思考方式、通用能力与设计原则。
 

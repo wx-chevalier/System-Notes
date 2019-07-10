@@ -2,6 +2,8 @@
 
 ## [功能域](../功能域/README.md) 
 
+- [Introduction](../功能域/README.md) 
+
 - [CMS](../功能域/CMS/README.md) 
   - [在线协作编辑](../功能域/CMS/在线协作编辑.md) 
 - [IM](../功能域/IM/README.md) 
@@ -23,6 +25,8 @@
     - [规范](../功能域/流程引擎/BPMN/规范.md) 
 
 ## [数据结构与算法](../数据结构与算法/README.md) 
+
+- [Introduction](../数据结构与算法/README.md) 
 
 - [动态规划](../数据结构与算法/动态规划/README.md) 
   - [动态规划概述](../数据结构与算法/动态规划/动态规划概述.md) 
@@ -112,6 +116,8 @@
 
 ## [整洁与重构](../整洁与重构/README.md) 
 
+- [Introduction](../整洁与重构/README.md) 
+
 - [Code Review](../整洁与重构/Code Review/README.md) 
 - [整洁代码](../整洁与重构/整洁代码/README.md) 
   - [异常处理](../整洁与重构/整洁代码/异常处理.md) 
@@ -123,6 +129,8 @@
   - [if-else](../整洁与重构/逻辑表示/if-else.md) 
 
 ## [研发方式与工具](../研发方式与工具/README.md) 
+
+- [Introduction](../研发方式与工具/README.md) 
 
 - [Git](../研发方式与工具/Git/README.md) 
   - [Rebase](../研发方式与工具/Git/Rebase.md) 
@@ -141,6 +149,8 @@
 - [版本管理](../研发方式与工具/版本管理/README.md) 
 
 ## [软件架构设计](../软件架构设计/README.md) 
+
+- [Introduction](../软件架构设计/README.md) 
 
 - [GUI 应用程序架构](../软件架构设计/GUI 应用程序架构/README.md) 
   - [单向数据流](../软件架构设计/GUI 应用程序架构/单向数据流/README.md) 
@@ -191,6 +201,8 @@
   - [领域状态](../软件架构设计/领域驱动设计/领域状态.md) 
 
 ## [面向对象的设计模式](../面向对象的设计模式/README.md) 
+
+- [Introduction](../面向对象的设计模式/README.md) 
 
 - [SOLID](../面向对象的设计模式/SOLID/README.md) 
   - [Java](../面向对象的设计模式/SOLID/Java.md) 

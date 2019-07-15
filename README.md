@@ -38,6 +38,8 @@
 
 # Preface | 前言
 
+一般来说，在软件工程中，我们往往会面临三类问题：
+
 Generally speaking, there are 3. The Performant System Problem, the Embedded System Problem, and the Complex Domain Problem.
 
 ## The Performant System Problem

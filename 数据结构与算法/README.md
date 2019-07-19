@@ -11,6 +11,6 @@
 
 首先，我们在数据结构与算法知识脑图中了解本系列包含的关键知识点与它们的结构：
 
-![](https://i.postimg.cc/gJqPxSmG/image.png)
+![mindmap](https://i.postimg.cc/gJqPxSmG/image.png)
 
 # 链接

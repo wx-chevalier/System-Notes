@@ -6,4 +6,4 @@
 
 值得一提的是，在本篇的结构划分中，遵循了模式优先而非语言优先的，原则，亦强调了笔者不拘泥于某种编程语言的理念：Programming into a Language, not in.
 
-[![image.png](https://i.postimg.cc/13fB6XPX/image.png)](https://postimg.cc/tsGFGXsG)
+![mindmap](https://i.postimg.cc/13fB6XPX/image.png)

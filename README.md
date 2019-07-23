@@ -38,93 +38,53 @@
 
 # Preface | 前言
 
-一般来说，在软件工程中，我们往往会面临三类问题：
+一般来说，在软件工程中，我们往往会面临三类问题：性能问题（The Performant System Problem）、系统的嵌入式问题（the Embedded System Problem）以及复杂领域建模问题（the Complex Domain Problem）。
 
-Generally speaking, there are 3. The Performant System Problem, the Embedded System Problem, and the Complex Domain Problem.
+## 性能
 
-## The Performant System Problem
+以著名的 Twitter 为例，你注册，你发推文，你喜欢别人的推文，这就是它。如果 Twitter 很简单，为什么其他人不能这样做呢？很明显，Twitter 的真正挑战实际上不是“它做什么”，而是它“如何做它能做的事情”。
 
-Let's talk about Twitter.
+Twitter 面临着每天为大约 5 亿用户提供服务的独特挑战。Twitter 解决的难题实际上是一个性能问题。当挑战是表现时，我们是否使用严格类型的语言并不重要。
 
-Twitter is actually a really simple concept.
+## 系统嵌入
 
-You sign up, you make tweets, you like other people's tweets and that's pretty much it.
+嵌入式系统是计算机硬件和软件的组合，其目的是实现对系统的机械或电气方面的控制。我们今天使用的大多数系统都是建立在一个非常复杂的代码层上，如果不是最初编写的，通常会编译成 C 或 C ++。
 
-If Twitter is that simple, why couldn't someone else do it?
+用这些语言编码不适合胆小的人。在 C 中，没有物体这样的东西; 我们作为人类喜欢物体，因为我们可以很容易地理解它们。 C 是程序性的，这使我们用这种语言编写的代码更加难以保持清洁。 这些问题还需要了解较低级别的细节。
 
-It's apparent that the real challenge for Twitter is not actually so much as "what it does", but it's "how it's able to do what it does".
+C ++确实让生活变得更好，因为它具有面向对象，但挑战仍然是与较低级别的硬件细节进行有趣的交互。因为我们对这些问题使用的语言并没有那么多的选择，所以在这里讨论 TypeScript 是无关紧要的。
 
-Twitter has the unique challenge of serving requests from approximately 500 million users every single day.
+## 复杂领域建模
 
-The hard problem that Twitter solves is actually a perfomance problem.
+对于某些问题，这个挑战不是关于处理更多请求的扩展，而是根据代码库的大小进行扩展。企业公司有复杂的现实问题需要解决。在这些公司中，最大的工程挑战通常是：
 
-When the challenge is performance, whether we use a strictly typed language or not is less important.
+- 能够逻辑地（通过域）将整块的各个部分分成更小的应用程序。然后，物理上（通过有界上下文的微服务）将它们分开，以便可以分配团队来维护它们
 
-## The Embedded System Problem
+- 处理这些应用程序之间的集成和同步
 
-An embedded system is a combination of computer hardware and software, with the purpose of enabling control over the mechanical or electrical aspects of a system.
+- 对域概念进行建模并实际解决域的问题
 
-Most systems we use today are built on a very complex layer of code that, if not initially written in, compiles down to C or C++ usually.
+- 创建由开发人员和领域专家共享的无处不在（包罗万象）的语言
 
-Coding in these languages is not for the faint of heart.
+- 不会迷失在大量编写的代码中，并且在不破坏现有代码的情况下无法添加新功能
 
-In C, there is no such thing as objects; and we as humans like objects because we can easily understand them. C is procedural and this makes the code that we have to write in this language more challenging to keep clean. These problems also require knowledge of the lower-level details.
-
-C++ does make life a whole lot better because it has object orientation, but the challenge is still fundementally interacting with lower-level hardware details.
-
-Because we don't really have that much of a choice on the languages we use for these problems, it's irrelevant to discuss TypeScript here.
-
-## The Complex Domain Problem
-
-For some problems, that challenge is less about scaling in terms of handling more requests, but scaling in terms of the codebase's size.
-
-Enterprise companies have complex real-life problems to be solved. In these companies, the biggest engineering challenges are usually:
-
-- Being able to logically (via domains) separate parts of that monolith into smaller apps. And then, physically (via microservices for bounded contexts) split them up so that teams can be assigned to maintain them
-
-- Handling integration and synchronization between these apps
-
-- Modeling the domain concepts and actually solving the problems of the domain
-
-- Creating a ubiquitous (all encompassing) language to be shared by developers and domain experts
-
-- Not getting lost in the mass amounts of code written and slowing down to the point where it becomes impossible to add new features without breaking existing ones
-
-I've essentially described the types of problems that Domain Driven Design solves. For these types of projects, you wouldn't even think about not using a strictly-typed language like TypeScript.
+我基本上描述了 Domain Driven Design 解决的问题类型。对于这些类型的项目，您甚至不会考虑不使用像 TypeScript 这样的严格类型的语言。
 
 ## 强/弱类型语言
 
-For Complex Domain problems, if you don't choose TypeScript and instead, choose JavaScript, it will require some extra effort to be successful. Not only will you have to be extra comfortable with your object modeling abilities in vanilla JavaScript, but you'll also have to know how to utilize the 4 principles of object-oriented programming (encapsulation, abstraction, inheritance, and polymorphism).
+对于设计到复杂领域建模的问题，如果您不选择 TypeScript 而是选择 JavaScript，则需要一些额外的努力才能成功。您不仅需要更加熟悉 vanilla JavaScript 中的对象建模功能，而且还必须知道如何利用面向对象编程的 4 个原则（封装，抽象，继承和多态）。
 
-This can be hard to do. JavaScript doesn't naturally come with concepts of interfaces and abstract classes.
+这可能很难做到。 JavaScript 自然不具备接口和抽象类的概念。使用 vanilla JavaScript 无法轻松实现 SOLID 设计原则中的“接口隔离”。单独使用 JavaScript 也需要一定程度的纪律作为开发人员才能保持代码清洁，而且一旦代码库足够大，这一点至关重要。您还需要确保您的团队在如何在 JavaScript 中实现通用设计模式方面拥有相同的学科，经验和知识水平。如果没有，你需要引导他们。
 
-"Interface Segregation" from the SOLID design principles isn't easily achievable with vanilla JavaScript
+在像这样的领域驱动项目中，使用严格类型语言的强大好处不是表达可以做什么，而是更多关于使用封装和信息隐藏来通过限制实际允许的域对象来减少错误的表面区域。代码大小通常与复杂域问题相关联，其中大型代码库意味着复杂的域，但情况并非总是如此。当项目的代码量达到一定大小时，跟踪存在的所有内容变得更加困难，并且更容易最终重新实现已编码的内容。
 
-Using JavaScript alone would also require a certain level of discipline as a developer in order to keep the code clean, and this is vital once the codebase is sufficiently large. You're also left to ensure that your team shares the same discipline, experience and knowledge level on how to implement common design patterns in JavaScript. If not, you'll need to guide them.
+复制是精心设计和稳定的软件的敌人。当新开发人员开始在已经很大的代码库上编码时，这一点尤为明显。Visual Studio Code 的自动完成和 Intellisense 有助于浏览大型项目。它适用于 TypeScript，但它在 JavaScript 方面有限。对于我知道将保持简单和小型的项目，或者如果我知道它最终将被丢弃，我将不太愿意推荐 TypeScript 作为必需品。
 
-In Domain-Driven projects like this, the strong benefit from using a strictly typed language is less about expressing what can be done, but more about using encapsulation and information hiding to reduce the surface area of bugs by limiting what domain objects are actually allowed to do.
+## 生产级别软件与 Demo
 
-Code size usually ties back to the Complex Domain Problem, where a large codebase means a complex domain, but that's not always the case.
+生产软件是您关心的代码，或者如果它不起作用您将遇到麻烦的代码。 这也是你为其编写测试的代码。 一般的经验法则是，如果您关心代码，则需要对其进行单元测试。如果您不在乎，请不要进行测试。
 
-When the amount of code a project has gets to a certain size, it becomes harder to keep track of everything that exists, and becomes easier to end up re-implementing something already coded.
-
-Duplication is the enemy to well-designed and stable software.
-
-This is especially heightened when new developers start coding on an already large codebase.
-
-Visual Studio Code's autocompletion and Intellisense helps to navigate through huge projects. It works really well with TypeScript, but it's somewhat limited with JavaScript.
-
-For projects that I know will stay simple and small, or if I know that it will be thrown away eventually, I would be less pressed to recommend TypeScript as a necessity.
-
-## Production software vs. pet projects
-
-Production software is code that you care about, or code that you'll get in trouble for if it doesn't work. It's also code that you've written tests for. The general rule of thumb is that if you care about the code, you need to have unit tests for it.
-
-If you don't care, don't have tests.
-
-Pet projects are self-explanatory. Do whatever you like. You have no professional commitment to uphold any standards of craftsmanship whatsoever.
-
-Go on and make things! Make small things, make big things.
+宠物项目是不言自明的。做你喜欢的事。 您没有专业承诺维护任何标准的工艺。
 
 # About
 

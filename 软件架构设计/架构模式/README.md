@@ -1,12 +1,10 @@
 [![javascript](https://user-images.githubusercontent.com/5803001/44412874-859de980-a59c-11e8-8845-eebe9d13d832.jpg)](https://github.com/wx-chevalier/SoftwareEngineering-Series)
 
-# 软件架构风格
+# 软件架构模式
 
-The main difference is, an Architectural Pattern, as we said, is a way to solve a recurring architectural problem, while an Architectural Style is a name given to a recurrent Architectural Design. It doesn't exist to solve a problem.
+软件架构设计的一个核心问题是能否使用重复的架构模式，即能否达到架构级的软件重用。也就是说，能否在不同的软件系统中，使用同一架构。当我们讨论软件架构时，常常会提及软件架构模式（Architectural Pattern）与软件架构风格（Architectural Style）。
 
-软件架构设计的一个核心问题是能否使用重复的架构模式，即能否达到架构级的软件重用。也就是说，能否在不同的软件系统中，使用同一架构。软件架构风格是描述某一特定应用领域中系统组织方式的惯用模式。
-
-架构风格反映了领域中众多系统所共有的结构和语义特性，并指导如何将各个模块和子系统有效滴组织成一个完整的系统。
+软件架构模式往往会用于具体地解决某个具体的重复的架构问题，而架构风格则是对于某个具体的架构设计方案的命名。软件架构风格是描述某一特定应用领域中系统组织方式的惯用模式；架构风格反映了领域中众多系统所共有的结构和语义特性，并指导如何将各个模块和子系统有效组织成一个完整的系统。在笔者的系列文章中，并未硬性分割架构风格与架构模式的差异，而是统一以架构模式来指代。
 
 - 数据流风格：批处理序列，管道/过滤器。
 - 调用/返回风格：主程序/子系统，面向对象风格，层次结构。

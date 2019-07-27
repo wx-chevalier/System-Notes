@@ -4,4 +4,4 @@ COLA 是由阿里开源的业务架构风格，COLA 是 Clean Object-Oriented an
 
 ![](https://i.postimg.cc/9QPNbzm9/image.png)
 
-换一个视角，从 COLA 应用处理响应一个请求的过程来看。COLA 使用了 CQRS 来分离命令和查询的职责，使用扩展点和元数据来提升应用的扩展性。整个处理流程如下图所示：
+换一个视角，从 COLA 应用处理响应一个请求的过程来看。COLA 使用了 CQRS 来分离命令和查询的职责，使用扩展点和元数据来提升应用的扩展性。

@@ -8,12 +8,14 @@
 
 毫无疑问，设计模式于己于他人于系统都是多赢的，设计模式使代码编制真正工程化，设计模式是软件工程的基石，如同大厦的一块块砖石一样。项目中合理的运用设计模式可以完美的解决很多问题，每种模式在现在中都有相应的原理来与之对应，每一个模式描述了一个在我们周围不断重复发生的问题，以及该问题的核心解决方案，这也是它能被广泛应用的原因。
 
-![mindmap](https://i.postimg.cc/zBSqCMPZ/Design-Patterns.png)
-
 总体来说设计模式分为三大类：
 
-- 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。
+![mindmap](https://i.postimg.cc/Jz4vvTrm/image.png)
 
-- 结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。
+![](https://i.postimg.cc/J0YZn4kp/image.png)
 
-- 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。
+# 链接
+
+- https://sourcemaking.com/design_patterns/creational_patterns
+
+- https://refactoringguru.cn/design-patterns/factory-method

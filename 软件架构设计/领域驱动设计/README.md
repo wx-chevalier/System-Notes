@@ -1,15 +1,21 @@
 # 领域驱动设计
 
-DDD 领域驱动设计，起源于 2004 年著名建模专家 Eric Evans 发表的他最具影响力的著名书籍：《Domain-Driven Design – Tackling Complexity in the Heart of Software》，Eric Evans 在该书中只是提供了一套原始理论，并没有提供一套方法论，因此多年来对于 DDD 也是见仁见智。更早些时候 MartinFowler 曾经提出贫血模型与充血模型的概念，他认为我们大多数系统以 pojo 作为模型，只有普通的 getter、setter 方法，没有真正的行为，好像缺少血液的人，在 Evans 看来，DDD 中模型都是以充血形式存在，也就是说在 DDD 中，我们设计的模型不仅包含描述业务属性，还要包含能够描述动作的方法，不同的是，领域中一些概念不能用在模型对象，如仓储、工厂、服务等，如强加于模型中，将破坏模型的定义。
+DDD 领域驱动设计，起源于 2004 年著名建模专家 Eric Evans 发表的他最具影响力的著名书籍：《Domain-Driven Design – Tackling Complexity in the Heart of Software》，Eric Evans 在该书中只是提供了一套原始理论，并没有提供一套方法论，因此多年来对于 DDD 也是见仁见智。更早些时候 MartinFowler 曾经提出贫血模型与充血模型的概念，他认为我们大多数系统以 POJO 作为模型，只有普通的 getter、setter 方法，没有真正的行为，好像缺少血液的人，在 Evans 看来，DDD 中模型都是以充血形式存在，也就是说在 DDD 中，我们设计的模型不仅包含描述业务属性，还要包含能够描述动作的方法，不同的是，领域中一些概念不能用在模型对象，如仓储、工厂、服务等，如强加于模型中，将破坏模型的定义。
 
 领域驱动设计将教您如何在应用程序中建模现实世界，并使用 OOP 封装组织的业务逻辑。软件开发过程很复杂。当我们遇到问题时，我们通常会尝试通过将其变为更易理解和易于管理的部分来解决复杂问题。领域驱动设计是一种软件开发方法，用于处理复杂的软件项目，以提供满足组织目标的最终产品。事实上，领域驱动设计促进了项目将重点放在不断发展的核心模型上。它将教您如何在应用程序中有效地建模现实世界，并使用 OOP 封装组织的业务逻辑。
 
+DDD 的实践并非一蹴而就，往往都会先是套概念，在代码中使用 Aggregation Root，Bonded Context，Repository 等等这些概念；也会使用一定的分层策略，然而这种做法一般对复杂度的治理并没有多大作用。在经过大量的实践之后，就可以融会贯通，理解 DDD 的本质是统一语言、边界划分和面向对象分析的方法。
+
 # 设计理念
 
-领域驱动设计最大的好处是将业务语义显现化，把原先晦涩难懂的业务算法逻辑，通过领域对象（Domain Object），统一语言（Ubiquitous Language）将领域概念清晰的显性化表达出来。通过领域模型和 DDD 的分层思想，屏蔽外部变化对领域逻辑的影响，确保交付的软件产品是边界清晰的微服务，而不是内部边界依然混乱的小单体。在需求和设计变化时，可以轻松的完成微服务的开发、拆分和组合，确保微服务不易受外部变化的影响，并稳定运行。
+领域驱动设计最大的好处是将业务语义显现化，把原先晦涩难懂的业务算法逻辑，通过领域对象（Domain Object），统一语言（Ubiquitous Language）将领域概念清晰的显性化表达出来。
 
-- 统一语言，软件的开发人员/使用人员都使用同一套语言，即对某个概念，名词的认知是统一的。
-- 面向领域，以领域去思考问题，而不是模块。
+- 统一语言，软件的开发人员/使用人员都使用同一套语言，即对某个概念，名词的认知是统一的。将模型作为语言的支柱。确保团队在内部的所有交流中，代码中，画图，写东西，特别是讲话的时候都要使用这种语言。例如账号，转账，透支策略，这些都是非常重要的领域概念，如果这些命名都和我们日常讨论以及 PRD 中的描述保持一致，将会极大提升代码的可读性，减少认知成本。
+- 面向领域，业务语义显性化，以领域去思考问题，而不是模块。将隐式的业务逻辑从一推 if-else 里面抽取出来，用通用语言去命名、去写代码、去扩展，让其变成显示概念，比如“透支策略”这个重要的业务概念，按照事务脚本的写法，其含义完全淹没在代码逻辑中没有突显出来。
+
+接触到需求第一步就是考虑领域模型，而不是将其切割成数据和行为，然后数据用数据库实现，行为使用服务实现，最后造成需求的首肢分离。以银行账号 Account 为案例，Account 有“存款”，“计算利息”和“取款”等业务行为，但是传统经典的方式是将“存款”，“计算利息”和“取款”行为放在账号的服务 AccountService 中，而不是放在 Account 对象本身之中。
+
+DDD 让你首先考虑的是业务语言，而不是数据。DDD 强调业务抽象和面向对象编程，而不是过程式业务逻辑实现。通过领域模型和 DDD 的分层思想，屏蔽外部变化对领域逻辑的影响，确保交付的软件产品是边界清晰的微服务，而不是内部边界依然混乱的小单体。在需求和设计变化时，可以轻松的完成微服务的开发、拆分和组合，确保微服务不易受外部变化的影响，并稳定运行。
 
 为了实现这两个核心，需要一个关键的角色，领域专家。他负责问题域，和问题解决域，他应该通晓研发的这个产品需要解决哪些问题，专业术语，关联关系。而在目前敏捷开发的结构下，流水线上的各个角色往往会专注于自己负责的环节，精细化的分工也限制了每个角色的全局视角；虽然我们经常提倡所谓的主人翁意识，但是在落地时又很难去推进。
 
@@ -31,49 +37,126 @@ DDD 领域驱动设计，起源于 2004 年著名建模专家 Eric Evans 发表�
 
 DDD 不适合多数为 CRUD 单表操作的简单业务场景，在该场景下往往导致增加系统复杂度。同样不适合基于老系统代码之上进行的优化重构，因为这样从传统分层模式到基于聚合的设计是完全颠覆性的，论改造成本不如重新开发一套新应用。
 
-# 名词和术语
+# 应用案例
 
-![](https://i.postimg.cc/1X77QS5Q/image.png)
+## 事务脚本
 
-## Entity（实体）
+这里以银行转账事务脚本实现为例，在事务脚本的实现中，关于在两个账号之间转账的领域业务逻辑都被写在了 MoneyTransferService 的实现里面了，而 Account 仅仅是 getters 和 setters 的数据结构，也就是我们说的贫血模型：
 
-每个实体是具有唯一标识的领域概念，并且可以相当长的一段时间内持续地变化。假设“客户”是一个实体，那么“李处长”、“王秘书”作为实体之一，都有唯一的“会员 ID”或者“身份证号”用以区分，假设每个客户都有一个或者多个收货地址（包括国家、省、市、村、楼号、单元）等等，作为客户实体的一部分携带的业务属性，可以进一步提取为地址值对象，一对多关联，用以保证最关键的业务含义在实体身上，控制每个领域对象的粒度最小，避免属性过多导致模型混乱，结构不清晰。
+```java
+public class MoneyTransferServiceTransactionScriptImpl
+      implements MoneyTransferService {
+  private AccountDao accountDao;
+  private BankingTransactionRepository bankingTransactionRepository;
+  . . .
+  @Override
+  public BankingTransaction transfer(
+      String fromAccountId, String toAccountId, double amount) {
+    Account fromAccount = accountDao.findById(fromAccountId);
+    Account toAccount = accountDao.findById(toAccountId);
+    // . . .
+    double newBalance = fromAccount.getBalance() - amount;
+    switch (fromAccount.getOverdraftPolicy()) {
+    case NEVER:
+      if (newBalance < 0) {
+        throw new DebitException("Insufficient funds");
+      }
+      break;
+    case ALLOWED:
+      if (newBalance < -limit) {
+        throw new DebitException(
+            "Overdraft limit (of " + limit + ") exceeded: " + newBalance);
+      }
+      break;
+    }
+    fromAccount.setBalance(newBalance);
+    toAccount.setBalance(toAccount.getBalance() + amount);
+    BankingTransaction moneyTransferTransaction =
+        new MoneyTranferTransaction(fromAccountId, toAccountId, amount);
+    bankingTransactionRepository.addTransaction(moneyTransferTransaction);
+    return moneyTransferTransaction;
+  }
+}
+```
 
-我们可以对实体做多次修改，故一个实体对象可能和它先前的状态大不相同。但是，由于它们拥有相同的身份标识，他们依然是同一个实体。例如一件商品在电商商品上下文中是一个实体，通过商品中台唯一的商品 id 来标示这个实体。
+这完全是面向过程的代码风格。
 
-## ValueObject（值对象）
+## DDD
 
-VO 用于度量和描述事物，当你只关心某个对象的属性时，该对象便可作为一个 VO。实体与 VO 的区别在于唯一的身份标识和可变性。当一个对象用于描述一个事物，但是又没有唯一标示，那么它就是一个 VO。例如商品中的商品类别，类别就没有一个唯一标识，通过图书、服装等这些值就能明确表示这个商品类别。
+如果用 DDD 的方式实现，Account 实体除了账号属性之外，还包含了行为和业务逻辑，比如 debit( ) 和 credit( ) 方法。
 
-VO 一般是不影响实际业务开展的，可共享的，没有唯一标识的 POJO 对象。在传统三层模式中，VO 往往用以作为界面展示的信息载体，在 DDD 中虽然编写方式一致，但是在这里仍是具有一定业务语义，是领域模型的一部分，而不是被表现层某页面绑架的临时对象。
+```java
+// @Entity
+public class Account {
+  // @Id
+  private String id;
+  private double balance;
+  private OverdraftPolicy overdraftPolicy;
+  // . . .
+  public double balance() { return balance; }
+  public void debit(double amount) {
+    this.overdraftPolicy.preDebit(this, amount);
+    this.balance = this.balance - amount;
+    this.overdraftPolicy.postDebit(this, amount);
+  }
+  public void credit(double amount) {
+    this.balance = this.balance + amount;
+  }
+}
+```
 
-## Aggregate（聚合）
+而且透支策略 OverdraftPolicy 也不仅仅是一个 Enum 了，而是被抽象成包含了业务规则并采用了策略模式的对象。
 
-聚合是具有一定关联关系的实体对象的集合，用来划分实体之间的边界，使模型之间更加内聚，边界更加清晰，定义清晰的聚合有助于避免混乱的模型关系划分导致模型之间错综复杂的关系网。抛除概念，可以理解为一组有关联关系的数据单元，聚合的加载、修改、销毁作为一个整体进行。
+```java
+public interface OverdraftPolicy {
+  void preDebit(Account account, double amount);
+  void postDebit(Account account, double amount);
+}
+public class NoOverdraftAllowed implements OverdraftPolicy {
+  public void preDebit(Account account, double amount) {
+    double newBalance = account.balance() - amount;
+    if (newBalance < 0) {
+      throw new DebitException("Insufficient funds");
+    }
+  }
+  public void postDebit(Account account, double amount) {
+  }
+}
+public class LimitedOverdraft implements OverdraftPolicy {
+  private double limit;
+  // . . .
+  public void preDebit(Account account, double amount) {
+    double newBalance = account.balance() - amount;
+    if (newBalance < -limit) {
+      throw new DebitException(
+          "Overdraft limit (of " + limit + ") exceeded: " + newBalance);
+    }
+  }
+  public void postDebit(Account account, double amount) {
+  }
+}
+```
 
-而聚合根是聚合的边界，是与外部打交道的唯一入口，聚合内部实体对象或值对象保持被聚合根引用，不可被其他聚合操作引用，也不能单独进行查询。聚合内部的实体也有可能引用其他的聚合根。由此特性可得，聚合根的查询，在 DB 层面也应该是一个单元，聚合根被删除，整个聚合也会被删除（基本等于级联删除）。
+而 Domain Service 只需要调用 Domain Entity 对象完成业务逻辑即可。
 
-比如“公司”、“老板”、“员工” 就是一个聚合，有独立存在的意义，不依赖其他对象存在，能够被独立访问到的从这三个实体来看，公司为聚合根，公司倒闭了，雇佣的员工和老板也就不存在了。另外，快递员会每天往公司投递货物，两者之间并无直接关联，因此快递员是隶属于另外聚合中的一个实体，或独立为只有一个实体的聚合的根。因此聚合和根的设定需要在实际业务角度深入分析。
-
-通常在大多领域模型中，多数聚合只有一个实体，即聚合根，该实体内部只包含一部分值对象，另外少数聚合中也只有两三个实体引用。聚合尽可能粒度控制不要太大，否则为在事务级别做到聚合完整性，性能代价较大。
-
-## Bounded Context（限界上下文）
-
-用来封装通用语言和领域对象，为领域提供上下文语境，保证在领域之内的一些术语、业务相关对象等（通用语言）有一个确切的含义，没有二义性。使团队所有成员能够明确地知道什么必须保持一致，什么必须独立开发。
-
-## 工厂（Factory）
-
-有时候创建领域对象不仅仅是简单的 new 操作，比如创建是需要一系列初始化工作，对参数进行一些业务规则校验，如果参数无效不能创建期望的对象时抛出一个异常等，而这些规则属于领域层的业务，我们不希望暴露给应用层更多的领域规则，这就需要将这些细节进行一次封装，而在 DDD 中没有其他元素适合这一工作，于是出现了工厂这一概念。隐藏创建对象的好处是即不会污染应用层，又避免泄露领域层规则，只需要对外暴露简单的方法，外部传入创建所需的参数即可。
-
-## 仓储（Repository）
-
-由于聚合的特性，我们需要一并加载聚合实体到内存，也需将聚合整体持久化到 DB 中，我们又不希望直接在业务编码中直接编入如何获取数据的代码，于是产生出这一元素，负责聚合的加载与持久，对外提供简单的接口调用。仓储内部持有的一定是聚合，原因是在 DDD 中模型是以聚合划分的，实体的组建与持久依赖于所在聚合，模型不能够脱离聚合单独创建，因此仓储的设计也应该从聚合角度出发，我理解的仓储就是聚合的管理器，它的定义仅是一个接口，实现方式任意替换而不影响上层调用者。
-
-抛除概念，从实际开发角度，仓储是领域模型与 ORM 工具中间的协调器。例如传统贫血模型中，DAO 通过 ORM 工具将表映射为对应的 DO(数值对象)，而 DDD 中模型以聚合为边界划分，而碍于历史原因或性能需要，表结构往往与聚合结构有较大区别，仓储就是为了协调这种 DB 于模型之间转换而提出的概念。
-
-如果系统并非用 DDD 方式建立模型, 而对象的加载使用 Repository 方式查询，则有些不伦不类，这样与 DAO 无任何分别，因为模型是贫血模型而非聚合。
-包的划分，仓储接口定义在领域层，实现在基础设施层。在传统 DDD 中一般由应用层引用仓储，而在 CQRS(DDD 针对因系统中存在大量复杂查询导致不得不跨聚合查询的一种优化模式)中一般由 Command 引用。
-
-## Event Storming（事件风暴）
-
-事件风暴是一项团队活动，旨在通过领域事件识别出聚合根，进而划分微服务的限界上下文。在活动中，团队先通过头脑风暴的形式罗列出领域中所有的领域事件，整合之后形成最终的领域事件集合，然后对于每一个事件，标注出导致该事件的命令（Command），再然后为每个事件标注出命令发起方的角色，命令可以是用户发起，也可以是第三方系统调用或者是定时器触发等。最后对事件进行分类整理出聚合根以及限界上下文。
+```java
+public class MoneyTransferServiceDomainModelImpl
+      implements MoneyTransferService {
+  private AccountRepository accountRepository;
+  private BankingTransactionRepository bankingTransactionRepository;
+  . . .
+  @Override
+  public BankingTransaction transfer(
+      String fromAccountId, String toAccountId, double amount) {
+    Account fromAccount = accountRepository.findById(fromAccountId);
+    Account toAccount = accountRepository.findById(toAccountId);
+    // . . .
+    fromAccount.debit(amount);
+    toAccount.credit(amount);
+    BankingTransaction moneyTransferTransaction =
+        new MoneyTranferTransaction(fromAccountId, toAccountId, amount);
+    bankingTransactionRepository.addTransaction(moneyTransferTransaction);
+    return moneyTransferTransaction;
+  }
+}
+```

@@ -7,9 +7,9 @@
 - [CMS](../功能域/CMS/README.md) 
   - [在线协作编辑](../功能域/CMS/在线协作编辑.md) 
 - [IM](../功能域/IM/README.md) 
-  - [WebSocket](../功能域/IM/WebSocket.md/) 
   - [Feed](../功能域/IM/Feed/README.md) 
   - [WebRTC](../功能域/IM/WebRTC/README.md) 
+  - [WebSocket](../功能域/IM/WebSocket/README.md) 
   - [实时通信](../功能域/IM/实时通信/README.md) 
     - [SocketIO](../功能域/IM/实时通信/SocketIO.md) 
     - [实时通信](../功能域/IM/实时通信/实时通信.md) 
@@ -23,7 +23,7 @@
 - [流程引擎](../功能域/流程引擎/README.md) 
   - [Activiti](../功能域/流程引擎/Activiti/README.md) 
   - [BPMN](../功能域/流程引擎/BPMN/README.md) 
-    - [规范](../功能域/流程引擎/BPMN/规范.md) 
+    - [BPMN 规范](../功能域/流程引擎/BPMN/BPMN 规范.md) 
 
 ## [数据结构与算法](../数据结构与算法/README.md) 
 

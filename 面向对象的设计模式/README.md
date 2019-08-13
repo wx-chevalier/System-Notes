@@ -12,7 +12,9 @@
 
 ![mindmap](https://i.postimg.cc/Jz4vvTrm/image.png)
 
-本篇的所有参考代码归纳在 []() 仓库中。
+本篇的所有参考代码归纳在 [design-pattern-snippets](https://github.com/wx-chevalier/design-pattern-snippets) 仓库中。
+
+# Gang of Four
 
 # 链接
 

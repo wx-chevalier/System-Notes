@@ -25,8 +25,10 @@
 
 ![](https://i.postimg.cc/W1tRts0Y/image.png)
 
-# 链接
+# Motivation & Credits
 
-- https://sourcemaking.com/design_patterns/creational_patterns
+本篇参考了如下教程：
 
-- https://refactoringguru.cn/design-patterns/factory-method
+- [Source Making](https://sourcemaking.com/design_patterns/)
+
+- [Refactoring Guru](https://refactoringguru.cn/design-patterns/factory-method)

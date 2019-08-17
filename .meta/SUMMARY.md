@@ -1,30 +1,5 @@
 # Summary 
 
-## [功能域](../功能域/README.md) 
-
-- [Introduction](../功能域/README.md) 
-
-- [CMS](../功能域/CMS/README.md) 
-  - [在线协作编辑](../功能域/CMS/在线协作编辑.md) 
-- [IM](../功能域/IM/README.md) 
-  - [Feed](../功能域/IM/Feed/README.md) 
-  - [WebRTC](../功能域/IM/WebRTC/README.md) 
-  - [WebSocket](../功能域/IM/WebSocket/README.md) 
-  - [实时通信](../功能域/IM/实时通信/README.md) 
-    - [SocketIO](../功能域/IM/实时通信/SocketIO.md) 
-    - [实时通信](../功能域/IM/实时通信/实时通信.md) 
-    - [聊天室](../功能域/IM/实时通信/聊天室.md) 
-  - [直播](../功能域/IM/直播/README.md) 
-    - [直播协议](../功能域/IM/直播/直播协议.md) 
-- [LBS](../功能域/LBS/README.md) 
-- [开放平台](../功能域/开放平台/README.md) 
-  - [微信](../功能域/开放平台/微信/README.md) 
-  - [支付宝](../功能域/开放平台/支付宝/README.md) 
-- [流程引擎](../功能域/流程引擎/README.md) 
-  - [Activiti](../功能域/流程引擎/Activiti/README.md) 
-  - [BPMN](../功能域/流程引擎/BPMN/README.md) 
-    - [BPMN 规范](../功能域/流程引擎/BPMN/BPMN 规范.md) 
-
 ## [数据结构与算法](../数据结构与算法/README.md) 
 
 - [Introduction](../数据结构与算法/README.md) 

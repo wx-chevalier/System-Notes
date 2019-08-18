@@ -4,6 +4,11 @@
 
 - [Introduction](../数据结构与算法/README.md) 
 
+- [Go](../数据结构与算法/Go/README.md) 
+- [Java](../数据结构与算法/Java/README.md) 
+- [Python](../数据结构与算法/Python/README.md) 
+- [Rust](../数据结构与算法/Rust/README.md) 
+- [TS](../数据结构与算法/TS/README.md) 
 - [动态规划](../数据结构与算法/动态规划/README.md) 
   - [动态规划概述](../数据结构与算法/动态规划/动态规划概述.md) 
   - [股票买卖](../数据结构与算法/动态规划/股票买卖.md) 
@@ -85,12 +90,6 @@
   - [跳表](../数据结构与算法/线性表/跳表.md) 
   - [链表](../数据结构与算法/线性表/链表.md) 
   - [集合](../数据结构与算法/线性表/集合.md) 
-- [编程实现](../数据结构与算法/编程实现/README.md) 
-  - [Go](../数据结构与算法/编程实现/Go/README.md) 
-  - [Java](../数据结构与算法/编程实现/Java/README.md) 
-  - [Python](../数据结构与算法/编程实现/Python/README.md) 
-  - [Rust](../数据结构与算法/编程实现/Rust/README.md) 
-  - [TS](../数据结构与算法/编程实现/TS/README.md) 
 
 ## [整洁与重构](../整洁与重构/README.md) 
 

@@ -8,19 +8,19 @@
 
 简而言之，Component Based Design 就是将整个 UI 切分为更小的、更可控的具有清晰命名的部分。而这些细小的部分又可以划分为如下 6 个不同的分组。
 
-## Identity:特性
+## Identity: 特性
 
 首先是特性，即是项目的核心标志性元素，譬如字体、排版、主色与次生色等等。在某个项目中设计人员应该保持所有的设计都遵从同一套特性规范。
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/3/1-ZS6dVifI8bRs1PhFL8a1Tg.png)
 
-## Elements:元素
+## Elements: 元素
 
 第二个可复用的部分是元素，譬如按钮、链接、输入框、下拉列表等等这些都是属于元素。每个元素同时也会定义其不同状态下的显示，譬如悬浮状态的按钮、聚焦状态的按钮以及不可用的按钮。我们的口号是：Define Once，Reuse Throughout The Project.
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/3/1-KnoBW4w_RCBEwAvzG800TQ.png)
 
-## Components:组件
+## Components: 组件
 
 第三个可复用的部分是组件，这也是用户屏幕当中展示的最多的块。组件即是使用了一到多个元素(Elements)的任何界面部分，典型的譬如卡片、导航栏等等。需要注意的是，组件并不一定需要模块化。
 
@@ -28,19 +28,19 @@
 
 在设计组件的时候，我们同样需要根据项目的不同响应式尺寸来设计不同尺寸下的组件呈现方式。
 
-## Compositions:复合
+## Compositions: 复合
 
 我们逐步提高我们的着眼点，第四个分组即是复合。复合是任何包含了多个组件的 UI 部分，它们定义了内部组件的行为范式。下图就是简单的例子，下面的这个复合定义了组件的展示内容、组件的间距、整个标题等信息。
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/3/1-4Hc7Cd6ksSXKe5vzAzVrQw.png)
 
-## Layout:布局
+## Layout: 布局
 
 第五大类，布局，是对于设计原则的更高层抽象，典型的譬如网格系统，定义了行列之间的间隔。定义统一的布局有助于其他设计者复用现有的样式规范。
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/3/1-vL3mknPTPbBUThj-nhrwIw.png)
 
-## Pages:页面
+## Pages: 页面
 
 最后一组即是完整的呈现页面，每个页面包含了一系列的复合与组件的排列组合。所有超出设计预期的东西应该添加在页面这个层级，譬如如果市场的同学说我们的联系人页背景应该是蓝色的，那我们就该将这个特性添加到页面这个层级，而不应该污染上述五个层级。
 

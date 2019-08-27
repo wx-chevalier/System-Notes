@@ -1,6 +1,6 @@
 # Flux 单向数据流架构
 
-## 双向数据绑定的不足
+# 双向数据绑定的不足
 
 This means that one change (a user input or API response) can affect the state of an application in many places in the code — for example, two-way data binding. That can be hard to maintain and debug.
 
@@ -12,7 +12,7 @@ Instead of a Virtual DOM, Vue.js uses the actual DOM as the template and keeps r
 
 总而言之，笔者认为双向数据流与单向数据流相比，性能上孰优孰劣尚无定论，最大的区别在于单向数据流与双向数据流相比有更好地可控性，这一点在上文提及的函数响应式编程中也有体现。若论快速开发，笔者感觉双向数据绑定略胜一筹，毕竟这种 View 与 ViewModel/ViewLogic 之间的直接绑定直观便捷。而如果是注重于全局的状态管理，希望维护耦合程度较低、可测试性/可扩展性较高的代码，那么还是单向数据流，即 Unidirectional Architecture 较为合适。一家之言，欢迎讨论。
 
-## Flux:数据流驱动的页面
+# Flux: 数据流驱动的页面
 
 Flux 不能算是绝对的先行者，但是在 Unidirectional Architecture 中却是最富盛名的一个，也是很多人接触到的第一个 Unidirectional Architecture。Flux 主要由以下几个部分构成：
 
@@ -24,42 +24,35 @@ Flux 不能算是绝对的先行者，但是在 Unidirectional Architecture 中�
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/923C026D-DCF6-49F1-932E-88A632578068.png)
 根据上述流程，我们可知 Flux 模式的特性为：
 
-- Dispatcher:Event Bus 中设置有一个单例的 Dispatcher，很多 Flux 的变种都移除了 Dispatcher 依赖。
-- 只有 View 使用可组合的组件:在 Flux 中只有 React 的组件可以进行层次化组合，而 Stores 与 Actions 都不可以进行层次化组合。React 组件与 Flux 一般是松耦合的，因此 Flux 并不是 Fractal，Dispatcher 与 Stores 可以被看做 Orchestrator。
-- 用户事件响应在渲染时声明:在 React 的 `render()`  函数中，即负责响应用户交互，也负责注册用户事件的处理器
+- Dispatcher: Event Bus 中设置有一个单例的 Dispatcher，很多 Flux 的变种都移除了 Dispatcher 依赖。
+
+- 只有 View 使用可组合的组件: 在 Flux 中只有 React 的组件可以进行层次化组合，而 Stores 与 Actions 都不可以进行层次化组合。React 组件与 Flux 一般是松耦合的，因此 Flux 并不是 Fractal，Dispatcher 与 Stores 可以被看做 Orchestrator。
+
+- 用户事件响应在渲染时声明: 在 React 的 `render()`  函数中，即负责响应用户交互，也负责注册用户事件的处理器
 
 下面我们来看一个具体的代码对比，首先是以经典的 Cocoa 风格编写一个简单的计数器按钮:
 
-```
+```ojc
 class ModelCounter
 
-
     constructor: (@value=1) ->
-
-
     increaseValue: (delta) =>
         @value += delta
 
-
 class ControllerCounter
-
 
     constructor: (opts) ->
         @model_counter = opts.model_counter
         @observers = []
 
-
     getValue: => @model_counter.value
-
 
     increaseValue: (delta) =>
         @model_counter.increaseValue(delta)
         @notifyObservers()
 
-
     notifyObservers: =>
         obj.notify(this) for obj in @observers
-
 
     registerObserver: (observer) =>
         @observers.push(observer)
@@ -67,12 +60,10 @@ class ControllerCounter
 
 class ViewCounterButton
 
-
     constructor: (opts) ->
         @controller_counter = opts.controller_counter
         @button_class = opts.button_class or 'button_counter'
         @controller_counter.registerObserver(this)
-
 
     render: =>
         elm = $("<button class=\"#{@button_class}\">
@@ -81,24 +72,23 @@ class ViewCounterButton
             @controller_counter.increaseValue(1)
         return elm
 
-
     notify: =>
         $("button.#{@button_class}").replaceWith(=> @render())
 ```
 
 上述代码逻辑用上文提及的 MVC 模式图演示就是:
+
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/1-wjSds7V7Q2jqC7AqkTK8hg.gif)
+
 而如果用 Flux 模式实现，会是下面这个样子:
 
-```
+```sh
 # Store
 class CounterStore extends EventEmitter
-
 
     constructor: ->
         @count = 0
         @dispatchToken = @registerToDispatcher()
-
 
     increaseValue: (delta) ->
         @count += 1
@@ -106,7 +96,6 @@ class CounterStore extends EventEmitter
 
     getCount: ->
         return @count
-
 
     registerToDispatcher: ->
         CounterDispatcher.register((payload) =>
@@ -119,60 +108,57 @@ class CounterStore extends EventEmitter
 # Action
 class CounterActions
 
-
     @increaseCount: (delta) ->
         CounterDispatcher.handleViewAction({
             'type': ActionTypes.INCREASE_COUNT
             'delta': delta
         })
 
-
 # View
 CounterButton = React.createClass(
 
-
     getInitialState: ->
         return {'count': 0}
-
 
     _onChange: ->
         @setState({
             count: CounterStore.getCount()
         })
 
-
     componentDidMount: ->
         CounterStore.addListener('CHANGE', @_onChange)
-
 
     componentWillUnmount: ->
         CounterStore.removeListener('CHANGE', @_onChange)
 
-
     render: ->
         return React.DOM.button({'className': @prop.class}, @state.value)
-
-
 )
 ```
 
 其数据流图为:
+
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/1-C1WAATMd5gagQXy73bPEzw.gif)
 
-## Redux:集中式的状态管理
+## Redux: 集中式的状态管理
 
 Redux 是 Flux 的所有变种中最为出色的一个，并且也是当前 Web 领域主流的状态管理工具，其独创的理念与功能深刻影响了 GUI 应用程序架构中的状态管理的思想。Redux 将 Flux 中单例的 Dispatcher 替换为了单例的 Store，即也是其最大的特性，集中式的状态管理。并且 Store 的定义也不是从零开始单独定义，而是基于多个 Reducer 的组合，可以把 Reducer 看做 Store Factory。Redux 的重要组成部分包括:
 
 - Singleton Store:管理应用中的状态，并且提供了一个`dispatch(action)`函数。
+
 - Provider:用于监听 Store 的变化并且连接像 React、Angular 这样的 UI 框架
+
 - Actions:基于用户输入创建的分发给 Reducer 的事件
+
 - Reducers:用于响应 Actions 并且更新全局状态树的纯函数
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/EE52C4A6-0755-47D9-9A4B-70080E177869.png)
 根据上述流程，我们可知 Redux 模式的特性为：
 
-- 以工厂模式组装 Stores:Redux 允许我以`createStore()`函数加上一系列组合好的 Reducer 函数来创建 Store 实例，还有另一个`applyMiddleware()`函数可以允许在`dispatch()`函数执行前后链式调用一系列中间件。
-- Providers:Redux 并不特定地需要何种 UI 框架，可以与 Angular、React 等等很多 UI 框架协同工作。Redux 并不是 Fractal，一般来说 Store 被视作 Orchestrator。
+- 以工厂模式组装 Stores: Redux 允许我以`createStore()`函数加上一系列组合好的 Reducer 函数来创建 Store 实例，还有另一个`applyMiddleware()`函数可以允许在`dispatch()`函数执行前后链式调用一系列中间件。
+
+- Providers: Redux 并不特定地需要何种 UI 框架，可以与 Angular、React 等等很多 UI 框架协同工作。Redux 并不是 Fractal，一般来说 Store 被视作 Orchestrator。
+
 - User Event 处理器即可以选择在渲染函数中声明，也可以在其他地方进行声明。
 
 ## Model-View-Update
@@ -191,131 +177,23 @@ Redux 是 Flux 的所有变种中最为出色的一个，并且也是当前 Web 
 - Elm 属于 Fractal 架构:因为 Elm 中所有的模块组件都支持层次化组合，即都可以被单独地导出使用
 
 ## Model-View-Intent
+
 MVI 是一个基于[RxJS](https://github.com/Reactive-Extensions/RxJS)的响应式单向数据流架构。MVI 也是[Cycle.js](http://cycle.js.org/)的首选架构，主要由 Observable 事件流对象与处理函数组成。其主要的组成部分包括:
 
 - Intent:Observable 提供的将用户事件转化为 Action 的函数
+
 - Model:Observable 提供的将 Action 转化为可观测的 State 的函数
+
 - View:将状态渲染为用户界面的函数
+
 - Custom Element:类似于 React Component 那样的界面组件
 
 ![](http://staltz.com/img/mvi-unidir-ui-arch.jpg)
+
 根据上述流程，我们可知 MVI 模式的特性为：
 
 - 重度依赖于 Observables:架构中的每个部分都会被转化为 Observable 事件流
+
 - Intent:不同于 Flux 或者 Redux，MVI 中的 Actions 并没有直接传送给 Dispatcher 或者 Store，而是交于正在监听的 Model
+
 - 彻底的响应式，并且只要所有的组件都遵循 MVI 模式就能保证整体架构的 fractal 特性
-
-# Clean Architecture
-
-![](http://luboganev.github.io/images/2015-07-23-clean-architecture-pt2/CleanArchitecture.jpg)
-Uncle Bob 提出 Clean Architecture 最早并不是专门面向于 GUI 应用程序，而是描述了一种用于构建可扩展、可测试软件系统的概要原则。 Clean Architecture 可能运用于构建网站、Web 应用、桌面应用以及移动应用等不同领域场景的软件开发中。其定义的基本原则保证了关注点分离以及整个软件项目的模块性与可组织性，也就是我们在上文提及的 GUI 应用程序架构中所需要考量的点。 Clean Architecture 中最基础的理论当属所谓的依赖原则(Dependency Rule)，在依赖洋葱图中的任一内层模块不应该了解或依赖于任何外层模块。换言之，我们定义在外层模块中的代码不应该被内层模块所引入，包括变量、函数、类等等任何的软件实体。除此之外，Clean Architecture 还强制规定了所有邻接圈层之间的交互与通信应当以抽象方式定义，譬如在 Android 中应该利用 Java 提供的 POJOs 以及 Interfaces，而 iOS 中应该使用 Protocols 或者标准类。这种强制定义也就保证了不同层之间的组件完全解耦合，并且能够很方便地更改或者 Mock 测试，而不会影响到其他层的代码。Clean Architecture 是非常理想化的架构定义模式，也仅是提出了一些基本的原则，其在 iOS 的具体实践也就是所谓的 VIPER 架构。
-
-## iOS Viper Architecture
-
-Viper 架构中职责分割地更为细致，大概分为了五层:
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/2/1-0pN3BNTXfwKbf08lhwutag.png)
-
-- Interactor:包含了与数据以及网络相关的业务逻辑，譬如从服务端获取数据并构造出实体对象。很多时候我们会使用所谓的 Services 或者 Managers 来负责此方面的工作
-- 包含 UI 相关的一些业务逻辑，调用 Interactor 中的方法
-- Entities:单纯的数据对象而不是数据访问层
-- Router:在 VIPER 模块间完成路由
-
-一般来说，一个 VIPER 模块可以是单独的某个页面或者整个应用程序，经常会按照权限来划分。
-
-```
-import UIKit
-
-
-struct Person { // Entity (usually more complex e.g. NSManagedObject)
-    let firstName: String
-    let lastName: String
-}
-
-
-struct GreetingData { // Transport data structure (not Entity)
-    let greeting: String
-    let subject: String
-}
-
-
-protocol GreetingProvider {
-    func provideGreetingData()
-}
-
-
-protocol GreetingOutput: class {
-    func receiveGreetingData(greetingData: GreetingData)
-}
-
-
-class GreetingInteractor : GreetingProvider {
-    weak var output: GreetingOutput!
-
-    func provideGreetingData() {
-        let person = Person(firstName: "David", lastName: "Blaine") // usually comes from data access layer
-        let subject = person.firstName + " " + person.lastName
-        let greeting = GreetingData(greeting: "Hello", subject: subject)
-        self.output.receiveGreetingData(greeting)
-    }
-}
-
-
-protocol GreetingViewEventHandler {
-    func didTapShowGreetingButton()
-}
-
-
-protocol GreetingView: class {
-    func setGreeting(greeting: String)
-}
-
-
-class GreetingPresenter : GreetingOutput, GreetingViewEventHandler {
-    weak var view: GreetingView!
-    var greetingProvider: GreetingProvider!
-
-    func didTapShowGreetingButton() {
-        self.greetingProvider.provideGreetingData()
-    }
-
-    func receiveGreetingData(greetingData: GreetingData) {
-        let greeting = greetingData.greeting + " " + greetingData.subject
-        self.view.setGreeting(greeting)
-    }
-}
-
-
-class GreetingViewController : UIViewController, GreetingView {
-    var eventHandler: GreetingViewEventHandler!
-    let showGreetingButton = UIButton()
-    let greetingLabel = UILabel()
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.showGreetingButton.addTarget(self, action: "didTapButton:", forControlEvents: .TouchUpInside)
-    }
-
-    func didTapButton(button: UIButton) {
-        self.eventHandler.didTapShowGreetingButton()
-    }
-
-    func setGreeting(greeting: String) {
-        self.greetingLabel.text = greeting
-    }
-
-    // layout code goes here
-}
-// Assembling of VIPER module, without Router
-let view = GreetingViewController()
-let presenter = GreetingPresenter()
-let interactor = GreetingInteractor()
-view.eventHandler = presenter
-presenter.view = view
-presenter.greetingProvider = interactor
-interactor.output = presenter
-```
-
-- Distribution:毫无疑问，VIPER 中职责分割的最为细致
-- Testability:测试性肯定也是最好的
-- 易用性:代码最多

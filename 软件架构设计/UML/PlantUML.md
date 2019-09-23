@@ -260,39 +260,138 @@ customer -- (checkout)
 
 # 活动图（Activity Diagram）
 
+在活动图中，你可以使用 `(*)` 来表示活动开始点和结束点。使用 --> 来表示箭头。
+
 ```puml
-!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+(*) --> "First Activity"
+"First Activity" --> (*)
+```
 
-start
-:ClickServlet.handleRequest();
-:new page;
-if (Page.onSecurityCheck) then (true)
-:(Page.onInit();
-if (isForward?) then (no)
-    :Process controls;
-    if (continue processing?) then (no)
-    stop
-    endif
+## 箭头与分支
 
-    if (isPost?) then (yes)
-    :Page.onPost();
-    else (no)
-    :Page.onGet();
-    endif
-    :Page.onRender();
-endif
-else (false)
-endif
+缺省情况下，活动图的箭头是没有标注的。但我们可以通过方括号 [labels] 来设置标注，只要把它放在箭头定义的后面就可以了。
 
-if (do redirect?) then (yes)
-:redirect process;
+```puml
+(*) --> "First Activity"
+-->[You can put also labels] "Second Activity"
+-->(*)
+```
+
+我们可以使用 -> 创建一个水平箭头，也可以通过下面的方式来改变箭头 的方向：
+
+- -down-> 向下（这个是默认的，等同于 =–>=）
+- -right-> 向右
+- -left-> 向左
+- -up-> 向上
+
+```puml
+(*) --> "1"
+-right-> "2"
+-down-> "3"
+-left-> "4"
+-le-> "5"
+-up-> "6"
+-l-> "7"
+-do-> "8"
+-d-> "9"
+-> "10"
+--> (*)
+```
+
+在描述箭头时， up|down|left|right 这几个单词的写法可以简化， 用单词开头的一个或两个字母来替换就行了，比如 -down-> 也可以写成 -d-> 或者 -do-> 。在 PlantUML 里，我们可以使用 if/then/else 关键词来定义分支。
+
+```puml
+(*) --> "Initialisation"
+
+if " Some Test" then
+    -->[ture] "Some Activity"
+    --> "Another Activity"
+    -right-> (*)
 else
-if (do forward?) then (yes)
-    :Forward request;
-else (no)
-    :Render page template;
+    ->[false] "Something else"
+    -->[Ending process] (*)
 endif
+```
+
+对于多分支：
+
+```puml
+(*) --> if "Some Test" then
+-->[true] "1"
+
+if "" then
+    -> "3" as a3
+else
+    if "Other test" then
+    -left-> "5"
+    --> (*)
+    else
+    --> "6"
+    --> (*)
+    endif
 endif
 
-stop
+else
+->[false] "2"
+--> (*)
+endif
+
+a3 --> if "last test" then
+--> "7"
+--> (*)
+else
+-> "8"
+--> (*)
+endif
+```
+
+## 活动描述
+
+在定义活动的时候，有时候需要用多行文字来描述这个活动，这时我们可以 在描述里添加换行符 \n ，也可以使用少量的 HTML 标签。以下是可以使用的 HTML 标签：
+
+```t
+<b>
+<i>
+<font size="nn"> or <size:nn> to change font size
+<font color="#AAAAAA"> or <font color="colorName">
+<color:#AAAAAA> or <color:colorName>
+<img:file.png> to include an image
+```
+
+针对较长文本描述活动，可以起一个较短别名（如："long text" as A1）， 在图形定义脚本中可以直接使用别名。PlantUML 可以通过在脚本里使用 note 来添加注释文本块。PlantUML 用上面列表里的命令来标注一个注释块的开始，然后用 end note 来标注注释块的结束。同时 note 命令也允许使用单行定义一个文本块， 详见下面的例子。
+
+```puml
+(*) --> "Some Activity" as s
+note right: This activity has to be defined
+s --> (*)
+note left
+This note is on
+serveral lines
+end note
+```
+
+## 分区（Partition）
+
+通过分区关键词 partition 可以定义一个分区，并且可以使用 HTML 的 颜色码或颜色名来设置分区的背景色。在你申明一个活动时，PlantUML 会自动 的把这个活动对象放置到最后使用的分区中。当然，也可以使用 end partitio 关闭分区定义。
+
+```puml
+partition Conductor
+(*) --> "Climbs on Platform"
+--> === S1 ===
+--> Bows
+end partition
+
+partition Aduience #LightSkyBlue
+=== S1 === --> Applauds
+
+partition Conductor
+Bows --> === S2 ===
+--> WavesArmes
+Applauds --> === S2 ===
+end partition
+
+partition Orchestra #CCCCEE
+WavesArmes --> Introduction
+--> "Play music"
+end partition
 ```

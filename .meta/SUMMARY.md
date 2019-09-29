@@ -5,6 +5,9 @@
 - [Introduction](../协作与项目管理/README.md) 
 
 - [Git](../协作与项目管理/Git/README.md) 
+  - [GitLab](../协作与项目管理/Git/GitLab/README.md) 
+    - [CI](../协作与项目管理/Git/GitLab/CI.md) 
+  - [Github](../协作与项目管理/Git/Github/README.md) 
   - [语法使用](../协作与项目管理/Git/语法使用/README.md) 
     - [Rebase](../协作与项目管理/Git/语法使用/Rebase.md) 
     - [仓库](../协作与项目管理/Git/语法使用/仓库.md) 

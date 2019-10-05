@@ -52,11 +52,11 @@ Deep Blue 出现的三年之后，也就是 2000 年时，Roy Fielding 发布了
 
 - Synchronicity: 同步性
 
-现有模式下，在两台机器互联互通之前我们需要编写与分享 API 说明文档，即使我们忽略了因为人为沟通而导致的误解，如果 APIs 的规范发生了变化很多开发者还是会照着旧的文档编写 API 消费程序，最终导致驴头不对马嘴。在工程实践中，想要保持文档与 API 的实时一致性非常困难，需要大量的人力物力，另一方面，想要保持所有的客户端与 API 保持一致更是痴人说梦。 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/1/1-2SCmHLfgdpJKcsng_z_bVg.png)
+现有模式下，在两台机器互联互通之前我们需要编写与分享 API 说明文档，即使我们忽略了因为人为沟通而导致的误解，如果 APIs 的规范发生了变化很多开发者还是会照着旧的文档编写 API 消费程序，最终导致驴头不对马嘴。在工程实践中，想要保持文档与 API 的实时一致性非常困难，需要大量的人力物力，另一方面，想要保持所有的客户端与 API 保持一致更是痴人说梦。![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/1/1-2SCmHLfgdpJKcsng_z_bVg.png)
 
 - Versioning: 版本控制
 
-上面提及的接口同步问题也随之带来了版本控制的问题，鉴于实际上大部分的接口并没有严格遵循 Fielding 的 REST 准则，很多的 API 客户端都与这些接口强耦合。这种强耦合最终会导致一个非常脆弱、鲁棒性非常低的系统，任何 API 的变化都有可能导致客户端的崩溃。同时，API 客户端的升级也是完全依赖于开发者，这一点的代价也非常昂贵且缓慢，并且还要考虑到大量的已经部署的无法轻易升级的老版本 API 客户端。 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/1/1-9utOz-qyggiV9LdF2tCvzw.png)
+上面提及的接口同步问题也随之带来了版本控制的问题，鉴于实际上大部分的接口并没有严格遵循 Fielding 的 REST 准则，很多的 API 客户端都与这些接口强耦合。这种强耦合最终会导致一个非常脆弱、鲁棒性非常低的系统，任何 API 的变化都有可能导致客户端的崩溃。同时，API 客户端的升级也是完全依赖于开发者，这一点的代价也非常昂贵且缓慢，并且还要考虑到大量的已经部署的无法轻易升级的老版本 API 客户端。![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/1/1-9utOz-qyggiV9LdF2tCvzw.png)
 
 这林林总总的问题让我们畏惧改变，每次对代码的修改都好似埋下未知的炸弹。我们不敢去修改已存在的接口，而是不断地编写新的接口，最终导致代码库日益庞杂。我们需要投入更多的人力物力，背负更多的技术负债，以及无休止的讨论来解决版本难题。
 
@@ -76,7 +76,7 @@ Deep Blue 出现的三年之后，也就是 2000 年时，Roy Fielding 发布了
 
 ## Human role in M2M Communication
 
-让我们再来回顾下前面抛出的问题，为什么我们一定需要人类参与到 API Turks 中呢？人类在机器与机器的通信中又占据了怎么不可或缺的角色？实际上人类最关键的作用在于 API 的发现与理解，我们在找到合适的服务之后需要来理解是否能用它达成预定目标以及到底应该怎么做。 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/1/1-AIypIid7NmqmclbF1K1VLg.png)
+让我们再来回顾下前面抛出的问题，为什么我们一定需要人类参与到 API Turks 中呢？人类在机器与机器的通信中又占据了怎么不可或缺的角色？实际上人类最关键的作用在于 API 的发现与理解，我们在找到合适的服务之后需要来理解是否能用它达成预定目标以及到底应该怎么做。![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/1/1-AIypIid7NmqmclbF1K1VLg.png)
 
 ## Autonomous APIs
 

@@ -387,7 +387,7 @@ POST /{namespace}/{action-resource}
 
 ## Risks
 
-* 架构设计的可扩展性 _ 一旦这种模式被滥用了，URI 的数量会急剧增长，特别是根级别的 Action 可以随着时间疯狂增长。同样的这也会导致路由或者对外提供服务的配置复杂度急速增长。 _ URI 无法再被扩展，即不能再使用子资源。
+* 架构设计的可扩展性 _ 一旦这种模式被滥用了，URI 的数量会急剧增长，特别是根级别的 Action 可以随着时间疯狂增长。同样的这也会导致路由或者对外提供服务的配置复杂度急速增长。_ URI 无法再被扩展，即不能再使用子资源。
 * 可测试性 : 因为缺乏丰富的 GET 等读取类操作而使得与 [Resource Collection](#resource-collection)-oriented 模式相比有较大缺陷
 * 历史 : 所有对于 Action 的调用应该存在某种资源中，譬如`/action-resource-history`。
 

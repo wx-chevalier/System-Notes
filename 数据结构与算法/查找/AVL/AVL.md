@@ -1,6 +1,6 @@
 # AVL: 完全平衡的二叉查找树
 
-二叉查找树可以表示动态的数据集合，对于给定的数据集合，在建立一颗二叉查找树时，二叉查找树的结构形态与关键字的插入顺序有关。如果全部或者部分地按照关键字的递增或者递减顺序插入二叉查找树的结点，则所建立的二叉查找树全部或者在局部形成退化的单分支结构。在最坏的情况下，二叉查找树可能完全偏斜，高度为`n`，其平均与最坏的情况下查找时间都是`O(n)；`而最好的情况下，二叉查找树的结点尽可能靠近根结点，其平均与最好情况的查找时间都是`O(logn)`。因此，我们希望最理想的状态下是使二叉查找树始终处于良好的结构形态。 ![](http://www.tutorialspoint.com/data_structures_algorithms/images/unbalanced_bst.jpg)
+二叉查找树可以表示动态的数据集合，对于给定的数据集合，在建立一颗二叉查找树时，二叉查找树的结构形态与关键字的插入顺序有关。如果全部或者部分地按照关键字的递增或者递减顺序插入二叉查找树的结点，则所建立的二叉查找树全部或者在局部形成退化的单分支结构。在最坏的情况下，二叉查找树可能完全偏斜，高度为`n`，其平均与最坏的情况下查找时间都是`O(n)；`而最好的情况下，二叉查找树的结点尽可能靠近根结点，其平均与最好情况的查找时间都是`O(logn)`。因此，我们希望最理想的状态下是使二叉查找树始终处于良好的结构形态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/unbalanced_bst.jpg)
 
 1962 年，Adelson-Velsikii 和 Landis 提出了一种结点在高度上相对平衡的二叉查找树，又称为 AVL 树。其平均和最坏情况下的查找时间都是`O(logn)`。同时，插入和删除的时间复杂性也会保持`O(logn)`，且在插入和删除之后，在高度上仍然保持平衡。AVL 树又称为平衡二叉树，即 Balanced Binary Tree 或者 Height-Balanced Tree，它或者是一棵空二叉树，或者是具有如下性质的二叉查找树：其左子树和右子树都是高度平衡的二叉树，且左子树和右子树的高度之差的绝对值不超过 1。如果将二叉树上结点的平衡因子 BF(Balanced Factor )定义为该结点的左子树与右子树的高度之差，根据 AVL 树的定义，AVL 树中的任意结点的平衡因子只可能是 -1(右子树高于左子树)、 0 或者 1(左子树高于右子树)，在某些图中也会表示为绝对高度差，即 0，1 ， 2 这种形式，请注意理解。
 
@@ -45,7 +45,7 @@ AVL 树的调整过程很类似于数学归纳法，每次在插入新节点之�
 
 ## Left Rotation: 左旋 , 右子树右子节点
 
-当新插入的结点为右子树的右子结点时，我们需要进行左旋操作来保证此部分子树继续处于平衡状态。 ![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_left_rotation.jpg) 我们应该找到离新插入的结点最近的一个非平衡结点，来以其为轴进行旋转，下面看一个比较复杂的情况: ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/4/F8CD6D7F-825E-44BB-B295-3B5AD1F11930.png)
+当新插入的结点为右子树的右子结点时，我们需要进行左旋操作来保证此部分子树继续处于平衡状态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_left_rotation.jpg) 我们应该找到离新插入的结点最近的一个非平衡结点，来以其为轴进行旋转，下面看一个比较复杂的情况: ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/4/F8CD6D7F-825E-44BB-B295-3B5AD1F11930.png)
 
 ```
 /**
@@ -91,7 +91,7 @@ private AVLNode rotateLeft(AVLNode a) {
 
 ## Right Rotation: 右旋 , 左子树左子节点
 
-当新插入的结点为左子树的左子结点时，我们需要进行右旋操作来保证此部分子树继续处于平衡状态。 ![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_right_rotation.jpg) 下面看一个比较复杂的情况 : ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/4/23B249C2-F7A3-44D5-ACCA-B34CC6F41089.png)
+当新插入的结点为左子树的左子结点时，我们需要进行右旋操作来保证此部分子树继续处于平衡状态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_right_rotation.jpg) 下面看一个比较复杂的情况 : ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/4/23B249C2-F7A3-44D5-ACCA-B34CC6F41089.png)
 
 ```
 private AVLNode rotateRight(AVLNode a) {

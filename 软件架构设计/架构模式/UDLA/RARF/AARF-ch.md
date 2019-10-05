@@ -170,7 +170,7 @@ Reactive Programming Principles (via manifesto)
 
 **参考文献**
 
-* [reactive-programming-using-rxjava-and-akka](https://www.linkedin.com/pulse/20141208023559-947775-reactive-programming-using-rxjava-and-akka)
+- [reactive-programming-using-rxjava-and-akka](https://www.linkedin.com/pulse/20141208023559-947775-reactive-programming-using-rxjava-and-akka)
 
 ## What's AARF?(什么是 AARF)
 

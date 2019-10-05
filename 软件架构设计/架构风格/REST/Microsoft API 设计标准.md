@@ -11,9 +11,9 @@
 
 在正式介绍本指南之前，推荐阅读如下一些参考资料
 
-* [RFC 2616](http://www.ietf.org/rfc/rfc2616.txt) -- HTTP/1.1 的细节定义
-* [REST in Practice](http://www.amazon.com/REST-Practice-Hypermedia-Systems-Architecture/dp/0596805829/) -- 基于 REST 的实践指南
-* [REST on Wikipedia](http://en.wikipedia.org/wiki/Representational_state_transfer) -- 维基百科上关于 REST 的核心概念与思想的介绍
+- [RFC 2616](http://www.ietf.org/rfc/rfc2616.txt) -- HTTP/1.1 的细节定义
+- [REST in Practice](http://www.amazon.com/REST-Practice-Hypermedia-Systems-Architecture/dp/0596805829/) -- 基于 REST 的实践指南
+- [REST on Wikipedia](http://en.wikipedia.org/wiki/Representational_state_transfer) -- 维基百科上关于 REST 的核心概念与思想的介绍
 
 # Taxonomy
 

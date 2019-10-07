@@ -381,7 +381,7 @@ AARF 与 MicroServices 的最终目标都是为了避免巨石应用程序的出
 
 实际上，现在也有很多微服务的设计模式上，在保证隔离性的基础上，以 Event-Driven 的方式来组合不同的服务并且管理这些分布式数据。
 
-> [event-driven-data-management-microservices](https://www.nginx.com/blog/event-driven-data-management-microservices/)
+- [event-driven-data-management-microservices](https://www.nginx.com/blog/event-driven-data-management-microservices/)
 
 ![Each service in a microservice architecture maintains a private database table](https://www.nginx.com/wp-content/uploads/2015/12/Richardson-microservices-part5-separate-tables-e1449727641793.png)
 
@@ -393,7 +393,7 @@ AARF 与 MicroServices 的最终目标都是为了避免巨石应用程序的出
 
 Request per thread is an old beast and should be avoided as much as possible. It not only affects an application's scalability but can also lead to cascading failures.
 
-> [Non-Blocking REST Services With Spring](https://dzone.com/articles/non-blocking-rest-services-with-spring)
+- [Non-Blocking REST Services With Spring](https://dzone.com/articles/non-blocking-rest-services-with-spring)
 
 ## Flux & Redux
 

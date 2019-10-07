@@ -58,7 +58,7 @@ CAP 理论是分布式系统构建中的基础理论之一，其中的 C(Consist
 
 ## Backends For Frontends: 一切为了前端
 
-> [Pattern: Backends For Frontends](http://samnewman.io/patterns/architectural/bff/)
+- [Pattern: Backends For Frontends](http://samnewman.io/patterns/architectural/bff/)
 
 ### General-Purpose API Backend: 统一的后端接口
 

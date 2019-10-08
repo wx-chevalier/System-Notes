@@ -4,9 +4,10 @@
 
 本文主要讲解下 Git Rebase 的基本概念用法、其内部原理以及我们在真实项目中使用 Git Rebase 应该遵循的原则以及为啥需要遵循这些原则。
 
-# Base of Rebase
+# Rebase 基础
 
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/1/1-FNaZp740nmp8wz851BqcAg.png)
+
 相信对于 rebase 肯定不会陌生，就好像上图描述的过程一样，当你使用 rebase 命令的时候，即好像将你需要去 rebase 的分支拔下来然后重新插到另一个分支上。官方对于 rebase 的描述为：
 
 ```
@@ -24,6 +25,64 @@
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/1/1-p0EGOtTUhzpUnF5p2c2UAw.png)
 
 从上图可以看出，在对特征分支进行 rebase 之后，其等效于创建了新的提交。并且老的提交也没有被销毁，只是简单地不能再被访问或者使用。在对于分支的章节我们曾经提及，一个分支只是一个执行提交的指针。因此如果既没有分支或者 Tag 指向某个提交，该提交将无法再被访问使用，但是该提交会一直存在于你的文件系统中，占用着你的磁盘存储。
+
+## 使用 Rebase 修改本地历史
+
+顾名思义，Rebase(变基)有移花接木之效果，能将特性分支移接到主分支之上，常用于优化提交历史，或者修改本地的提交信息。首先查看本地的 Commit 历史：
+
+```sh
+$ git log --pretty=oneline
+
+a931ac7c808e2471b22b5bd20f0cad046b1c5d0d c
+b76d157d507e819d7511132bdb5a80dd421d854f b
+df239176e1a2ffac927d8b496ea00d5488481db5 a
+```
+
+运行 Git Rebase:
+
+```sh
+# 使用 Git Rebase，对最后两个提交进行操作
+git rebase --interactive HEAD~2
+```
+
+```s
+pick b76d157 b
+squash a931ac7 c //change pick to squash
+
+# Rebase df23917..a931ac7 onto df23917
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+# However, if you remove everything, the rebase will be aborted.
+#
+```
+
+然后保存并且关闭编辑器：
+
+```s
+# This is a combination of 2 commits.
+# The first commit's message is:
+
+b
+
+# This is the 2nd commit message:
+
+c
+```
+
+这样的话就已经完成了合并
+
+```sh
+$ git log --pretty=oneline
+18fd73d3ce748f2a58d1b566c03dd9dafe0b6b4f b and c
+df239176e1a2ffac927d8b496ea00d5488481db5 a
+```
 
 # Golden Rule of Rebase
 

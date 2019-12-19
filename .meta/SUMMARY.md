@@ -272,7 +272,7 @@
 - [架构模式](../软件架构设计/架构模式/README.md) 
   - [CQRS](../软件架构设计/架构模式/CQRS/README.md) 
     - [EventSourcing](../软件架构设计/架构模式/CQRS/EventSourcing.md) 
-    - [简单实现](../软件架构设计/架构模式/CQRS/简单实现.md) 
+    - [Spring 与 CQRS](../软件架构设计/架构模式/CQRS/Spring 与 CQRS.md) 
   - [EDA](../软件架构设计/架构模式/EDA/README.md) 
   - [UDLA](../软件架构设计/架构模式/UDLA/README.md) 
     - [反应式](../软件架构设计/架构模式/UDLA/反应式.md) 

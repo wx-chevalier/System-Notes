@@ -1,7 +1,5 @@
 ## Reactive Abstract Resource Flow
 
- 
-
 # Introduction
 
 Inspired By Flux and Microservice，I want to do something different in server side. I am a fresh bird for developing ， but has some practice in both frontend and backend. Recently, I develop an app containing iOS, android and web client(React). I use the Spring MVC as server-side framework. It’s good, but the mvc make me sometimes annoyed. Spring MVC mapping request to single controller according to its uri, that works well but demand or the product of my app suffers frequent change. Some one think its called agile, but result in so much deprecated code .

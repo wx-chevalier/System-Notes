@@ -1,16 +1,12 @@
-## title: Reactive Abstract Resource Flow
-
-[TOC]
-
 # Introduction
 
-Inspired By Flux and Microservice，I want to do something different in server side. I am a fresh bird for developing，but has some practice in both frontend and backend. Recently, I develop an app containing iOS, android and web client(React). I use the Spring MVC as server-side framework. It’s good, but the  mvc make me sometimes annoyed. Spring MVC mapping request to single controller according to its uri, that works well but demand or the product of my app suffers frequent change. Some one think its called agile, but result in so much deprecated code .
+Inspired By Flux and Microservice，I want to do something different in server side. I am a fresh bird for developing，but has some practice in both frontend and backend. Recently, I develop an app containing iOS, android and web client(React). I use the Spring MVC as server-side framework. It’s good, but the mvc make me sometimes annoyed. Spring MVC mapping request to single controller according to its uri, that works well but demand or the product of my app suffers frequent change. Some one think its called agile, but result in so much deprecated code .
 
-Sometime, even the front-end add one element in its view, I need to rewrite one  controller to adapt to suitable RequestData. So , I want to present my Asynchronous Abstract Resource Flow idea. I don’t know wherther it is good and it;s only during the draft progress, no one except me know what it is.
+Sometime, even the front-end add one element in its view, I need to rewrite one controller to adapt to suitable RequestData. So , I want to present my Asynchronous Abstract Resource Flow idea. I don’t know wherther it is good and it;s only during the draft progress, no one except me know what it is.
 
 I think the impression of Docker, which ships data via container between different sevice, may be a little alike. AARF don’t map request to one controller, it’s not Ordering food， but self-help.
 
-In this post, I use AARF as abbreviation  to indicate on Asynchronous Abstract Resource Flow.Main principle of AARF is split the complex business logic into micro handlers, which is mapping to single resource. Besides, for the convenience of MVVM(data binding), responded data is 
+In this post, I use AARF as abbreviation to indicate on Asynchronous Abstract Resource Flow.Main principle of AARF is split the complex business logic into micro handlers, which is mapping to single resource. Besides, for the convenience of MVVM(data binding), responded data is
 
 In conclusion, the front-end draft the responsed data structure by define the resource flow path and required attribute. The server-side provide essential constraints of resources and relation.
 
@@ -30,13 +26,13 @@ In conclusion， there are two category of attributes in AARF model, one is call
 
 ## ResourceBag
 
-A ResourceBag is wrapper for all resourced involved in this request processing,  it is the actual one which is shipped between resourceHandler and loaded with response data or any temporary data.
+A ResourceBag is wrapper for all resourced involved in this request processing, it is the actual one which is shipped between resourceHandler and loaded with response data or any temporary data.
 
 ## ResourceHandler Implementation
 
 A ResourceHandler is an observable(rxjava), it’s only handling logic for its resource, such as databased interacting and logic processing and data encapsulation. One demonstrated code snippet for resource handler are listed following:
 
-``` java
+```java
 @Component
 public class UserResourceHandler implements AbstractResourceHandler {
 
@@ -104,4 +100,3 @@ http://api.com/book?requestData={book_ids}
 and in AARF, it is:
 
 http://api.com/user/{user_token}/comment/all/books?requestData={}
-

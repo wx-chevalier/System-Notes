@@ -1,5 +1,3 @@
-[TOC]
-
 # Introduction
 
 > **AARF 是适用于现代复杂多变的业务模型，同时支持异步编程与分布式扩展的架构风格，Inspired By REST,Flux And Functional Reactive Programming。**
@@ -44,10 +42,10 @@ AARF 继承并个性化的解释了 REST 的六大原则，同时自身的原则
 >
 > PS：上面这句话只是单纯的为了装逼
 
-* 约定优于配置，配置优于硬编码，这一条算是 AARF 的核心理念，一方面表现在前端可见的资源组合搭配上，另一方面表现在对于隐性
+- 约定优于配置，配置优于硬编码，这一条算是 AARF 的核心理念，一方面表现在前端可见的资源组合搭配上，另一方面表现在对于隐性
 
-- 请求与响应的一致性。就好像 Redux 宣称的 Predictable State 一样，之前客户端是在请求之后对于返回数据进行
-- 尽可能地资源隔离。不强求资源的完全隔离，也不支持把对于资源的处理混杂在一起。至少在 ResourceHandler 这一层，不建议有对于其他资源的操作。在 Model 层，可以对于确定性的关联操作。在 Relation 层，可以随便混杂资源的操作。
+* 请求与响应的一致性。就好像 Redux 宣称的 Predictable State 一样，之前客户端是在请求之后对于返回数据进行
+* 尽可能地资源隔离。不强求资源的完全隔离，也不支持把对于资源的处理混杂在一起。至少在 ResourceHandler 这一层，不建议有对于其他资源的操作。在 Model 层，可以对于确定性的关联操作。在 Relation 层，可以随便混杂资源的操作。
 
 举个具体的例子，在我们的电商模型中，我们最常用的接口是返回商品(goods)信息，譬如：
 
@@ -131,10 +129,10 @@ AARF 的适用领域是那种需要快速迭代的具有一定逻辑复杂度的
 
 近年来微服务概念的兴起也是为了进行这样的解耦合，只是微服务和 AARF 的类比可以有以下几点：
 
-* 微服务和 AARF 在某种意义上都是推崇 SRP 原则，不过微服务是从传统的 SOA 架构衍变而来，而 AARF 是借鉴了以状态/数据为驱动的这样一种开发方式。
-* 微服务更多的是在功能上的，面向于整体后台架构的解耦合。而 AARF 关注的是偏向于业务逻辑的组织方式。
-* 微服务往往强调的是不同功能间的物理隔离，这是其与传统的巨石(Monolith)应用程序的一个很大的区别。而 AARF 依赖的是逻辑间的隔离，相对于功能领域会是一个更加抽象的概念。
-* 微服务是去除了 ESB 的 SOA，即一种去中心化的分布式软件架构。而 AARF 面向每个具体业务而言的去 Controller 化的基于抽象资源流的架构风格。
+- 微服务和 AARF 在某种意义上都是推崇 SRP 原则，不过微服务是从传统的 SOA 架构衍变而来，而 AARF 是借鉴了以状态/数据为驱动的这样一种开发方式。
+- 微服务更多的是在功能上的，面向于整体后台架构的解耦合。而 AARF 关注的是偏向于业务逻辑的组织方式。
+- 微服务往往强调的是不同功能间的物理隔离，这是其与传统的巨石(Monolith)应用程序的一个很大的区别。而 AARF 依赖的是逻辑间的隔离，相对于功能领域会是一个更加抽象的概念。
+- 微服务是去除了 ESB 的 SOA，即一种去中心化的分布式软件架构。而 AARF 面向每个具体业务而言的去 Controller 化的基于抽象资源流的架构风格。
 
 AARF 与 MicroServices 的最终目标都是为了避免巨石应用程序的出现，最终形成一种分布式地灵活可拆卸的应用程序。某些方面来说，AARF 是实现 MicroServices 的一个手段。
 
@@ -164,9 +162,9 @@ Reactive programming is an emerging discipline which combines concurrency and ev
 
 Reactive Programming Principles (via manifesto)
 
-* Responsive: The application should be quick to reacts to users, even under load and in the presence of failures
-* Resilient and Scalable: The application should be resilient, in order to stay responsive under various conditions. They also should react to changes in the input rate by increasing or decreasing the resources allocated to service these inputs. Today’s applications have more integration complexity, as they are composed of multiple applications.
-* Message Driven: A *message-driven*architecture is the foundation of scalable, resilient, and ultimately responsive systems.
+- Responsive: The application should be quick to reacts to users, even under load and in the presence of failures
+- Resilient and Scalable: The application should be resilient, in order to stay responsive under various conditions. They also should react to changes in the input rate by increasing or decreasing the resources allocated to service these inputs. Today’s applications have more integration complexity, as they are composed of multiple applications.
+- Message Driven: A *message-driven*architecture is the foundation of scalable, resilient, and ultimately responsive systems.
 
 **参考文献**
 
@@ -188,18 +186,18 @@ Reactive Programming Principles (via manifesto)
 
 ### AARF Principles
 
-* Front-end Friendly
+- Front-end Friendly
 
-  * flexibility
-  * readability
-  * Consistency
-    * Response comply with request
+  - flexibility
+  - readability
+  - Consistency
+    - Response comply with request
 
-* High Availability
+- High Availability
 
-  * Responsive & Fault-Tolerant
+  - Responsive & Fault-Tolerant
 
-* Develop Simplicity
+- Develop Simplicity
 
   ### [Modifiability](undefined)
 
@@ -209,15 +207,15 @@ Reactive Programming Principles (via manifesto)
 
   ​
 
-  * #### [Configurability](undefined)
+  - #### [Configurability](undefined)
 
     Configurability is related to both extensibility and reusability in that it refers to post-deployment modification of components, or configurations of components, such that they are capable of using a new service or data element type. The pipe-and-filter and code-on-demand styles are two examples that induce configurability of configurations and components, respectively.
 
-  * ### [Visibility](undefined)
+  - ### [Visibility](undefined)
 
     Styles can also influence the visibility of interactions within a network-based application by restricting interfaces via generality or providing access to monitoring. Visibility in this case refers to the ability of a component to monitor or mediate the interaction between two other components. Visibility can enable improved performance via shared caching of interactions, scalability through layered services, reliability through reflective monitoring, and security by allowing the interactions to be inspected by mediators (e.g., network firewalls). The mobile agent style is an example where the lack of visibility may lead to security concerns.
 
-* Scalability:架构的可扩展性
+- Scalability:架构的可扩展性
 
   Scalability refers to the ability of the architecture to support large numbers of components, or interactions among components, within an active configuration. Scalability can be improved by simplifying components, by distributing services across many components (decentralizing the interactions), and by controlling interactions and configurations as a result of monitoring. Styles influence these factors by determining the location of application state, the extent of distribution, and the coupling between components.
 
@@ -227,9 +225,9 @@ Reactive Programming Principles (via manifesto)
 
 ## Case Model(案例模型)
 
-* User
-* Book
-* Comment
+- User
+- Book
+- Comment
 
 Relation
 
@@ -263,9 +261,9 @@ AARF 主要是以数据流的方式解决复杂逻辑后来的构建问题，其
 
 ## Attribute(资源属性)
 
-* 资源唯一标识，譬如对于用户资源的唯一标识就是 user_id。
-* 外键依赖，外键依赖是表征资源之间显性关系的特征。注意，任何一个资源的标识名具有全局唯一性，譬如 use_id，那么所有的资源中都应该叫 user_id，而不应该使用 uid、id 等等缩写或者别名。另一方面，可能某个资源中的两个外键依赖都指向 user_id，但是表示两个不同的含义。譬如如果我们需要表征用户之间的互相关注的行为，一个表中可能有两个 user_id，第一个表示关注者，第二个表示被关注者。那么在命名时务必保证前缀不变，即皆为 user_id，可以通过 by 关键字添加后缀的方式，即 user_id_by_following、user_id_by_followed。
-* 值属性
+- 资源唯一标识，譬如对于用户资源的唯一标识就是 user_id。
+- 外键依赖，外键依赖是表征资源之间显性关系的特征。注意，任何一个资源的标识名具有全局唯一性，譬如 use_id，那么所有的资源中都应该叫 user_id，而不应该使用 uid、id 等等缩写或者别名。另一方面，可能某个资源中的两个外键依赖都指向 user_id，但是表示两个不同的含义。譬如如果我们需要表征用户之间的互相关注的行为，一个表中可能有两个 user_id，第一个表示关注者，第二个表示被关注者。那么在命名时务必保证前缀不变，即皆为 user_id，可以通过 by 关键字添加后缀的方式，即 user_id_by_following、user_id_by_followed。
+- 值属性
 
 ## Entity
 
@@ -291,7 +289,7 @@ LocalDateTime(映射时间类型)
 
 #### Select
 
-* 利用 foreach 构造多查询的 in 条件查询语句时候，注意容错
+- 利用 foreach 构造多查询的 in 条件查询语句时候，注意容错
 
 # Request & Response
 
@@ -448,7 +446,7 @@ delete deleteSingle deleteMultiple deleteAll
 
 这样一种直接把用户令牌与用户资源的唯一标识混为一谈的方式就是典型的错误。笔者比较推出基于 JWT 的用户认证。
 
-基于 SQL 级别的控制
+### 基于 SQL 级别的控制
 
 错误还是空？譬如用户请求一个不存在的商品，这是一个错误吗？请求一个不存在的资源，特别是在发生资源串联时，因此，在 Get 中，如果请求到的资源为空，则报错。
 

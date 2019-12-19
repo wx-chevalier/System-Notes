@@ -6,18 +6,18 @@
 
 在文章之初，笔者想交代下自己的背景，毕竟下文的很多考虑和思想都是来源于笔者所处的一个环境而产生的，笔者处于一个创业初期产品需求业务需求急速变更的小型技术团队。一般而言软件工程的基本步骤都会是先定义好需求，定义好数据存储，定义好接口规范与用户界面原型，但是笔者所在的环境下往往变更的速度已经超过了程序猿码字的速度 N 倍。另外，笔者本身也是一名前端开发者(待过创业公司的都知道，啥都得上)，笔者很多用于后端开发的思想也受到了前端很大的影响，譬如后端一直遵循的 MVC 架构模式，而前端已经有了 MVC、MVP 、 MVVM、Flux 、 Redux 等等这一些变迁。前端迎来了组件化的时代，而后端也是微服务的思想大行其道。本文主要受以下几个方法论的影响：
 
-* RESTful
-* MicroService
-* Reactive Programming
-* Redux
+- RESTful
+- MicroService
+- Reactive Programming
+- Redux
 
 在进行具体的表述之前，笔者想先把一些总结的内容说下，首先是几个前提吧：
 
-* **不要相信产品经理说的需求永远不变了这种话，too young ， too naive**
+- **不要相信产品经理说的需求永远不变了这种话，too young ， too naive**
 
-* **在快速迭代的情况下，现有的后台接口僵化、代码混乱以及整体可变性与可维护性变差，不能仅仅依赖于提高程序猿的代码水平、编写大量复杂的接口说明文档或者指望在项目开始之初即能定下所有接口与逻辑。目前的后端开发中流行的 MVC 架构也负有一定的责任，我们的目标是希望能够寻找出在最差的人员条件下也能有最好结果的方式。或者描述为无论程序猿水平如何，只要遵循几条基本原则，即可构造高可用逻辑架构，并且这些规则具有高度抽象性而与具体的业务逻辑无任何关系。**
+- **在快速迭代的情况下，现有的后台接口僵化、代码混乱以及整体可变性与可维护性变差，不能仅仅依赖于提高程序猿的代码水平、编写大量复杂的接口说明文档或者指望在项目开始之初即能定下所有接口与逻辑。目前的后端开发中流行的 MVC 架构也负有一定的责任，我们的目标是希望能够寻找出在最差的人员条件下也能有最好结果的方式。或者描述为无论程序猿水平如何，只要遵循几条基本原则，即可构造高可用逻辑架构，并且这些规则具有高度抽象性而与具体的业务逻辑无任何关系。**
 
-* **任何一个复杂的业务逻辑都可以表示为对一或多种抽象资源的四种操作 (GET、POST 、 PUT、DELETE) 的组合。**
+- **任何一个复杂的业务逻辑都可以表示为对一或多种抽象资源的四种操作 (GET、POST 、 PUT、DELETE) 的组合。**
 
 ## Motivation
 
@@ -136,16 +136,16 @@ RESTful 中也有`all is resource`的概念，但是 RESTful 强调的是像超�
 
 在讲资源的定义之前，首先看看关系型数据库中经典的设计范式：
 
->第一范式 ( 确保每列保持原子性 )
->第二范式 (2NF) 属性完全依赖于主键 ( 消除部分子函数依赖 )
->第三范式 (3NF) 属性不依赖于其它非主属性[消除传递依赖]
+> 第一范式 ( 确保每列保持原子性 )
+> 第二范式 (2NF) 属性完全依赖于主键 ( 消除部分子函数依赖 )
+> 第三范式 (3NF) 属性不依赖于其它非主属性[消除传递依赖]
 
 对于从具体的业务逻辑抽象出相互分割并且关联的资源是 RARF 的基础，在笔者构思 RARF 的基本原则时，一开始是想走强制严格化道路，即严格命名，具体而言：
 
-* 万物皆资源，资源皆平等。
-* 每个资源具有唯一的不可重复的命名。
-* 任何资源具有一个唯一的标识，即 {resource_name_id} 在所有表中必须保持一致。譬如我们定义了一个资源叫 user，那么它的标识就是 user_id，不可以叫 uid、userId 等等其他名称。
-* 任何资源的属性由 {resource_name_attribute_name} 构成，且遵循第二与第三范式。
+- 万物皆资源，资源皆平等。
+- 每个资源具有唯一的不可重复的命名。
+- 任何资源具有一个唯一的标识，即 {resource_name_id} 在所有表中必须保持一致。譬如我们定义了一个资源叫 user，那么它的标识就是 user_id，不可以叫 uid、userId 等等其他名称。
+- 任何资源的属性由 {resource_name_attribute_name} 构成，且遵循第二与第三范式。
 
 这一套命名规则，有点像乌托邦吧，毕竟作为一个不成熟的想法，RARF 还是要去切合已经存在的各种各样的数据库设计风格或者方案，不可能让人家把表推倒全部重建，所以呢，最后资源定义的规范就一句话：**资源名不可重复且资源属性具有唯一所有性**。不过想想，如果按照严格命名方案的话，会自动化很多。
 
@@ -229,15 +229,15 @@ DeferredSQLExecutor(DeferredSQLForQueryGoods,DeferredSQLForQueryGoodsProvider)
 
 缩了那么多，最后，我还是陈述下我在设计 RARF 一些莫名其妙的东西时候的愿景吧，其实看到现在机智的同学，应该能够感觉到，这个 RARF 和 MicroService 在很多设计理念上还是很类似的，这里先盗用下 MicroService 的 Benefits：
 
->Microservices do not require teams to rewrite the whole application if they want to add new features.
->Smaller codebases make maintenance easier and faster. This saves a lot of development effort and time, therefore increases overall productivity.
->The parts of an application can be scaled separately and are easier to deploy.
+> Microservices do not require teams to rewrite the whole application if they want to add new features.
+> Smaller codebases make maintenance easier and faster. This saves a lot of development effort and time, therefore increases overall productivity.
+> The parts of an application can be scaled separately and are easier to deploy.
 
 那么改造一下，RARF 的愿景就是：
 
-* RARF 希望能够在修改或者增删某些功能时不需要把全部代码过一遍
-* 基于 Resource 分割的代码库会更小并且更好管理，这会大大节省开发周期，提供产品能力
-* 整个应用程序能够独立扩展、易于部署。就像 RARF 中，如果发现哪个 ResourceHandler 需求比较大，可以无缝扩展出去。
+- RARF 希望能够在修改或者增删某些功能时不需要把全部代码过一遍
+- 基于 Resource 分割的代码库会更小并且更好管理，这会大大节省开发周期，提供产品能力
+- 整个应用程序能够独立扩展、易于部署。就像 RARF 中，如果发现哪个 ResourceHandler 需求比较大，可以无缝扩展出去。
 
 估计这篇文章也没啥人愿意看吧，不过如果哪位大神也有同样类似的思考的欢迎加 QQ384924552，可以一起讨论讨论。
 
@@ -285,10 +285,10 @@ AARF 继承并个性化的解释了 REST 的六大原则，同时自身的原则
 >
 > PS：上面这句话只是单纯的为了装逼
 
-* 约定优于配置，配置优于硬编码，这一条算是 AARF 的核心理念，一方面表现在前端可见的资源组合搭配上，另一方面表现在对于隐性
+- 约定优于配置，配置优于硬编码，这一条算是 AARF 的核心理念，一方面表现在前端可见的资源组合搭配上，另一方面表现在对于隐性
 
-- 请求与响应的一致性。就好像 Redux 宣称的 Predictable State 一样，之前客户端是在请求之后对于返回数据进行
-- 尽可能地资源隔离。不强求资源的完全隔离，也不支持把对于资源的处理混杂在一起。至少在 ResourceHandler 这一层，不建议有对于其他资源的操作。在 Model 层，可以对于确定性的关联操作。在 Relation 层，可以随便混杂资源的操作。
+* 请求与响应的一致性。就好像 Redux 宣称的 Predictable State 一样，之前客户端是在请求之后对于返回数据进行
+* 尽可能地资源隔离。不强求资源的完全隔离，也不支持把对于资源的处理混杂在一起。至少在 ResourceHandler 这一层，不建议有对于其他资源的操作。在 Model 层，可以对于确定性的关联操作。在 Relation 层，可以随便混杂资源的操作。
 
 举个具体的例子，在我们的电商模型中，我们最常用的接口是返回商品 (goods) 信息，譬如：
 
@@ -372,10 +372,10 @@ AARF 的适用领域是那种需要快速迭代的具有一定逻辑复杂度的
 
 近年来微服务概念的兴起也是为了进行这样的解耦合，只是微服务和 AARF 的类比可以有以下几点：
 
-* 微服务和 AARF 在某种意义上都是推崇 SRP 原则，不过微服务是从传统的 SOA 架构衍变而来，而 AARF 是借鉴了以状态 / 数据为驱动的这样一种开发方式。
-* 微服务更多的是在功能上的，面向于整体后台架构的解耦合。而 AARF 关注的是偏向于业务逻辑的组织方式。
-* 微服务往往强调的是不同功能间的物理隔离，这是其与传统的巨石 (Monolith) 应用程序的一个很大的区别。而 AARF 依赖的是逻辑间的隔离，相对于功能领域会是一个更加抽象的概念。
-* 微服务是去除了 ESB 的 SOA，即一种去中心化的分布式软件架构。而 AARF 面向每个具体业务而言的去 Controller 化的基于抽象资源流的架构风格。
+- 微服务和 AARF 在某种意义上都是推崇 SRP 原则，不过微服务是从传统的 SOA 架构衍变而来，而 AARF 是借鉴了以状态 / 数据为驱动的这样一种开发方式。
+- 微服务更多的是在功能上的，面向于整体后台架构的解耦合。而 AARF 关注的是偏向于业务逻辑的组织方式。
+- 微服务往往强调的是不同功能间的物理隔离，这是其与传统的巨石 (Monolith) 应用程序的一个很大的区别。而 AARF 依赖的是逻辑间的隔离，相对于功能领域会是一个更加抽象的概念。
+- 微服务是去除了 ESB 的 SOA，即一种去中心化的分布式软件架构。而 AARF 面向每个具体业务而言的去 Controller 化的基于抽象资源流的架构风格。
 
 AARF 与 MicroServices 的最终目标都是为了避免巨石应用程序的出现，最终形成一种分布式地灵活可拆卸的应用程序。某些方面来说，AARF 是实现 MicroServices 的一个手段。
 
@@ -405,9 +405,9 @@ Reactive programming is an emerging discipline which combines concurrency and ev
 
 Reactive Programming Principles (via manifesto)
 
-* Responsive: The application should be quick to reacts to users, even under load and in the presence of failures
-* Resilient and Scalable: The application should be resilient, in order to stay responsive under various conditions. They also should react to changes in the input rate by increasing or decreasing the resources allocated to service these inputs. Today’s applications have more integration complexity, as they are composed of multiple applications.
-* Message Driven: A *message-driven*architecture is the foundation of scalable, resilient, and ultimately responsive systems.
+- Responsive: The application should be quick to reacts to users, even under load and in the presence of failures
+- Resilient and Scalable: The application should be resilient, in order to stay responsive under various conditions. They also should react to changes in the input rate by increasing or decreasing the resources allocated to service these inputs. Today’s applications have more integration complexity, as they are composed of multiple applications.
+- Message Driven: A *message-driven*architecture is the foundation of scalable, resilient, and ultimately responsive systems.
 
 **参考文献**
 
@@ -429,18 +429,18 @@ Reactive Programming Principles (via manifesto)
 
 ### AARF Principles
 
-* Front-end Friendly
+- Front-end Friendly
 
-  * flexibility
-  * readability
-  * Consistency
-    * Response comply with request
+  - flexibility
+  - readability
+  - Consistency
+    - Response comply with request
 
-* High Availability
+- High Availability
 
-  * Responsive & Fault-Tolerant
+  - Responsive & Fault-Tolerant
 
-* Develop Simplicity
+- Develop Simplicity
 
   ### [Modifiability](undefined)
 
@@ -454,15 +454,15 @@ Reactive Programming Principles (via manifesto)
 
   ​
 
-  * #### [Configurability](undefined)
+  - #### [Configurability](undefined)
 
     Configurability is related to both extensibility and reusability in that it refers to post-deployment modification of components, or configurations of components, such that they are capable of using a new service or data element type. The pipe-and-filter and code-on-demand styles are two examples that induce configurability of configurations and components, respectively.
 
-  * ### [Visibility](undefined)
+  - ### [Visibility](undefined)
 
     Styles can also influence the visibility of interactions within a network-based application by restricting interfaces via generality or providing access to monitoring. Visibility in this case refers to the ability of a component to monitor or mediate the interaction between two other components. Visibility can enable improved performance via shared caching of interactions, scalability through layered services, reliability through reflective monitoring, and security by allowing the interactions to be inspected by mediators (e.g., network firewalls). The mobile agent style is an example where the lack of visibility may lead to security concerns.
 
-* Scalability: 架构的可扩展性
+- Scalability: 架构的可扩展性
 
   Scalability refers to the ability of the architecture to support large numbers of components, or interactions among components, within an active configuration. Scalability can be improved by simplifying components, by distributing services across many components (decentralizing the interactions), and by controlling interactions and configurations as a result of monitoring. Styles influence these factors by determining the location of application state, the extent of distribution, and the coupling between components.
 
@@ -472,9 +472,9 @@ Reactive Programming Principles (via manifesto)
 
 ## Case Model( 案例模型 )
 
-* User
-* Book
-* Comment
+- User
+- Book
+- Comment
 
 Relation
 
@@ -508,9 +508,9 @@ AARF 主要是以数据流的方式解决复杂逻辑后来的构建问题，其
 
 ## Attribute( 资源属性 )
 
-* 资源唯一标识，譬如对于用户资源的唯一标识就是 user_id。
-* 外键依赖，外键依赖是表征资源之间显性关系的特征。注意，任何一个资源的标识名具有全局唯一性，譬如 use_id，那么所有的资源中都应该叫 user_id，而不应该使用 uid、id 等等缩写或者别名。另一方面，可能某个资源中的两个外键依赖都指向 user_id，但是表示两个不同的含义。譬如如果我们需要表征用户之间的互相关注的行为，一个表中可能有两个 user_id，第一个表示关注者，第二个表示被关注者。那么在命名时务必保证前缀不变，即皆为 user_id，可以通过 by 关键字添加后缀的方式，即 user_id_by_following、user_id_by_followed 。
-* 值属性
+- 资源唯一标识，譬如对于用户资源的唯一标识就是 user_id。
+- 外键依赖，外键依赖是表征资源之间显性关系的特征。注意，任何一个资源的标识名具有全局唯一性，譬如 use_id，那么所有的资源中都应该叫 user_id，而不应该使用 uid、id 等等缩写或者别名。另一方面，可能某个资源中的两个外键依赖都指向 user_id，但是表示两个不同的含义。譬如如果我们需要表征用户之间的互相关注的行为，一个表中可能有两个 user_id，第一个表示关注者，第二个表示被关注者。那么在命名时务必保证前缀不变，即皆为 user_id，可以通过 by 关键字添加后缀的方式，即 user_id_by_following、user_id_by_followed 。
+- 值属性
 
 ## Entity
 
@@ -536,7 +536,7 @@ LocalDateTime( 映射时间类型 )
 
 #### Select
 
-* 利用 foreach 构造多查询的 in 条件查询语句时候，注意容错
+- 利用 foreach 构造多查询的 in 条件查询语句时候，注意容错
 
 # Request & Response
 

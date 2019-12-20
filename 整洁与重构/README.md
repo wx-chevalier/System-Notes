@@ -7,4 +7,3 @@
 # 链接
 
 - https://sourcemaking.com/refactoring
-- https://www.atatech.org/articles/103927

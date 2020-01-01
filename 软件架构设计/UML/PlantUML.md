@@ -139,7 +139,7 @@ note left
 end note
 ```
 
-通过使用关键词 note left of ， note right of 或 note over ， 我们还可以把注解放置在与之相关的参与者的左边或右边，或下方。通过改变注解的背景色，我们还可以高亮一个注解文本块。如果要使用多行注解，可以使用关键词 end note 来表示注解的结束。
+通过使用关键词 note left of，note right of 或 note over ， 我们还可以把注解放置在与之相关的参与者的左边或右边，或下方。通过改变注解的背景色，我们还可以高亮一个注解文本块。如果要使用多行注解，可以使用关键词 end note 来表示注解的结束。
 
 ```puml
 participant Alice

@@ -4,7 +4,7 @@
 
 软件开发就是把一个复杂的问题分解为一系列简单的问题，再把一系列简单的解决方案组合成一个复杂的解决方案。而软件开发中最大的挑战，就是即能够快速高效地针对需求、环境的变化做出改变，也能够持续提供稳定、高可用的服务。
 
-在笔者的系列文章中，分门别类地讨论了 Web、服务端、基础架构等某些具体的领域，而本系列关注形而上的软件工程相关的思考方式、通用能力与设计原则。为了更好地阐述，本系列默认使用 Java 为实现语言，不过你也可以在各篇的『编程实现』章节中查阅 TS、Go、Python、PHP、Rust 等其他版本的实现。
+在笔者的系列文章中，分门别类地讨论了 Web、服务端、基础架构等某些具体的领域，而本系列关注形而上的软件工程相关的思考方式、通用能力与设计原则。为了更好地阐述，本系列默认使用 Java 为实现语言，不过你也可以在各篇的编程实现章节中查阅 TS、Go、Python、PHP、Rust 等其他版本的实现。
 
 # Preface | 前言，从编码到软件系统
 
@@ -171,4 +171,4 @@ C ++确实让生活变得更好，因为它具有面向对象，但挑战仍然�
 
 * 行业应用：《[行业迷思](https://github.com/wx-chevalier/Business-Series)》、《[功能域](https://github.com/wx-chevalier/Business-Series)》、《[电子商务](https://github.com/wx-chevalier/Business-Series)》、《[智能制造](https://github.com/wx-chevalier/Business-Series)》
 
-此外，你还可前往 [xCompass](https://wx-chevalier.github.io/home/#/search) 交互式地检索、查找需要的文章/链接/书籍/课程；或者在 [MATRIX 文章与代码索引矩阵](https://github.com/wx-chevalier/Developer-Zero-To-Mastery)中查看文章与项目源代码等更详细的目录导航信息。最后，你也可以关注微信公众号：『**某熊的技术之路**』以获取最新资讯。
+此外，你还可前往 [xCompass](https://wx-chevalier.github.io/home/#/search) 交互式地检索、查找需要的文章/链接/书籍/课程；或者在 [MATRIX 文章与代码索引矩阵](https://github.com/wx-chevalier/Developer-Zero-To-Mastery)中查看文章与项目源代码等更详细的目录导航信息。最后，你也可以关注微信公众号：**某熊的技术之路**以获取最新资讯。

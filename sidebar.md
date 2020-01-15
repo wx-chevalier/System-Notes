@@ -265,10 +265,11 @@
       - [类关系](/软件架构设计/UML/类关系.md)
       - [类图](/软件架构设计/UML/类图.md)
     - [WebAPI](/软件架构设计/WebAPI/README.md)
-      - [API 的过去，现在与未来](/软件架构设计/WebAPI/API%20的过去，现在与未来.md)
       - [OpenAPI](/软件架构设计/WebAPI/OpenAPI/README.md)
         
-      - [WebAPI 风格变迁](/软件架构设计/WebAPI/WebAPI%20风格变迁.md)
+      - 演化与变迁
+        - [API 的过去，现在与未来](/软件架构设计/WebAPI/演化与变迁/API%20的过去，现在与未来.md)
+        - [WebAPI 风格变迁](/软件架构设计/WebAPI/演化与变迁/WebAPI%20风格变迁.md)
     - [中台](/软件架构设计/中台/README.md)
       - [业务定义](/软件架构设计/中台/业务定义.md)
       - [业务挑战](/软件架构设计/中台/业务挑战.md)

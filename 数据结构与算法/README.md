@@ -84,7 +84,7 @@
 
 ![](https://i.postimg.cc/hPvR7ywr/image.png)
 
-# Home & More | 延伸阅读
+# Copyright & More | 延伸阅读
 
 # 链接
 

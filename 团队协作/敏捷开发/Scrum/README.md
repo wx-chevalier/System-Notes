@@ -28,7 +28,7 @@ Sprint 是短距离赛跑的意思，这里面指的是一次迭代，而一次�
 
 2、Scrum Team 根据 Product Backlog 列表，做工作量的预估和安排；
 
-3、有了 Product Backlog 列表，我们需要通过 Sprint Planning Meeting（Sprint 计划会议） 来从中挑选出一个 Story 作为本次迭代完成的目标，这个目标的时间周期是 1~4 个星期，然后把这个 Story 进行细化，形成一个 Sprint Backlog；
+3、有了 Product Backlog 列表，我们需要通过 Sprint Planning Meeting（Sprint 计划会议）来从中挑选出一个 Story 作为本次迭代完成的目标，这个目标的时间周期是 1~4 个星期，然后把这个 Story 进行细化，形成一个 Sprint Backlog；
 
 4、Sprint Backlog 是由 Scrum Team 去完成的，每个成员根据 Sprint Backlog 再细化成更小的任务（细到每个任务的工作量在 2 天内能完成）；
 

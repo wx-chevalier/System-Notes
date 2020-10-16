@@ -6,6 +6,6 @@
 
 敏捷它是一种指导思想或开发方式，但是它没有明确告诉我们到底采用什么样的流程进行开发，而 Scrum 和 XP 就是敏捷开发的具体方式了，你可以采用 Scrum 方式也可以采用 XP 方式；Scrum 和 XP 的区别是，Scrum 偏重于过程，XP 则偏重于实践，但是实际中，两者是结合一起应用的，这里我主要讲 Scrum。
 
-# 链接
+# TBD
 
 - https://mp.weixin.qq.com/s/gGDkzpDMt6o-jmvzUDP1WQ

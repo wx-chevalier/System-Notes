@@ -36,7 +36,7 @@ Git doesn’t think of or store its data this way. Instead, Git thinks of its da
 
 ![](https://cdn-images-1.medium.com/max/1600/0*-8t0j0AN8GL2OP9y.png)
 
-# TBD
+# Links
 
 - https://mp.weixin.qq.com/s/ZuSjmkMj8cOFgkV0ojMosQ
 - https://zhuanlan.zhihu.com/p/71577255 深入理解 Git

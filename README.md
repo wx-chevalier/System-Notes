@@ -83,7 +83,7 @@ SOA 是为了更好的集成，为了隔离不同逻辑之间的互相影响而�
 
 # 软件设计
 
-软件设计有以下四大目标：简单、正确、一致、完整，但两大流派 MIT Style (MIT AI Lab 是 LISP 重镇) 和 New Jersey Style (C 和 UNIX 的老家贝尔实验室所在地) 对这些目标的优先级排序不同。MIT Style 认为软件正确性要绝对保证，然后优先级 正确 ~= 一致 > 完整 > 简单，简单这一条还得分，为了接口简单，可以忍受实现复杂。而 New Jersey Style 是正好反过来：首先软件实现得简单，做不到宁愿让接口复杂点，为了简单显然可以牺牲完整性，而正确、一致，那就尽力吧…… 反正得简单。Worse is Better 前面的 Worse 指的就是像 UNIX 这样为简单甚至能放弃「正确」这种有绝对标准的好的东西，后面的 Better, 指的是更好的生存适应性，这里面不带价值判断，文章作者也为 "Worse Is Better Is Worse" or "Worse is Better is Still Better" 一直在纠结，但这是一个能解释很多现象的准确观察。
+软件设计有以下四大目标：简单、正确、一致、完整，但两大流派 MIT Style (MIT AI Lab 是 LISP 重镇) 和 New Jersey Style (C 和 UNIX 的老家贝尔实验室所在地) 对这些目标的优先级排序不同。MIT Style 认为软件正确性要绝对保证，然后优先级 正确 ~= 一致 > 完整 > 简单，简单这一条还得分，为了接口简单，可以忍受实现复杂。而 New Jersey Style 是正好反过来：首先软件实现得简单，做不到宁愿让接口复杂点，为了简单显然可以牺牲完整性，而正确、一致，那就尽力吧…… 反正得简单。Worse is Better 前面的 Worse 指的就是像 UNIX 这样为简单甚至能放弃正确这种有绝对标准的好的东西，后面的 Better, 指的是更好的生存适应性，这里面不带价值判断，文章作者也为 "Worse Is Better Is Worse" or "Worse is Better is Still Better" 一直在纠结，但这是一个能解释很多现象的准确观察。
 
 ## 性能
 

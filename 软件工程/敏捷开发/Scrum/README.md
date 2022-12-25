@@ -2,7 +2,7 @@
 
 Scrum 的英文意思是橄榄球运动的一个专业术语，表示“争球”的动作；把一个开发流程的名字取名为 Scrum，我想你一定能想象出你的开发团队在开发一个项目时，大家像打橄榄球一样迅速、富有战斗激情、人人你争我抢地完成它，你一定会感到非常兴奋的。
 
-![](https://i.postimg.cc/R0Y18Jsf/image.png)
+![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20221225150801.png)
 
 # 角色划分
 
@@ -20,7 +20,7 @@ Scrum 的英文意思是橄榄球运动的一个专业术语，表示“争球�
 
 # 开发模型
 
-![](https://i.postimg.cc/BvbcMBg4/image.png)
+![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20221225150835.png)
 
 Sprint 是短距离赛跑的意思，这里面指的是一次迭代，而一次迭代的周期是 1 个月时间（即 4 个星期），也就是我们要把一次迭代的开发内容以最快的速度完成它，这个过程我们称它为 Sprint。
 

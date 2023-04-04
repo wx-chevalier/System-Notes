@@ -1,7 +1,5 @@
-  - 1 DevOps [1]
-    - 1.1 999.参考资料 [2]
-      - [1.1.1 万字长文带你彻底搞懂什么是 DevOps](/DevOps/999.参考资料/2021-万字长文带你彻底搞懂什么是%20DevOps.md)
-      - [1.1.2 必致（BizDevOps）](/DevOps/999.参考资料/2023-必致（BizDevOps）.md)
+  - [1 DevOps](/DevOps/README.md)
+    
   - [2 INTRODUCTION](/INTRODUCTION.md)
   - 3 团队协作 [2]
     - 3.1 技术管理 [1]

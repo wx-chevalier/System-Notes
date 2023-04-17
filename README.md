@@ -1,6 +1,6 @@
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg) ![](https://parg.co/bDm)
 
-![](https://i.postimg.cc/dtdTv30G/image.png)
+![](https://assets.ng-tech.icu/item/20230417205536.png)
 
 # Software Engineering Series | 软件工程、算法与架构
 
@@ -12,7 +12,7 @@
 
 一般来说，在软件工程中，我们往往会面临三类问题：性能问题（The Performant System Problem）、系统的嵌入式问题（the Embedded System Problem）以及复杂领域建模问题（the Complex Domain Problem）。
 
-![](https://i.postimg.cc/wBjMt2jj/image.png)
+![](https://assets.ng-tech.icu/item/20230417205450.png)
 
 系统泛指由一群有关联的个体组成，根据某种规则运作，能完成个别元件不能单独完成的工作的群体。子系统也是由一群有关联的个体所组成的系统，多半会是更大系统中的一部分。
 

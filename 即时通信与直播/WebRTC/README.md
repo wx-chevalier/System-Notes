@@ -27,7 +27,7 @@ WebRTC 与 WebSockets 有一个显著的区别：Websockets 通过 TCP 工作，
 - Video Engine（视频引擎模块）：包含编码能力（如 VP8）、视频缓冲、图像增强。
 - Transport（传输模块）：传输协议在底层使用 UDP，上层使用的 RTP（为安全起见增加 SRTP），还有 P2P 机制，包括 STUN、TURN 和 ICE。
 
-我们知道 WebRTC 要解决的是两个浏览器之间如何进行实时音视频互动的问题。从底层来看，就是要解决两个点之间如何进行高效的网络传输。这就涉及要很多重要的传输协议，请参阅 [《Network-Series](https://github.com/wx-chevalier/Network-Series?q=)》。
+我们知道 WebRTC 要解决的是两个浏览器之间如何进行实时音视频互动的问题。从底层来看，就是要解决两个点之间如何进行高效的网络传输。这就涉及要很多重要的传输协议，请参阅 [《Network-Notes](https://github.com/wx-chevalier/Network-Notes?q=)》。
 
 # Links
 

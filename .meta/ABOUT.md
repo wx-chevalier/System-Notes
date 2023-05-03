@@ -1,3 +1,3 @@
-[](https://github.com/wx-chevalier/SoftwareEngineering-Series)
+[](https://github.com/wx-chevalier/SoftwareEngineering-Notes)
 
 # About

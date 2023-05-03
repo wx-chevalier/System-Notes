@@ -8,7 +8,7 @@ H.264，通常也被称之为 H.264/AVC（或者 H.264/MPEG-4 AVC 或 MPEG-4/H.2
 
 在 H.264 定义的结构中，一个视频图像编码后的数据叫做一帧。一帧是由一个或多个片（slice）组成的，一个片是由一个或多个宏块（MB）组成的（宏块是 H264 编码的基本单位），一个宏块是由 16x16 的 yuv 数据组成的。
 
-> 对于 YUV 的介绍参阅 [《Frontend-Series](https://github.com/wx-chevalier/Frontend-Series/search?q=YUV)》
+> 对于 YUV 的介绍参阅 [《Frontend-Notes](https://github.com/wx-chevalier/Frontend-Notes/search?q=YUV)》
 
 ## 帧类型
 

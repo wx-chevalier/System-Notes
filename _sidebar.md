@@ -49,30 +49,36 @@
       - [3.7.2 编解码 [2]](/即时通信与直播/音视频编解码/编解码/README.md)
         - [3.7.2.1 AAC 音频编码](/即时通信与直播/音视频编解码/编解码/AAC%20音频编码.md)
         - [3.7.2.2 H.264](/即时通信与直播/音视频编解码/编解码/H.264.md)
-  - [4 权限隔离 [6]](/权限隔离/README.md)
-    - [4.1 OAuth](/权限隔离/OAuth/README.md)
+  - [4 权限认证 [6]](/权限认证/README.md)
+    - [4.1 OAuth [2]](/权限认证/OAuth/README.md)
+      - 4.1.1 99.参考资料 [1]
+        - [4.1.1.1 Sheng OAuth2.0 协议](/权限认证/OAuth/99.参考资料/2022-Sheng-OAuth2.0%20协议.md)
+      - 4.1.2 OIDC [1]
+        - 4.1.2.1 99.参考资料 [1]
+          - [4.1.2.1.1 Sheng OIDC 协议](/权限认证/OAuth/OIDC/99.参考资料/2021-Sheng-OIDC%20协议.md)
+    - [4.2 RBAC](/权限认证/RBAC/README.md)
       
-    - [4.2 RBAC](/权限隔离/RBAC/README.md)
-      
-    - [4.3 SSO [4]](/权限隔离/SSO/README.md)
-      - [4.3.1 CAS](/权限隔离/SSO/CAS/README.md)
+    - [4.3 SSO [4]](/权限认证/SSO/README.md)
+      - [4.3.1 CAS](/权限认证/SSO/CAS/README.md)
         
-      - [4.3.2 Hydra](/权限隔离/SSO/Hydra/README.md)
+      - [4.3.2 Hydra](/权限认证/SSO/Hydra/README.md)
         
-      - [4.3.3 Keycloak](/权限隔离/SSO/Keycloak/README.md)
+      - [4.3.3 Keycloak](/权限认证/SSO/Keycloak/README.md)
         
-      - [4.3.4 Pac4j](/权限隔离/SSO/Pac4j/README.md)
+      - [4.3.4 Pac4j](/权限认证/SSO/Pac4j/README.md)
         
-    - [4.4 多租户 [1]](/权限隔离/多租户/README.md)
-      - [4.4.1 通用多租户框架](/权限隔离/多租户/通用多租户框架.md)
-    - [4.5 开放平台 [1]](/权限隔离/开放平台/README.md)
-      - [4.5.1 扫码登陆](/权限隔离/开放平台/扫码登陆.md)
-    - [4.6 认证基础 [2]](/权限隔离/认证基础/README.md)
-      - 4.6.1 HTTP [2]
-        - [4.6.1.1 HTTP 认证](/权限隔离/认证基础/HTTP/HTTP%20认证.md)
-        - [4.6.1.2 Session](/权限隔离/认证基础/HTTP/Session.md)
-      - 4.6.2 JWT [1]
-        - [4.6.2.1 JWT](/权限隔离/认证基础/JWT/JWT.md)
+    - [4.4 多租户 [1]](/权限认证/多租户/README.md)
+      - [4.4.1 通用多租户框架](/权限认证/多租户/通用多租户框架.md)
+    - [4.5 开放平台 [1]](/权限认证/开放平台/README.md)
+      - [4.5.1 扫码登陆](/权限认证/开放平台/扫码登陆.md)
+    - [4.6 认证基础 [3]](/权限认证/认证基础/README.md)
+      - 4.6.1 99.参考资料 [1]
+        - [4.6.1.1 Password, Session, Cookie, Token, JWT, SSO, OAuth   Authentication Explained](/权限认证/认证基础/99.参考资料/2023-Password,%20Session,%20Cookie,%20Token,%20JWT,%20SSO,%20OAuth%20-%20Authentication%20Explained.md)
+      - 4.6.2 HTTP [2]
+        - [4.6.2.1 HTTP 认证](/权限认证/认证基础/HTTP/HTTP%20认证.md)
+        - [4.6.2.2 Session](/权限认证/认证基础/HTTP/Session.md)
+      - 4.6.3 JWT [1]
+        - [4.6.3.1 JWT](/权限认证/认证基础/JWT/JWT.md)
   - [5 软件工程 [10]](/软件工程/README.md)
     - [5.1 DevOps](/软件工程/DevOps/README.md)
       

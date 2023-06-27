@@ -1,6 +1,6 @@
 # OIDC 协议
 
-OIDC 是 OpenID Connect 的简称，OIDC=(Identity, Authentication) + OAuth 2.0。**它在 OAuth2 上构建了一个身份层，是一个基于 OAuth2 协议的身份认证标准协议。**我们都知道 OAuth2 是一个授权协议，它无法提供完善的身份认证功能（关于这一点请参考[[认证授权\] 3.基于 OAuth2 的认证（译） (opens new window)](http://www.cnblogs.com/linianhui/p/authentication-based-on-oauth2.html)），OIDC 使用 OAuth2 的授权服务器来为第三方客户端提供用户的身份认证，并把对应的身份认证信息传递给客户端，且可以适用于各种类型的客户端（比如服务端应用，移动 APP，JS 应用），且完全兼容 OAuth2，也就是说你搭建了一个 OIDC 的服务后，也可以当作一个 OAuth2 的服务来用。应用场景如图：
+OIDC 是 OpenID Connect 的简称，OIDC=(Identity, Authentication) + OAuth 2.0。**它在 OAuth2 上构建了一个身份层，是一个基于 OAuth2 协议的身份认证标准协议。**我们都知道 OAuth2 是一个授权协议，它无法提供完善的身份认证功能，OIDC 使用 OAuth2 的授权服务器来为第三方客户端提供用户的身份认证，并把对应的身份认证信息传递给客户端，且可以适用于各种类型的客户端（比如服务端应用，移动 APP，JS 应用），且完全兼容 OAuth2，也就是说你搭建了一个 OIDC 的服务后，也可以当作一个 OAuth2 的服务来用。应用场景如图：
 
 ![img](https://thinking-oss.oss-cn-beijing.aliyuncs.com/img/2021/10/202110101111139.png)
 

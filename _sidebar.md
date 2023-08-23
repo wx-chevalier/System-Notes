@@ -17,11 +17,11 @@
           - [3.1.1.1.1 Building and operating a pretty big storage system called S3](/巨头实践/Amazon/AWS/S3/2023-Building%20and%20operating%20a%20pretty%20big%20storage%20system%20called%20S3.md)
   - [4 权限认证 [6]](/权限认证/README.md)
     - [4.1 OAuth [2]](/权限认证/OAuth/README.md)
-      - 4.1.1 99.参考资料 [1]
-        - [4.1.1.1 Sheng OAuth2.0 协议](/权限认证/OAuth/99.参考资料/2022-Sheng-OAuth2.0%20协议.md)
+      - 4.1.1 99~参考资料 [1]
+        - [4.1.1.1 Sheng OAuth2.0 协议](/权限认证/OAuth/99~参考资料/2022-Sheng-OAuth2.0%20协议.md)
       - 4.1.2 OIDC [1]
-        - 4.1.2.1 99.参考资料 [1]
-          - [4.1.2.1.1 Sheng OIDC 协议](/权限认证/OAuth/OIDC/99.参考资料/2021-Sheng-OIDC%20协议.md)
+        - 4.1.2.1 99~参考资料 [1]
+          - [4.1.2.1.1 Sheng OIDC 协议](/权限认证/OAuth/OIDC/99~参考资料/2021-Sheng-OIDC%20协议.md)
     - [4.2 RBAC](/权限认证/RBAC/README.md)
       
     - [4.3 SSO [4]](/权限认证/SSO/README.md)
@@ -38,8 +38,8 @@
     - [4.5 开放平台 [1]](/权限认证/开放平台/README.md)
       - [4.5.1 扫码登陆](/权限认证/开放平台/扫码登陆.md)
     - [4.6 认证基础 [3]](/权限认证/认证基础/README.md)
-      - 4.6.1 99.参考资料 [1]
-        - [4.6.1.1 Password, Session, Cookie, Token, JWT, SSO, OAuth   Authentication Explained](/权限认证/认证基础/99.参考资料/2023-Password,%20Session,%20Cookie,%20Token,%20JWT,%20SSO,%20OAuth%20-%20Authentication%20Explained.md)
+      - 4.6.1 99~参考资料 [1]
+        - [4.6.1.1 Password, Session, Cookie, Token, JWT, SSO, OAuth   Authentication Explained](/权限认证/认证基础/99~参考资料/2023-Password,%20Session,%20Cookie,%20Token,%20JWT,%20SSO,%20OAuth%20-%20Authentication%20Explained.md)
       - 4.6.2 HTTP [2]
         - [4.6.2.1 HTTP 认证](/权限认证/认证基础/HTTP/HTTP%20认证.md)
         - [4.6.2.2 Session](/权限认证/认证基础/HTTP/Session.md)
@@ -68,8 +68,8 @@
     - [5.9 软件质量](/软件工程/软件质量/README.md)
       
     - [5.10 项目管理 [3]](/软件工程/项目管理/README.md)
-      - 5.10.1 99.参考资料 [1]
-        - [5.10.1.1 软件工程项目管理文档模板](/软件工程/项目管理/99.参考资料/软件工程项目管理文档模板/README.md)
+      - 5.10.1 99~参考资料 [1]
+        - [5.10.1.1 软件工程项目管理文档模板](/软件工程/项目管理/99~参考资料/软件工程项目管理文档模板/README.md)
           
       - 5.10.2 需求规划 [2]
         - [5.10.2.1 需求管理](/软件工程/项目管理/需求规划/需求管理.md)

@@ -4,7 +4,7 @@ OIDC 是 OpenID Connect 的简称，OIDC=(Identity, Authentication) + OAuth 2.0�
 
 ![img](https://thinking-oss.oss-cn-beijing.aliyuncs.com/img/2021/10/202110101111139.png)
 
-## [#](https://thinking.renzhansheng.cn/pages/1518f6/#_1-oidc协议族)1. OIDC 协议族
+## 1. OIDC 协议族
 
 OIDC 本身是有多个规范构成，其中包含一个核心的规范，多个可选支持的规范来提供扩展支持.
 
@@ -38,7 +38,7 @@ OIDC 的核心在于在 OAuth2 的授权流程中，一并提供用户的身份�
 4. **ID Token**: JWT 格式的数据，包含 EU 身份认证的信息。
 5. **UserInfo Endpoint**：用户信息接口（受 OAuth2 保护），当 RP 使用 Access Token 访问时，返回授权用户的信息，此接口必须使用 HTTPS。
 
-### [#](https://thinking.renzhansheng.cn/pages/1518f6/#_2-2-工作流程)2.2 工作流程
+### 2.2 工作流程
 
 从抽象的角度来看，OIDC 的流程由以下 5 个步骤构成：
 
@@ -52,7 +52,7 @@ OIDC 的核心在于在 OAuth2 的授权流程中，一并提供用户的身份�
 
 AuthN=Authentication，表示认证；AuthZ=Authorization，代表授权。
 
-### [#](https://thinking.renzhansheng.cn/pages/1518f6/#_2-3-id-token)2.3 ID Token
+### 2.3 ID Token
 
 上面提到过**OIDC 对 OAuth2 最主要的扩展就是提供了 ID Token**。ID Token 是一个安全令牌，是一个授权服务器提供的包含**用户信息**的 JWT 格式的数据结构。ID Token 的主要构成部分如下（使用 OAuth2 流程的 OIDC）。
 
@@ -74,7 +74,7 @@ AuthN=Authentication，表示认证；AuthZ=Authorization，代表授权。
 - Access Token 是授权第三方客户端**访问受保护资源**的令牌
 - ID Token 是第三方客户端**标识用户身份认证**的问令牌
 
-### [#](https://thinking.renzhansheng.cn/pages/1518f6/#_2-4-认证流程)2.4 认证流程
+### 2.4 认证流程
 
 1. **Authorization Code Flow**：使用 OAuth2 的**授权码**来换取 Id Token 和 Access Token。
 2. **Implicit Flow**：使用 OAuth2 的**Implicit**流程获取 Id Token 和 Access Token。

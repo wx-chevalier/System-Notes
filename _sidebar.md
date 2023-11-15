@@ -9,8 +9,11 @@
       - [1.3.3 进程模型](/01~服务器/Nginx/进程模型.md)
     - [1.4 OpenResty](/01~服务器/OpenResty/README.md)
       
-  - 2 99~参考资料 [1]
-    - [2.1 2023~BytebyteGo~System Design 101](/99~参考资料/2023~BytebyteGo~System%20Design%20101.md)
+  - 2 99~参考资料 [2]
+    - [2.1 Awesome System Design Articles](/99~参考资料/Awesome%20System%20Design%20Articles/README.md)
+      
+    - 2.2 BytebyteGo~System Design 101 [1]
+      - [2.2.1 2023~BytebyteGo~System Design 101](/99~参考资料/BytebyteGo~System%20Design%20101/2023~BytebyteGo~System%20Design%20101.md)
   - [3 INTRODUCTION](/INTRODUCTION.md)
   - 4 大厂实践 [1]
     - 4.1 Amazon [1]

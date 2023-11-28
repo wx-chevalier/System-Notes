@@ -48,8 +48,10 @@
       - 5.6.2 HTTP [2]
         - [5.6.2.1 HTTP 认证](/权限认证/认证基础/HTTP/HTTP%20认证.md)
         - [5.6.2.2 Session](/权限认证/认证基础/HTTP/Session.md)
-      - 5.6.3 JWT [1]
-        - [5.6.3.1 JWT](/权限认证/认证基础/JWT/JWT.md)
+      - 5.6.3 JWT [2]
+        - 5.6.3.1 99~参考资料 [1]
+          - [5.6.3.1.1 2023~Stop using JSON Web tokens for user sessions](/权限认证/认证基础/JWT/99~参考资料/2023~Stop%20using%20JSON%20Web%20tokens%20for%20user%20sessions.md)
+        - [5.6.3.2 JWT](/权限认证/认证基础/JWT/JWT.md)
   - [6 软件工程 [10]](/软件工程/README.md)
     - [6.1 代码与工程化](/软件工程/代码与工程化.md)
     - [6.2 技术方案](/软件工程/技术方案/README.md)

@@ -25,7 +25,6 @@ import ../vhosts/*
 ```
 localhost
 
-
 gzip
 browse
 websocket /echo cat
@@ -64,7 +63,6 @@ bind 127.0.0.1
 mysite.com {
   root /www/mysite.com
 }
-
 
 sub.mysite.com {
   root /www/sub.mysite.com
@@ -311,7 +309,6 @@ curl \
 curl -X MOVE \
   -H "Destination: /web/path/to-release" \
   https://127.0.0.1/web/path/from-release
-
 
 # DELETE is 'rm -r'
 curl -X DELETE \

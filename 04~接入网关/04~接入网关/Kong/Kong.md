@@ -39,7 +39,6 @@ $ docker run -d --name kong \
 # 判断 Kong 是否启动成功
 $ curl -i http://localhost:8001/
 
-
 # 使用 Konga 作为界面化管理
 # Admin login: admin | password: adminadminadmin
 $ docker run -p 1337:1337 \

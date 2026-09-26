@@ -22,7 +22,6 @@ lua_package_path "/path/to/lua-resty-http/lib/?.lua;;";
 
 server {
 
-
   location /simpleinterface {
     resolver 8.8.8.8;  # use Google's open DNS server for an example
 
@@ -57,7 +56,6 @@ server {
       ngx.say(res.body)
     ';
   }
-
 
   location /genericinterface {
     content_by_lua '

@@ -634,8 +634,6 @@ server {
 
     listen 80;
 
-
-
     server_name www.jjonline.cn www.jjonline.org;
 
     index index.html index.htm index.php;
